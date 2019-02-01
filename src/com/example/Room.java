@@ -1,3 +1,7 @@
+package com.example;
+
+import com.example.Direction;
+
 public class Room {
     private String name;
     private String description;

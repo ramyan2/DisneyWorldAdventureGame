@@ -1,3 +1,5 @@
+package com.example;
+
 public class Direction {
     private String directionName;
     private String room;

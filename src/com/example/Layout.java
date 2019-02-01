@@ -1,3 +1,5 @@
+package com.example;
+
 public class Layout {
     private String startingRoom;
     private String endingRoom;
