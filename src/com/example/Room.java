@@ -2,8 +2,9 @@ package com.example;
 
 import com.example.Direction;
 
-public class Room {
-    private String name;
+
+public class Room implements Output {
+    public String name;
     private String description;
     private Direction[] directions;
 
@@ -11,5 +12,10 @@ public class Room {
         name = roomName;
         description = roomDescription;
         directions = roomDirections;
+    }
+
+    public void getDescription() {
+        System.out.println(description);
+        System.out.print("");
     }
 }
