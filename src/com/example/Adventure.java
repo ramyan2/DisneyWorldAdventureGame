@@ -50,7 +50,7 @@ public class Adventure {
     }
 
     /**
-     * if the user inputs an invalid direction then it prints it cannot go that direction
+     * if the user inputs an invalid direction then it prints it cannot go that direction or it does not understand that input
      * @param inputtedDirection
      */
 
@@ -66,8 +66,10 @@ public class Adventure {
         }
         if (tracker == false && x[0].toLowerCase().equals(keyword)) {
             System.out.println("I can't " + inputtedDirection);
+            System.out.println(room.getDescription());
         } else if (tracker == false && !x[0].toLowerCase().equals(keyword)) {
             System.out.println("I don't understand " + inputtedDirection);
+            System.out.println(room.getDescription());
         }
     }
 
