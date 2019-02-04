@@ -17,6 +17,7 @@ public class Adventure implements Output {
     public String endRoom;
     public static Adventure game = new Adventure();
     public Direction[] directions;
+    public Direction currentDirection;
 
     private static final String readJson = Data.getFileContentsAsString("AdventuresJSON");
 
@@ -40,8 +41,26 @@ public class Adventure implements Output {
         }
     }
 
-    public String getDescription() {
+    public String getDescription(){
         return currentRoom;
+    }
+
+    public void getRoomBasedOnDirection(String inputtedDirection) {
+        String actualDirection = inputtedDirection.toLowerCase();
+        for (int i = 0; i < directions.length; i++) {
+            if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
+                currentDirection = directions[i];
+            } else {
+                System.out.println("accounts for null");
+                currentDirection = directions[0];
+            }
+        }
+        for(int i = 0; i < arrayRooms.length; i++) {
+            if (arrayRooms[i].getName().equals(currentDirection.getRoom())) {
+                System.out.println(arrayRooms[i].getDescription());
+            }
+        }
+
     }
 
 
@@ -75,6 +94,10 @@ public class Adventure implements Output {
         game.parsingJson();
         game.startGame();
         game.indicateHavingReachedEnd();
+        Scanner scanner = new Scanner(System.in);  // Reading from System.in
+        System.out.println("Enter a direction: ");
+        String direction = scanner.nextLine();
+        game.getRoomBasedOnDirection(direction);
     }
 
 
