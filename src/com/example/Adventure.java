@@ -36,6 +36,9 @@ public class Adventure {
         return parsedJson;
     }
 
+    /**
+     * goes through the array of rooms in my json until it finds the current room and sets it to a Room object and sets the possible directions you can go from this room to a directions array
+     */
 
     public void setCurrentRoomObject() {
         for (int i = 0; i < arrayRooms.length; i++) {
@@ -47,7 +50,7 @@ public class Adventure {
     }
 
     /**
-     * gets the room description based on the direction inputted by the user
+     * prints the room description based on the direction inputted by the user
      * @param inputtedDirection
      */
 
@@ -62,11 +65,17 @@ public class Adventure {
                 System.out.println(room.getDescription());
                 printRoomDirectionsBasedOnInput();
                 break;
+            } else {
+                System.out.println("I can't go to " + inputtedDirection);
+                System.out.println();
             }
         }
     }
 
 
+    /**
+     * prints the directions you can possibly go from the room based on the input
+     */
     public void printRoomDirectionsBasedOnInput() {
         setCurrentRoomObject();
         System.out.println("From here you can go: ");
@@ -76,10 +85,11 @@ public class Adventure {
     }
 
 
-
+    /**
+     * starts the game by setting the current room to the starting room and prints this room's description and directions you can go from this room
+     */
     public void startGame() {
         startRoom = parsedJson.getStartingRoom();
-        endRoom = parsedJson.getEndingRoom();
         currentRoom = startRoom;
         game.setCurrentRoomObject();
 
@@ -90,6 +100,11 @@ public class Adventure {
 
     }
 
+    /**
+     * returns true or false based on if the user's inputted direction takes you to the ending room
+     * @param inputtedDirection
+     * @return true if it does not take you to the ending room so the game can continue or false if it does take you to the ending room so it can end the game
+     */
     public boolean indicateHavingReachedEnd(String inputtedDirection) {
         String actualDirection = inputtedDirection.toLowerCase();
         for (int i = 0; i < directions.length; i++) {
