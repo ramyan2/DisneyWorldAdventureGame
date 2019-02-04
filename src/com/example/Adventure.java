@@ -160,8 +160,11 @@ public class Adventure {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a direction: ");
             String direction = scanner.nextLine();
-            if((direction.toLowerCase().equals(quitWord.toLowerCase())) || (direction.toLowerCase().equals(exitWord.toLowerCase())) ||
-                    game.indicateHavingReachedEnd(direction)) {
+            if((direction.toLowerCase().equals(quitWord.toLowerCase())) || (direction.toLowerCase().equals(exitWord.toLowerCase()))) {
+                System.out.println("EXIT");
+                loop = false;
+            } else if (game.indicateHavingReachedEnd(direction)) {
+                System.out.println("You have reached your final destination");
                 System.out.println("EXIT");
                 loop = false;
             } else {
