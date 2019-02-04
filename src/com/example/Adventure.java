@@ -21,6 +21,7 @@ public class Adventure {
     public static String quitWord = "QUIT";
     public static String exitWord = "EXIT";
     public Room room;
+    public boolean validInput = true;
 
 
     private static final String readJson = Data.getFileContentsAsString("AdventuresJSON");
@@ -64,12 +65,18 @@ public class Adventure {
                 tracker = true;
             }
         }
-        if (tracker == false && x[0].toLowerCase().equals(keyword)) {
+        if (tracker && !x[0].toLowerCase().equals(keyword)) {
+            System.out.println("I don't understand " + "'" + inputtedDirection + "'");
+            System.out.println(room.getDescription());
+            validInput = false;
+        } else if (tracker == false && x[0].toLowerCase().equals(keyword)) {
             System.out.println("I can't " + inputtedDirection);
             System.out.println(room.getDescription());
+            validInput = false;
         } else if (tracker == false && !x[0].toLowerCase().equals(keyword)) {
-            System.out.println("I don't understand " + inputtedDirection);
+            System.out.println("I don't understand " + "'" + inputtedDirection + "'");
             System.out.println(room.getDescription());
+            validInput = false;
         }
     }
 
@@ -159,7 +166,9 @@ public class Adventure {
                 loop = false;
             } else {
                 game.notAValidDirection(direction);
-                game.printRoomDescriptionBasedOnDirection(direction);
+                if (game.validInput) {
+                    game.printRoomDescriptionBasedOnDirection(direction);
+                }
             }
         }
     }
