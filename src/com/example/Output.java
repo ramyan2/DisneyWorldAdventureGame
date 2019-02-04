@@ -1,5 +1,6 @@
 package com.example;
 
 public interface Output {
-    void getDescription(Room currentRoom);
+    public String getDescription();
+    public void indicateHavingReachedEnd();
 }
