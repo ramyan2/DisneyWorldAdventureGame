@@ -45,21 +45,28 @@ public class Adventure implements Output {
         return currentRoom;
     }
 
+    /**
+     * gets the room description based on the direction inputted by the user
+     * @param inputtedDirection
+     */
+
     public void getRoomDescriptionBasedOnDirection(String inputtedDirection) {
         String actualDirection = inputtedDirection.toLowerCase();
         for (int i = 0; i < directions.length; i++) {
             if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
                 currentDirection = directions[i];
+                for(int j = 0; j < arrayRooms.length; j++) {
+                    if (arrayRooms[j].getName().equals(currentDirection.getRoom())) {
+                        System.out.println(arrayRooms[j].getDescription());
+                    }
+                }
             } else {
                 System.out.println("accounts for null");
                 currentDirection = directions[0];
+                System.out.println(arrayRooms[0].getDescription());
             }
         }
-        for(int i = 0; i < arrayRooms.length; i++) {
-            if (arrayRooms[i].getName().equals(currentDirection.getRoom())) {
-                System.out.println(arrayRooms[i].getDescription());
-            }
-        }
+
 
     }
 
