@@ -45,7 +45,7 @@ public class Adventure implements Output {
         return currentRoom;
     }
 
-    public void getRoomBasedOnDirection(String inputtedDirection) {
+    public void getRoomDescriptionBasedOnDirection(String inputtedDirection) {
         String actualDirection = inputtedDirection.toLowerCase();
         for (int i = 0; i < directions.length; i++) {
             if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
@@ -97,7 +97,7 @@ public class Adventure implements Output {
         Scanner scanner = new Scanner(System.in);  // Reading from System.in
         System.out.println("Enter a direction: ");
         String direction = scanner.nextLine();
-        game.getRoomBasedOnDirection(direction);
+        game.getRoomDescriptionBasedOnDirection(direction);
     }
 
 
