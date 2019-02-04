@@ -49,16 +49,25 @@ public class Adventure {
         }
     }
 
-    public void invalidInput(String inputtedDirection) {
+    /**
+     * if the user inputs an invalid direction then it prints it cannot go that direction
+     * @param inputtedDirection
+     */
+
+    public void notAValidDirection(String inputtedDirection) {
+        String keyword = "go";
         boolean tracker = false;
-        String actualDirection = inputtedDirection.toLowerCase();
+        String[] x = inputtedDirection.split(" ");
+        String actualDirection = x[1].toLowerCase();
         for (int i = 0; i < directions.length; i++) {
             if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
                 tracker = true;
             }
         }
-        if (tracker == false) {
-            System.out.println("I can't go " + inputtedDirection);
+        if (tracker == false && x[0].toLowerCase().equals(keyword)) {
+            System.out.println("I can't " + inputtedDirection);
+        } else if (tracker == false && !x[0].toLowerCase().equals(keyword)) {
+            System.out.println("I don't understand " + inputtedDirection);
         }
     }
 
@@ -69,7 +78,8 @@ public class Adventure {
      */
 
     public void printRoomDescriptionBasedOnDirection(String inputtedDirection) {
-        String actualDirection = inputtedDirection.toLowerCase();
+        String[] x = inputtedDirection.split(" ");
+        String actualDirection = x[1].toLowerCase();
         for (int i = 0; i < directions.length; i++) {
             if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
                 currentDirection = directions[i];
@@ -118,7 +128,8 @@ public class Adventure {
      * @return true if it does not take you to the ending room so the game can continue or false if it does take you to the ending room so it can end the game
      */
     public boolean indicateHavingReachedEnd(String inputtedDirection) {
-        String actualDirection = inputtedDirection.toLowerCase();
+        String[] x = inputtedDirection.split(" ");
+        String actualDirection = x[1].toLowerCase();
         for (int i = 0; i < directions.length; i++) {
             if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
                 currentDirection = directions[i];
@@ -126,9 +137,9 @@ public class Adventure {
             }
         }
         if (currentRoom.equals(endRoom)) {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
 
@@ -141,11 +152,11 @@ public class Adventure {
             System.out.println("Enter a direction: ");
             String direction = scanner.nextLine();
             if((direction.toLowerCase().equals(quitWord.toLowerCase())) || (direction.toLowerCase().equals(exitWord.toLowerCase())) ||
-                    !game.indicateHavingReachedEnd(direction)) {
+                    game.indicateHavingReachedEnd(direction)) {
                 System.out.println("EXIT");
                 loop = false;
             } else {
-                game.invalidInput(direction);
+                game.notAValidDirection(direction);
                 game.printRoomDescriptionBasedOnDirection(direction);
             }
         }
