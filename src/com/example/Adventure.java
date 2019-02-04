@@ -49,6 +49,20 @@ public class Adventure {
         }
     }
 
+    public void invalidInput(String inputtedDirection) {
+        boolean tracker = false;
+        String actualDirection = inputtedDirection.toLowerCase();
+        for (int i = 0; i < directions.length; i++) {
+            if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
+                tracker = true;
+            }
+        }
+        if (tracker == false) {
+            System.out.println("I can't go " + inputtedDirection);
+        }
+    }
+
+
     /**
      * prints the room description based on the direction inputted by the user
      * @param inputtedDirection
@@ -65,11 +79,9 @@ public class Adventure {
                 System.out.println(room.getDescription());
                 printRoomDirectionsBasedOnInput();
                 break;
-            } else {
-                System.out.println("I can't go to " + inputtedDirection);
-                System.out.println();
             }
         }
+
     }
 
 
@@ -120,13 +132,12 @@ public class Adventure {
     }
 
 
-
     public static void main (String[] args) {
         boolean loop = true;
         game.parsingJson();
         game.startGame();
         while (loop) {
-            Scanner scanner = new Scanner(System.in);  // Reading from System.in
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a direction: ");
             String direction = scanner.nextLine();
             if((direction.toLowerCase().equals(quitWord.toLowerCase())) || (direction.toLowerCase().equals(exitWord.toLowerCase())) ||
@@ -134,12 +145,10 @@ public class Adventure {
                 System.out.println("EXIT");
                 loop = false;
             } else {
+                game.invalidInput(direction);
                 game.printRoomDescriptionBasedOnDirection(direction);
             }
         }
-
-
-
     }
 
 
