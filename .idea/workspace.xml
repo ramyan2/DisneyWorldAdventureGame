@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,14 +57,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="16221" />
-          <entry key="txt" value="4317" />
+          <entry key="java" value="16240" />
+          <entry key="txt" value="4512" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16221" />
-          <entry key="PLAIN_TEXT" value="4317" />
+          <entry key="JAVA" value="16240" />
+          <entry key="PLAIN_TEXT" value="4512" />
         </counts>
       </usages-collector>
     </session>
@@ -104,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="195">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -113,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3396">
-              <caret line="240" column="21" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+            <state relative-caret-position="2820">
+              <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4890#4891#0" expanded="true" />
@@ -129,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="136">
+              <caret line="238" column="57" lean-forward="true" selection-start-line="238" selection-start-column="57" selection-end-line="238" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,10 +187,10 @@
         <option value="$PROJECT_DIR$/test/AdventureTimeTestTest.java" />
         <option value="$PROJECT_DIR$/src/com/example/Direction.java" />
         <option value="$PROJECT_DIR$/src/com/example/Room.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Layout.java" />
         <option value="$PROJECT_DIR$/src/com/example/Output.java" />
         <option value="$PROJECT_DIR$/test/AdventureTimeTest.java" />
         <option value="$PROJECT_DIR$/src/com/example/Data.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Layout.java" />
         <option value="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" />
         <option value="$PROJECT_DIR$/src/com/example/Adventure.java" />
       </list>
@@ -260,7 +258,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549399071951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549399739644" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -294,7 +292,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdventureTimeTest">
+  <component name="RunManager" selected="Application.Adventure">
+    <configuration name="Adventure" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Adventure" />
+      <module name="adventure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdventureTimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
@@ -305,22 +316,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="adventure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testInvalidInputMethodWhenUserTypesInValidInput2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -374,19 +369,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput2" />
       <item itemvalue="JUnit.AdventureTimeTest.testWhenReachedEnd" />
       <item itemvalue="JUnit.AdventureTimeTest.testWhenNotReachedEnd" />
       <item itemvalue="JUnit.AdventureTimeTest" />
       <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" />
+      <item itemvalue="Application.Adventure" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Adventure" />
         <item itemvalue="JUnit.AdventureTimeTest" />
         <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" />
         <item itemvalue="JUnit.AdventureTimeTest.testWhenNotReachedEnd" />
         <item itemvalue="JUnit.AdventureTimeTest.testWhenReachedEnd" />
-        <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput2" />
       </list>
     </recent_temporary>
   </component>
@@ -576,25 +571,17 @@
       <option name="project" value="LOCAL" />
       <updated>1549396354832</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added some more test cases like null and valid inputs to try and break my code, then cleaned my formatting and method names and made sure to meet all the assignment requirements.">
+      <created>1549399146109</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1549399146109</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AdventureTimeTest_testWhenInputIsNull - 2019.02.05 at 14h 12m 28s.xml">
-      <configuration name="AdventureTimeTest.testWhenInputIsNull" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testWhenInputIsNullForPrintRoomMethod - 2019.02.05 at 14h 13m 18s.xml">
-      <configuration name="AdventureTimeTest.testWhenInputIsNullForPrintRoomMethod" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testWhenInputIsNullForPrintRoomMethod - 2019.02.05 at 14h 13m 36s.xml">
-      <configuration name="AdventureTimeTest.testWhenInputIsNullForPrintRoomMethod" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testWhenInputIsNullForHavingReachedEndMethod - 2019.02.05 at 14h 16m 12s.xml">
-      <configuration name="AdventureTimeTest.testWhenInputIsNullForHavingReachedEndMethod" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testWhenInputIsNullForHavingReachedEndMethod - 2019.02.05 at 14h 16m 27s.xml">
-      <configuration name="AdventureTimeTest.testWhenInputIsNullForHavingReachedEndMethod" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AdventureTimeTest_testInvalidInputMethodWhenUserTypesInValidInput2 - 2019.02.05 at 14h 18m 32s.xml">
       <configuration name="AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput2" configurationId="JUnit" />
     </history-entry>
@@ -610,12 +597,27 @@
     <history-entry file="AdventureTimeTest - 2019.02.05 at 14h 26m 52s.xml">
       <configuration name="AdventureTimeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AdventureTimeTest_testInvalidInputMethodWhenUserTypesInValidInput3 - 2019.02.05 at 14h 37m 32s.xml">
+      <configuration name="AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testInvalidInputMethodWhenUserTypesInValidInput3 - 2019.02.05 at 14h 37m 44s.xml">
+      <configuration name="AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest - 2019.02.05 at 14h 37m 56s.xml">
+      <configuration name="AdventureTimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest - 2019.02.05 at 14h 40m 30s.xml">
+      <configuration name="AdventureTimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest - 2019.02.05 at 14h 40m 51s.xml">
+      <configuration name="AdventureTimeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -624,7 +626,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -649,7 +651,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added a data class to read the inputted url" />
     <MESSAGE value="Added a data class to read the inputted url, used the given Data class from tv time assignment and adapted it to take in a url" />
     <MESSAGE value="Added input and output interfaces and adventure time test class to test my helper methods. Also incoportated a checkIfStartingOrEndingRoom to see if the current room is the starting or ending room." />
     <MESSAGE value="wrote getters for my three classes" />
@@ -674,7 +675,8 @@
     <MESSAGE value="Wrote test cases for the indicateHavingReachedEnd method that returned true if the user reached the end of the game and false if they did not reach the end of the game." />
     <MESSAGE value="Wrote more test cases to try and break my checkIfInputIsAValidDirection method to see if it returns true if user inputs a valid input and see if it returns false when user inputs only the direction name." />
     <MESSAGE value="Added a try catch to my parsingJson method to gracefully detect and handle the case where user provided a bad URL. Also allowed users to specify an alternate URL on the command line in my main method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a try catch to my parsingJson method to gracefully detect and handle the case where user provided a bad URL. Also allowed users to specify an alternate URL on the command line in my main method." />
+    <MESSAGE value="Added some more test cases like null and valid inputs to try and break my code, then cleaned my formatting and method names and made sure to meet all the assignment requirements." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some more test cases like null and valid inputs to try and break my code, then cleaned my formatting and method names and made sure to meet all the assignment requirements." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -710,6 +712,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -734,24 +750,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3396">
-          <caret line="240" column="21" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+        <state relative-caret-position="2820">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4890#4891#0" expanded="true" />
@@ -764,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="238" column="57" lean-forward="true" selection-start-line="238" selection-start-column="57" selection-end-line="238" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
