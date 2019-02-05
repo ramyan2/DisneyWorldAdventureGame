@@ -41,13 +41,14 @@ public class Adventure {
      * goes through the array of rooms in my json until it finds the current room and sets it to a Room object and sets the possible directions you can go from this room to a directions array
      */
 
-    public void setCurrentRoomObject() {
+    public Room setCurrentRoomObject() {
         for (int i = 0; i < arrayRooms.length; i++) {
             if (arrayRooms[i].getName().equals(currentRoom)) {
                 room = arrayRooms[i];
                 directions = room.getDirections();
             }
         }
+        return room;
     }
 
     /**
@@ -70,11 +71,11 @@ public class Adventure {
                 System.out.println("I don't understand " + "'" + inputtedDirection + "'");
                 System.out.println(room.getDescription());
                 validInput = false;
-            } else if (tracker == false && x[0].toLowerCase().equals(keyword)) {
+            } else if (!tracker && x[0].toLowerCase().equals(keyword)) {
                 System.out.println("I can't " + inputtedDirection);
                 System.out.println(room.getDescription());
                 validInput = false;
-            } else if (tracker == false && !x[0].toLowerCase().equals(keyword)) {
+            } else if (!tracker && !x[0].toLowerCase().equals(keyword)) {
                 System.out.println("I don't understand " + "'" + inputtedDirection + "'");
                 System.out.println(room.getDescription());
                 validInput = false;
@@ -104,9 +105,8 @@ public class Adventure {
             if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
                 currentDirection = directions[i];
                 currentRoom = currentDirection.getRoom();
-                setCurrentRoomObject();
 
-                System.out.println(room.getDescription());
+                System.out.println(setCurrentRoomObject().getDescription());
                 printRoomDirectionsBasedOnInput();
                 break;
             }
