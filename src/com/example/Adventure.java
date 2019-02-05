@@ -133,12 +133,19 @@ public class Adventure {
     /**
      * prints the directions you can possibly go from the room based on the input
      */
-    public void printPossibleDirectionsBasedOnInput() {
+    public String printPossibleDirectionsBasedOnInput() {
         setCurrentRoomObject();
+        String[] returnArray = new String[directions.length];
+        String toReturn = "";
         System.out.println("From here you can go: ");
         for (int i = 0; i < directions.length; i++) {
             System.out.println(directions[i].getDirectionName());
+            returnArray[i] = directions[i].getDirectionName();
         }
+        for (int j = 0; j < returnArray.length; j++) {
+            toReturn += returnArray[j] + " ";
+        }
+        return toReturn.trim();
     }
 
 

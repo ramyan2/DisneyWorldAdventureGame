@@ -1,6 +1,5 @@
 package com.example;
 
-import com.example.Adventure;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -162,7 +161,31 @@ public class AdventureTimeTest {
         assertEquals("You are in Siebel 1314.  There are happy CS 126 students doing a code review.", game.printRoomDescriptionBasedOnDirection("go south"));
     }
 
-    //--------Tests printPossibleDirectionsBasedOnInputDirection method---------//
+    //--------Tests printPossibleDirectionsBasedOnInputDirection methodSTART---------//
+
+    @Test
+    public void testPrintPossibleDirectionsFromStartingRoom() {
+        game.currentRoom = "MatthewsStreet";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[0].getDirections();
+        assertEquals("East", game.printPossibleDirectionsBasedOnInput());
+    }
+
+    @Test
+    public void testPrintPossibleDirectionsFromRandomRoom() {
+        game.currentRoom = "AcmOffice";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[2].getDirections();
+        assertEquals("South", game.printPossibleDirectionsBasedOnInput());
+    }
+
+    @Test
+    public void testPrintPossibleDirectionsForMoreThanOneDirection() {
+        game.currentRoom = "SiebelEastHallway";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[5].getDirections();
+        assertEquals("West South Down", game.printPossibleDirectionsBasedOnInput());
+    }
 
 
 
@@ -186,11 +209,6 @@ public class AdventureTimeTest {
         assertEquals(true, game.indicateHavingReachedEnd("south"));
     }
 
-
-    @Test
-    public void returnTrueIfReachedEnd() {
-        //assertEquals("", rAndM.getName());
-    }
 
 
 
