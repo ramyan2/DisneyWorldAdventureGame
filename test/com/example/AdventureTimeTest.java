@@ -194,7 +194,8 @@ public class AdventureTimeTest {
         game.currentRoom = "MatthewsStreet";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[0].getDirections();
-        assertEquals("You are in the west entry of Siebel Center.  You can see the elevator, the ACM office, and hallways to the north and east.", game.printRoomDescriptionBasedOnDirection("go east"));
+        assertEquals("You are in the west entry of Siebel Center.  You can see the elevator, the ACM office, and hallways to the north and east.",
+                game.printRoomDescriptionBasedOnDirection("go east"));
     }
 
     @Test
