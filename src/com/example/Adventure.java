@@ -79,6 +79,10 @@ public class Adventure {
                 System.out.println(room.getDescription());
                 validInput = false;
             }
+        } else if (x[0].toLowerCase().equals(keyword)) {
+            System.out.println("I can't " + inputtedDirection);
+            System.out.println(room.getDescription());
+            validInput = false;
         } else {
             System.out.println("I don't understand " + "'" + inputtedDirection + "'");
             System.out.println(room.getDescription());
