@@ -56,7 +56,8 @@ public class Adventure {
      * @param inputtedDirection
      */
 
-    public void notAValidDirection(String inputtedDirection) {
+
+    public boolean checkIfInputIsAValidDirection(String inputtedDirection) {
         String keyword = "go";
         boolean tracker = false;
         String[] x = inputtedDirection.split(" ");
@@ -71,25 +72,30 @@ public class Adventure {
                 System.out.println("I don't understand " + "'" + inputtedDirection + "'");
                 System.out.println(room.getDescription());
                 validInput = false;
+                tracker = false;
             } else if (!tracker && x[0].toLowerCase().equals(keyword)) {
                 System.out.println("I can't " + inputtedDirection);
                 System.out.println(room.getDescription());
                 validInput = false;
+                tracker = false;
             } else if (!tracker && !x[0].toLowerCase().equals(keyword)) {
                 System.out.println("I don't understand " + "'" + inputtedDirection + "'");
                 System.out.println(room.getDescription());
                 validInput = false;
+                tracker = false;
             }
         } else if (x[0].toLowerCase().equals(keyword)) {
             System.out.println("I can't " + inputtedDirection);
             System.out.println(room.getDescription());
             validInput = false;
+            tracker = false;
         } else {
             System.out.println("I don't understand " + "'" + inputtedDirection + "'");
             System.out.println(room.getDescription());
             validInput = false;
+            tracker = false;
         }
-
+        return tracker;
     }
 
 
@@ -179,7 +185,7 @@ public class Adventure {
                 System.out.println("EXIT");
                 loop = false;
             } else {
-                game.notAValidDirection(direction);
+                game.checkIfInputIsAValidDirection(direction);
                 if (game.validInput) {
                     game.printRoomDescriptionBasedOnDirection(direction);
                 } else {

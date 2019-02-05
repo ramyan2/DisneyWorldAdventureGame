@@ -4,7 +4,7 @@
     <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/AdventureTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +29,12 @@
     <session id="-1912283878">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,14 +56,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11038" />
-          <entry key="txt" value="3194" />
+          <entry key="java" value="11942" />
+          <entry key="txt" value="3266" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11038" />
-          <entry key="PLAIN_TEXT" value="3194" />
+          <entry key="JAVA" value="11942" />
+          <entry key="PLAIN_TEXT" value="3266" />
         </counts>
       </usages-collector>
     </session>
@@ -73,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/example/Direction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
               <folding>
                 <element signature="e#145#146#0" expanded="true" />
                 <element signature="e#181#182#0" expanded="true" />
@@ -88,12 +89,8 @@
         <entry file="file://$PROJECT_DIR$/src/com/example/Room.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
               <folding>
-                <element signature="e#72#73#0" expanded="true" />
-                <element signature="e#99#100#0" expanded="true" />
-                <element signature="e#137#138#0" expanded="true" />
-                <element signature="e#171#172#0" expanded="true" />
                 <element signature="e#304#305#0" expanded="true" />
                 <element signature="e#337#338#0" expanded="true" />
               </folding>
@@ -104,18 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="210">
               <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-              <folding>
-                <element signature="e#80#81#0" expanded="true" />
-                <element signature="e#115#116#0" expanded="true" />
-                <element signature="e#152#153#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#245#246#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -123,8 +110,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="209">
+              <caret line="130" column="78" selection-start-line="130" selection-start-column="78" selection-end-line="130" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="181">
+              <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
+            <state relative-caret-position="1515">
               <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
             </state>
           </provider>
@@ -186,6 +173,7 @@
       <find>currentD</find>
       <find>currentDirection</find>
       <find>setCUr</find>
+      <find>validDirection</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -274,7 +262,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549347156951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549350481460" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -308,8 +296,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdventureTimeTest.returnsStartingRoomPossibleDirections">
-    <configuration name="AdventureTimeTest.returnsAnotherRoomDescription" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AdventureTimeTest.testRightOutputWhenUserInputsNothing">
+    <configuration name="AdventureTimeTest.testRightOutputWhenUserInputsNothing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -319,13 +307,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="returnsAnotherRoomDescription" />
+      <option name="METHOD_NAME" value="testRightOutputWhenUserInputsNothing" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.returnsAnotherRoomName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testRightOutputWhenUserInputsOnlyARandomString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -335,13 +323,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="returnsAnotherRoomName" />
+      <option name="METHOD_NAME" value="testRightOutputWhenUserInputsOnlyARandomString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.returnsEndingRoomDescription" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testRightOutputWhenUserInputsRandomCharacters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -351,13 +339,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="returnsEndingRoomDescription" />
+      <option name="METHOD_NAME" value="testRightOutputWhenUserInputsRandomCharacters" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.returnsEndingRoomName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testWhenUserInputsGoThenRandomString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -367,13 +355,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="returnsEndingRoomName" />
+      <option name="METHOD_NAME" value="testWhenUserInputsGoThenRandomString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.returnsStartingRoomPossibleDirections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testWhenUserInputsWrongString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -383,26 +371,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="returnsStartingRoomPossibleDirections" />
+      <option name="METHOD_NAME" value="testWhenUserInputsWrongString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AdventureTimeTest.returnsAnotherRoomName" />
-      <item itemvalue="JUnit.AdventureTimeTest.returnsAnotherRoomDescription" />
-      <item itemvalue="JUnit.AdventureTimeTest.returnsEndingRoomName" />
-      <item itemvalue="JUnit.AdventureTimeTest.returnsEndingRoomDescription" />
-      <item itemvalue="JUnit.AdventureTimeTest.returnsStartingRoomPossibleDirections" />
+      <item itemvalue="JUnit.AdventureTimeTest.testWhenUserInputsWrongString" />
+      <item itemvalue="JUnit.AdventureTimeTest.testWhenUserInputsGoThenRandomString" />
+      <item itemvalue="JUnit.AdventureTimeTest.testRightOutputWhenUserInputsOnlyARandomString" />
+      <item itemvalue="JUnit.AdventureTimeTest.testRightOutputWhenUserInputsRandomCharacters" />
+      <item itemvalue="JUnit.AdventureTimeTest.testRightOutputWhenUserInputsNothing" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdventureTimeTest.returnsStartingRoomPossibleDirections" />
-        <item itemvalue="JUnit.AdventureTimeTest.returnsEndingRoomDescription" />
-        <item itemvalue="JUnit.AdventureTimeTest.returnsEndingRoomName" />
-        <item itemvalue="JUnit.AdventureTimeTest.returnsAnotherRoomDescription" />
-        <item itemvalue="JUnit.AdventureTimeTest.returnsAnotherRoomName" />
+        <item itemvalue="JUnit.AdventureTimeTest.testRightOutputWhenUserInputsNothing" />
+        <item itemvalue="JUnit.AdventureTimeTest.testRightOutputWhenUserInputsRandomCharacters" />
+        <item itemvalue="JUnit.AdventureTimeTest.testRightOutputWhenUserInputsOnlyARandomString" />
+        <item itemvalue="JUnit.AdventureTimeTest.testWhenUserInputsGoThenRandomString" />
+        <item itemvalue="JUnit.AdventureTimeTest.testWhenUserInputsWrongString" />
       </list>
     </recent_temporary>
   </component>
@@ -543,39 +531,46 @@
       <option name="project" value="LOCAL" />
       <updated>1549337760485</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Wrote test cases for the method setCurrentRoomObject in adventures class">
+      <created>1549347185372</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1549347185372</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AdventureTimeTest_returnEndingRoomName - 2019.02.04 at 23h 58m 15s.xml">
-      <configuration name="AdventureTimeTest.returnEndingRoomName" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenEndingInputDoesNotMatchAnyPossibleDirections - 2019.02.05 at 00h 58m 46s.xml">
+      <configuration name="AdventureTimeTest.testWhenEndingInputDoesNotMatchAnyPossibleDirections" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsCurrentRoom - 2019.02.05 at 00h 01m 23s.xml">
-      <configuration name="AdventureTimeTest.returnsCurrentRoom" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenEndingInputDoesNotMatchAnyPossibleDirections - 2019.02.05 at 00h 58m 51s.xml">
+      <configuration name="AdventureTimeTest.testWhenEndingInputDoesNotMatchAnyPossibleDirections" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsCurrentRoomDescription - 2019.02.05 at 00h 04m 01s.xml">
-      <configuration name="AdventureTimeTest.returnsCurrentRoomDescription" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenEndingInput2DoesNotMatchAnyPossibleDirections - 2019.02.05 at 01h 00m 14s.xml">
+      <configuration name="AdventureTimeTest.testWhenEndingInput2DoesNotMatchAnyPossibleDirections" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsCurrentRoomDescription - 2019.02.05 at 00h 04m 07s.xml">
-      <configuration name="AdventureTimeTest.returnsCurrentRoomDescription" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenUserInputsIsInvalid - 2019.02.05 at 01h 00m 59s.xml">
+      <configuration name="AdventureTimeTest.testWhenUserInputsIsInvalid" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsAnotherRoomName - 2019.02.05 at 00h 05m 10s.xml">
-      <configuration name="AdventureTimeTest.returnsAnotherRoomName" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenUserInputsWrongString - 2019.02.05 at 01h 01m 30s.xml">
+      <configuration name="AdventureTimeTest.testWhenUserInputsWrongString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsAnotherRoomDescription - 2019.02.05 at 00h 05m 44s.xml">
-      <configuration name="AdventureTimeTest.returnsAnotherRoomDescription" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenUserInputsWrongString - 2019.02.05 at 01h 01m 38s.xml">
+      <configuration name="AdventureTimeTest.testWhenUserInputsWrongString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsAnotherRoomDescription - 2019.02.05 at 00h 05m 51s.xml">
-      <configuration name="AdventureTimeTest.returnsAnotherRoomDescription" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenUserInputsWrongString - 2019.02.05 at 01h 02m 26s.xml">
+      <configuration name="AdventureTimeTest.testWhenUserInputsWrongString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsEndingRoomName - 2019.02.05 at 00h 06m 51s.xml">
-      <configuration name="AdventureTimeTest.returnsEndingRoomName" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testWhenUserInputsGoThenRandomString - 2019.02.05 at 01h 03m 55s.xml">
+      <configuration name="AdventureTimeTest.testWhenUserInputsGoThenRandomString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsEndingRoomDescription - 2019.02.05 at 00h 06m 54s.xml">
-      <configuration name="AdventureTimeTest.returnsEndingRoomDescription" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testRightOutputWhenUserInputsOnlyARandomString - 2019.02.05 at 01h 06m 05s.xml">
+      <configuration name="AdventureTimeTest.testRightOutputWhenUserInputsOnlyARandomString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdventureTimeTest_returnsStartingRoomPossibleDirections - 2019.02.05 at 00h 08m 48s.xml">
-      <configuration name="AdventureTimeTest.returnsStartingRoomPossibleDirections" configurationId="JUnit" />
+    <history-entry file="AdventureTimeTest_testRightOutputWhenUserInputsRandomCharacters - 2019.02.05 at 01h 06m 57s.xml">
+      <configuration name="AdventureTimeTest.testRightOutputWhenUserInputsRandomCharacters" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -633,7 +628,8 @@
     <MESSAGE value="Added the main method to print out &quot;You have reached the final destination&quot; when the user reaches the ending room" />
     <MESSAGE value="If the user inputted only one word direction such as &quot;east&quot; it should print it does not understand what that is and allow them to retype a valid input." />
     <MESSAGE value="Fixed invalid inputs method to check if the user inputted a direction that didn't match any of the other directions possible then it printed the CORRECT output which is &quot;I cant go 'some direction'&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed invalid inputs method to check if the user inputted a direction that didn't match any of the other directions possible then it printed the CORRECT output which is &quot;I cant go 'some direction'&quot;" />
+    <MESSAGE value="Wrote test cases for the method setCurrentRoomObject in adventures class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote test cases for the method setCurrentRoomObject in adventures class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -650,24 +646,18 @@
     <entry file="file://$PROJECT_DIR$/test/AdventureTest.java" />
     <entry file="file://$PROJECT_DIR$/test/AdventureTimeTestTest.java" />
     <entry file="file://$PROJECT_DIR$/test/AdventureTime.java" />
-    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
+    <entry file="file://$PROJECT_DIR$/src/com/example/Input.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/example/Output.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/example/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Output.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -681,65 +671,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Direction.java">
+    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#145#146#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <element signature="e#80#81#0" expanded="true" />
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#152#153#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1515">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
           <folding>
-            <element signature="e#72#73#0" expanded="true" />
-            <element signature="e#99#100#0" expanded="true" />
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#171#172#0" expanded="true" />
             <element signature="e#304#305#0" expanded="true" />
             <element signature="e#337#338#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="209">
+          <caret line="130" column="78" selection-start-line="130" selection-start-column="78" selection-end-line="130" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
