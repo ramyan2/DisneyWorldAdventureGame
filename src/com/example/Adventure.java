@@ -2,17 +2,16 @@ package com.example;
 
 import com.google.gson.Gson;
 
-import java.util.ArrayList;
+import java.net.URL;
 
-import java.util.Arrays;
 import java.util.Scanner;
+import java.io.InputStreamReader;
 
 
 public class Adventure {
     public String currentRoom;
     public Layout parsedJson;
     public Room[] arrayRooms;
-    public ArrayList<Room> roomsList;
     public String startRoom;
     public String endRoom;
     public static Adventure game = new Adventure();
@@ -24,15 +23,20 @@ public class Adventure {
     public boolean validInput = true;
 
 
-    private static final String readJson = Data.getFileContentsAsString("AdventuresJSON");
+    String url = "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
 
-
-    public Layout parsingJson() {
+    public Layout parsingJson() throws Exception {
         Gson gson = new Gson();
-        parsedJson = gson.fromJson(readJson, Layout.class);
+        try {
+            URL obj = new URL(url);
+            InputStreamReader reader = new InputStreamReader(obj.openStream());
+            parsedJson = gson.fromJson(reader, Layout.class);
+
+        } catch(Exception e) {
+            System.out.println("bad url");
+        }
         arrayRooms = parsedJson.getRooms();
         endRoom = parsedJson.getEndingRoom();
-        roomsList = new ArrayList<>(Arrays.asList(arrayRooms));
 
         return parsedJson;
     }
@@ -61,10 +65,14 @@ public class Adventure {
     /**
      * if the user inputs an invalid direction then it prints it cannot go that direction or it does not understand that input
      * @param inputtedDirection
+     * @return tracker which indicates if the input is valid (true) or not valid(false)
      */
 
 
     public boolean checkIfInputIsAValidDirection(String inputtedDirection) {
+        if (inputtedDirection == null) {
+            return false;
+        }
         String keyword = "go";
         boolean tracker = false;
         String[] x = inputtedDirection.split(" ");
@@ -110,11 +118,15 @@ public class Adventure {
 
 
     /**
-     * prints the room description based on the direction inputted by the user
+     * prints the room description based on the direction inputted by the user and returns a string of this description
      * @param inputtedDirection
+     * @return description of currem room object
      */
 
     public String printRoomDescriptionBasedOnDirection(String inputtedDirection) {
+        if (inputtedDirection == null) {
+            return null;
+        }
         String[] x = inputtedDirection.split(" ");
         String actualDirection = x[1].toLowerCase();
         for (int i = 0; i < directions.length; i++) {
@@ -132,7 +144,8 @@ public class Adventure {
 
 
     /**
-     * prints the directions you can possibly go from the room based on the input
+     * prints the directions you can possibly go from the room based on the input and returns a string of these directions
+     * @return string of possible directions
      */
     public String printPossibleDirectionsBasedOnInput() {
         setCurrentRoomObject();
@@ -157,7 +170,7 @@ public class Adventure {
         game.setCurrentRoomObject();
 
         System.out.println("Your journey begins here.");
-        System.out.println(roomsList.get(0).getDescription());
+        System.out.println(arrayRooms[0].getDescription());
 
         printPossibleDirectionsBasedOnInput();
     }
@@ -188,8 +201,32 @@ public class Adventure {
     }
 
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws Exception {
+        boolean firstLoop = true;
+        while (firstLoop) {
+            Scanner scanner1 = new Scanner(System.in);
+            System.out.println("Do you want to change your JSON file to a new URL? (type yes or no)");
+            String answer = scanner1.nextLine();
+            if (answer.toLowerCase().equals("yes")) {
+                Scanner scanner2 = new Scanner(System.in);
+                System.out.println("Enter url");
+                String urlInput = scanner2.nextLine();
+                game.url = urlInput;
+                game.parsingJson();
+                // check if rooms are null and if they are its not a game world
+                if (game.startRoom == null || game.endRoom == null) {
+                    System.out.println("This is not a valid adventure: ");
+                    firstLoop = true;
+                }
+            } else if (answer.toLowerCase().equals("no")) {
+                firstLoop = false;
+            } else {
+                throw new IllegalArgumentException();
+            }
+        }
+
         boolean loop = true;
+        game.url =  "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
         game.parsingJson();
         game.startGame();
         while (loop) {

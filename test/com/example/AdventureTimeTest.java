@@ -8,13 +8,11 @@ public class AdventureTimeTest {
 
     private Adventure game = new Adventure();
     private Layout parsedJSon;
-    private Room[] roomsList;
 
 
     @Before
-    public void setUpGame() {
+    public void setUpGame() throws Exception {
         parsedJSon = game.parsingJson();
-        roomsList = parsedJSon.getRooms();
     }
 
     //------tests setCurrentRoomObject method------//
@@ -67,7 +65,6 @@ public class AdventureTimeTest {
         assertEquals(false,game.checkIfInputIsAValidDirection("go north"));
     }
 
-
     @Test
     public void testWhenRandomInputDoesNotMatchAnyPossibleDirections() {
         game.currentRoom = "AcmOffice";
@@ -94,6 +91,8 @@ public class AdventureTimeTest {
         game.room = game.arrayRooms[1];
         assertEquals(false,game.checkIfInputIsAValidDirection("south"));
     }
+
+
     @Test
     public void testWhenUserInputsWrongDirectionString() {
         game.currentRoom = "MatthewsStreet";
