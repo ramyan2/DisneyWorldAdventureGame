@@ -59,25 +59,32 @@ public class Adventure {
         String keyword = "go";
         boolean tracker = false;
         String[] x = inputtedDirection.split(" ");
-        String actualDirection = x[1].toLowerCase();
-        for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
-                tracker = true;
+        if (x.length == 2) {
+            String actualDirection = x[1].toLowerCase();
+            for (int i = 0; i < directions.length; i++) {
+                if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
+                    tracker = true;
+                }
             }
-        }
-        if (tracker && !x[0].toLowerCase().equals(keyword)) {
+            if (tracker && !x[0].toLowerCase().equals(keyword)) {
+                System.out.println("I don't understand " + "'" + inputtedDirection + "'");
+                System.out.println(room.getDescription());
+                validInput = false;
+            } else if (tracker == false && x[0].toLowerCase().equals(keyword)) {
+                System.out.println("I can't " + inputtedDirection);
+                System.out.println(room.getDescription());
+                validInput = false;
+            } else if (tracker == false && !x[0].toLowerCase().equals(keyword)) {
+                System.out.println("I don't understand " + "'" + inputtedDirection + "'");
+                System.out.println(room.getDescription());
+                validInput = false;
+            }
+        } else {
             System.out.println("I don't understand " + "'" + inputtedDirection + "'");
             System.out.println(room.getDescription());
             validInput = false;
-        } else if (tracker == false && x[0].toLowerCase().equals(keyword)) {
-            System.out.println("I can't " + inputtedDirection);
-            System.out.println(room.getDescription());
-            validInput = false;
-        } else if (tracker == false && !x[0].toLowerCase().equals(keyword)) {
-            System.out.println("I don't understand " + "'" + inputtedDirection + "'");
-            System.out.println(room.getDescription());
-            validInput = false;
         }
+
     }
 
 
@@ -100,7 +107,6 @@ public class Adventure {
                 break;
             }
         }
-
     }
 
 
@@ -128,7 +134,6 @@ public class Adventure {
         System.out.println(roomsList.get(0).getDescription());
 
         printRoomDirectionsBasedOnInput();
-
     }
 
     /**
@@ -138,15 +143,17 @@ public class Adventure {
      */
     public boolean indicateHavingReachedEnd(String inputtedDirection) {
         String[] x = inputtedDirection.split(" ");
-        String actualDirection = x[1].toLowerCase();
-        for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
-                currentDirection = directions[i];
-                currentRoom = currentDirection.getRoom();
+        if (x.length == 2) {
+            String actualDirection = x[1].toLowerCase();
+            for (int i = 0; i < directions.length; i++) {
+                if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
+                    currentDirection = directions[i];
+                    currentRoom = currentDirection.getRoom();
+                }
             }
-        }
-        if (currentRoom.equals(endRoom)) {
-            return true;
+            if (currentRoom.equals(endRoom)) {
+                return true;
+            }
         }
         return false;
     }
@@ -171,10 +178,10 @@ public class Adventure {
                 game.notAValidDirection(direction);
                 if (game.validInput) {
                     game.printRoomDescriptionBasedOnDirection(direction);
+                } else {
+                    game.validInput = true;
                 }
             }
         }
     }
-
-
 }
