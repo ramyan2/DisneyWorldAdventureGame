@@ -51,6 +51,13 @@ public class Adventure {
         return room;
     }
 
+    public String checkIfNull(String inputtedDirection) {
+        if (inputtedDirection == null) {
+            return null;
+        }
+        return inputtedDirection;
+    }
+
     /**
      * if the user inputs an invalid direction then it prints it cannot go that direction or it does not understand that input
      * @param inputtedDirection
@@ -99,12 +106,14 @@ public class Adventure {
     }
 
 
+
+
     /**
      * prints the room description based on the direction inputted by the user
      * @param inputtedDirection
      */
 
-    public void printRoomDescriptionBasedOnDirection(String inputtedDirection) {
+    public String printRoomDescriptionBasedOnDirection(String inputtedDirection) {
         String[] x = inputtedDirection.split(" ");
         String actualDirection = x[1].toLowerCase();
         for (int i = 0; i < directions.length; i++) {
@@ -113,17 +122,18 @@ public class Adventure {
                 currentRoom = currentDirection.getRoom();
 
                 System.out.println(setCurrentRoomObject().getDescription());
-                printRoomDirectionsBasedOnInput();
+                printPossibleDirectionsBasedOnInput();
                 break;
             }
         }
+        return setCurrentRoomObject().getDescription();
     }
 
 
     /**
      * prints the directions you can possibly go from the room based on the input
      */
-    public void printRoomDirectionsBasedOnInput() {
+    public void printPossibleDirectionsBasedOnInput() {
         setCurrentRoomObject();
         System.out.println("From here you can go: ");
         for (int i = 0; i < directions.length; i++) {
@@ -143,7 +153,7 @@ public class Adventure {
         System.out.println("Your journey begins here.");
         System.out.println(roomsList.get(0).getDescription());
 
-        printRoomDirectionsBasedOnInput();
+        printPossibleDirectionsBasedOnInput();
     }
 
     /**
@@ -185,11 +195,13 @@ public class Adventure {
                 System.out.println("EXIT");
                 loop = false;
             } else {
-                game.checkIfInputIsAValidDirection(direction);
-                if (game.validInput) {
-                    game.printRoomDescriptionBasedOnDirection(direction);
-                } else {
-                    game.validInput = true;
+                if (game.checkIfNull(direction) != null) {
+                    game.checkIfInputIsAValidDirection(direction);
+                    if (game.validInput) {
+                        game.printRoomDescriptionBasedOnDirection(direction);
+                    } else {
+                        game.validInput = true;
+                    }
                 }
             }
         }

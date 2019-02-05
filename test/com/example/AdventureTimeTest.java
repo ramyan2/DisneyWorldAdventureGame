@@ -18,6 +18,7 @@ public class AdventureTimeTest {
         roomsList = parsedJSon.getRooms();
     }
 
+    //------tests setCurrentRoomObject method------//
 
     @Test
     public void returnsStartingRoomName() {
@@ -133,12 +134,37 @@ public class AdventureTimeTest {
 
     @Test
     public void returnRightOutputWhenUserInputIsNull() {
-        game.currentRoom = "SiebelBasement";
-        game.endRoom = "Siebel1314";
-        game.directions = game.arrayRooms[7].getDirections();
-        game.room = game.arrayRooms[7];
-        assertEquals(false,game.checkIfInputIsAValidDirection(""));
+        assertEquals(null,game.checkIfNull(null));
     }
+
+//--------Tests printRoomDescriptionBasedOnDirection method---------//
+    @Test
+    public void testPrintNextRoomDescriptionMethodForStartingRoom() {
+        game.currentRoom = "MatthewsStreet";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[0].getDirections();
+        assertEquals("You are in the west entry of Siebel Center.  You can see the elevator, the ACM office, and hallways to the north and east.", game.printRoomDescriptionBasedOnDirection("go east"));
+    }
+
+    @Test
+    public void testPrintNextRoomDescriptionMethodForRandomRoom() {
+        game.currentRoom = "SiebelEntry";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[1].getDirections();
+        assertEquals("You are in the ACM office.  There are lots of friendly ACM people.", game.printRoomDescriptionBasedOnDirection("go northeast"));
+    }
+
+    @Test
+    public void testPrintNextRoomDescriptionMethodForLastRoom() {
+        game.currentRoom = "SiebelEastHallway";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[5].getDirections();
+        assertEquals("You are in Siebel 1314.  There are happy CS 126 students doing a code review.", game.printRoomDescriptionBasedOnDirection("go south"));
+    }
+
+    //--------Tests printPossibleDirectionsBasedOnInputDirection method---------//
+
+
 
 
 
