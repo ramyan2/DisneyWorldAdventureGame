@@ -68,6 +68,7 @@ public class Adventure {
         String keyword = "go";
         boolean tracker = false;
         String[] x = inputtedDirection.split(" ");
+
         if (x.length == 2) {
             String actualDirection = x[1].toLowerCase();
             for (int i = 0; i < directions.length; i++) {
@@ -135,15 +136,13 @@ public class Adventure {
      */
     public String printPossibleDirectionsBasedOnInput() {
         setCurrentRoomObject();
-        String[] returnArray = new String[directions.length];
         String toReturn = "";
         System.out.println("From here you can go: ");
         for (int i = 0; i < directions.length; i++) {
             System.out.println(directions[i].getDirectionName());
-            returnArray[i] = directions[i].getDirectionName();
         }
-        for (int j = 0; j < returnArray.length; j++) {
-            toReturn += returnArray[j] + " ";
+        for (int j = 0; j < directions.length; j++) {
+            toReturn += directions[j].getDirectionName() + " ";
         }
         return toReturn.trim();
     }
@@ -169,6 +168,9 @@ public class Adventure {
      * @return true if it does not take you to the ending room so the game can continue or false if it does take you to the ending room so it can end the game
      */
     public boolean indicateHavingReachedEnd(String inputtedDirection) {
+        if (inputtedDirection == null) {
+            return false;
+        }
         String[] x = inputtedDirection.split(" ");
         if (x.length == 2) {
             String actualDirection = x[1].toLowerCase();
@@ -178,9 +180,9 @@ public class Adventure {
                     currentRoom = currentDirection.getRoom();
                 }
             }
-            if (currentRoom.equals(endRoom)) {
-                return true;
-            }
+        }
+        if (currentRoom.equals(endRoom)) {
+            return true;
         }
         return false;
     }

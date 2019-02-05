@@ -187,33 +187,38 @@ public class AdventureTimeTest {
         assertEquals("West South Down", game.printPossibleDirectionsBasedOnInput());
     }
 
-
-
-
-
+    //------Test Cases for indicateHavingReachedEnd method-------//
 
     @Test
-    public void indicateNotHavingReachedEndTest() {
-        game.currentRoom = "MatthewsStreet";
+    public void testHavingReachedEndTrue() {
         game.endRoom = "Siebel1314";
-     //   game.directions = game.arrayRooms[roomsList.length - 1].getDirections();
-        assertEquals(false, game.indicateHavingReachedEnd("east"));
+        game.directions = game.arrayRooms[5].getDirections();
+        game.currentDirection = game.directions[1];
+        game.currentRoom = game.currentDirection.getRoom();
+        System.out.println(game.currentRoom);
+        assertEquals(true, game.indicateHavingReachedEnd("South"));
+
     }
 
     @Test
-    public void indicateHavingReachedEndTest() {
-        game.currentRoom = "SiebelNorthHallway";
+    public void testHavingReachedEndFalse() {
+        game.currentRoom = "SiebelEastHallway";
         game.endRoom = "Siebel1314";
-        game.directions = game.arrayRooms[roomsList.length - 1].getDirections();
+        game.directions = game.arrayRooms[5].getDirections();
+        game.currentDirection = game.directions[0];
 
-        assertEquals(true, game.indicateHavingReachedEnd("south"));
+        assertEquals(false, game.indicateHavingReachedEnd("west"));
     }
 
+    @Test
+    public void testHavingReachedEndMethodForNullCase() {
+        game.currentRoom = "SiebelEastHallway";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[5].getDirections();
+        game.currentDirection = game.directions[0];
 
-
-
-
-
+        assertEquals(false, game.indicateHavingReachedEnd(null));
+    }
 
 
 
