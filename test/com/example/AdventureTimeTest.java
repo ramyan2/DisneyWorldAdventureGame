@@ -29,7 +29,6 @@ public class AdventureTimeTest {
         assertEquals("You are on Matthews, outside the Siebel Center", game.setCurrentRoomObject().getDescription());
     }
 
-
     @Test
     public void returnsAnotherRoomName() {
         game.currentRoom = "AcmOffice";
@@ -54,7 +53,7 @@ public class AdventureTimeTest {
         assertEquals("You are in Siebel 1314.  There are happy CS 126 students doing a code review.",game.setCurrentRoomObject().getDescription());
     }
 
-//------Checks Invalid Inputs and Null Cases-------//
+//------Checks Invalid Inputs-------//
 
     @Test
     public void testWhenStartingInputDoesNotMatchAnyPossibleDirections() {
@@ -62,7 +61,7 @@ public class AdventureTimeTest {
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[0].getDirections();
         game.room = game.arrayRooms[0];
-        assertEquals(false,game.checkIfInputIsAValidDirection("go north"));
+        assertEquals(false,game.checkIfInputIsAValidDirection("Go noRth"));
     }
 
     @Test
@@ -80,18 +79,17 @@ public class AdventureTimeTest {
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[7].getDirections();
         game.room = game.arrayRooms[7];
-        assertEquals(false,game.checkIfInputIsAValidDirection("go down"));
+        assertEquals(false,game.checkIfInputIsAValidDirection("go DOWN"));
     }
 
     @Test
-    public void testInvalidInputMethodWhenUserTypesOnlyDirectionName() {
+    public void testInvalidInputMethodWhenUserTypesOnlyTheDirectionName() {
         game.currentRoom = "SiebelEntry";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[5].getDirections();
         game.room = game.arrayRooms[1];
         assertEquals(false,game.checkIfInputIsAValidDirection("south"));
     }
-
 
     @Test
     public void testWhenUserInputsWrongDirectionString() {
@@ -103,7 +101,7 @@ public class AdventureTimeTest {
     }
 
     @Test
-    public void testRightOutputWhenUserInputsGoThenRandomString() {
+    public void testWhenUserInputsGoThenRandomString() {
         game.currentRoom = "SiebelEntry";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[1].getDirections();
@@ -112,7 +110,7 @@ public class AdventureTimeTest {
     }
 
     @Test
-    public void testRightOutputWhenUserInputsOnlyARandomString() {
+    public void testWhenUserInputsOnlyARandomString() {
         game.currentRoom = "SiebelNorthHallway";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[3].getDirections();
@@ -121,7 +119,7 @@ public class AdventureTimeTest {
     }
 
     @Test
-    public void testRightOutputWhenUserInputsRandomCharacters() {
+    public void testWhenUserInputsRandomCharacters() {
         game.currentRoom = "SiebelEntry";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[1].getDirections();
@@ -130,7 +128,7 @@ public class AdventureTimeTest {
     }
 
     @Test
-    public void testRightOutputWhenUserInputsNothing() {
+    public void testWhenUserInputsNothing() {
         game.currentRoom = "SiebelBasement";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[7].getDirections();
@@ -138,11 +136,29 @@ public class AdventureTimeTest {
         assertEquals(false,game.checkIfInputIsAValidDirection(""));
     }
 
+    //------Test null cases------//
+
     @Test
     public void returnRightOutputWhenUserInputIsNull() {
         assertEquals(null,game.checkIfNull(null));
     }
 
+    @Test
+    public void testWhenInputIsNull() {
+        assertEquals(false,game.checkIfInputIsAValidDirection(null));
+    }
+
+    @Test
+    public void testWhenInputIsNullForPrintDescriptionMethod() {
+        assertEquals(null,game.printRoomDescriptionBasedOnDirection(null));
+    }
+
+    @Test
+    public void testWhenInputIsNullForHavingReachedEndMethod() {
+        assertEquals(false,game.indicateHavingReachedEnd(null));
+    }
+
+    //-----Test InvalidInputMethod for valid cases------//
 
     @Test
     public void testInvalidInputMethodWhenUserTypesInValidInput() {
@@ -150,9 +166,29 @@ public class AdventureTimeTest {
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[5].getDirections();
         game.room = game.arrayRooms[1];
-        assertEquals(true,game.checkIfInputIsAValidDirection("go south"));
+        assertEquals(true,game.checkIfInputIsAValidDirection("go sOUth"));
     }
+
+    @Test
+    public void testInvalidInputMethodWhenUserTypesInValidInput2() {
+        game.currentRoom = "MatthewsStreet";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[0].getDirections();
+        game.room = game.arrayRooms[0];
+        assertEquals(true,game.checkIfInputIsAValidDirection("GO east"));
+    }
+
+    @Test
+    public void testInvalidInputMethodWhenUserTypesInValidInput3() {
+        game.currentRoom = "SiebelNorthHallway";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[3].getDirections();
+        game.room = game.arrayRooms[1];
+        assertEquals(true,game.checkIfInputIsAValidDirection("go nORthEAst"));
+    }
+
 //--------Tests printRoomDescriptionBasedOnDirection method---------//
+
     @Test
     public void testPrintNextRoomDescriptionMethodForStartingRoom() {
         game.currentRoom = "MatthewsStreet";
@@ -177,7 +213,7 @@ public class AdventureTimeTest {
         assertEquals("You are in Siebel 1314.  There are happy CS 126 students doing a code review.", game.printRoomDescriptionBasedOnDirection("go south"));
     }
 
-    //--------Tests printPossibleDirectionsBasedOnInputDirection methodSTART---------//
+    //--------Tests printPossibleDirectionsBasedOnInputDirection method---------//
 
     @Test
     public void testPrintPossibleDirectionsFromStartingRoom() {
@@ -196,7 +232,7 @@ public class AdventureTimeTest {
     }
 
     @Test
-    public void testPrintPossibleDirectionsForMoreThanOneDirection() {
+    public void testPrintPossibleDirectionsForMoreThanOneOutputtedDirection() {
         game.currentRoom = "SiebelEastHallway";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[5].getDirections();
@@ -206,34 +242,21 @@ public class AdventureTimeTest {
     //------Test Cases for indicateHavingReachedEnd method-------//
 
     @Test
-    public void testHavingReachedEndTrue() {
+    public void testWhenReachedEnd() {
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[5].getDirections();
         game.currentDirection = game.directions[1];
         game.currentRoom = game.currentDirection.getRoom();
         System.out.println(game.currentRoom);
-        assertEquals(true, game.indicateHavingReachedEnd("South"));
-
+        assertEquals(true, game.indicateHavingReachedEnd("SoUTh"));
     }
 
     @Test
-    public void testHavingReachedEndFalse() {
+    public void testWhenNotReachedEnd() {
         game.currentRoom = "SiebelEastHallway";
         game.endRoom = "Siebel1314";
         game.directions = game.arrayRooms[5].getDirections();
         game.currentDirection = game.directions[0];
-        assertEquals(false, game.indicateHavingReachedEnd("west"));
+        assertEquals(false, game.indicateHavingReachedEnd("WEST"));
     }
-
-    @Test
-    public void testHavingReachedEndMethodForNullCase() {
-        game.currentRoom = "SiebelEastHallway";
-        game.endRoom = "Siebel1314";
-        game.directions = game.arrayRooms[5].getDirections();
-        game.currentDirection = game.directions[0];
-        assertEquals(false, game.indicateHavingReachedEnd(null));
-    }
-
-
-
 }

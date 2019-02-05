@@ -18,10 +18,4 @@ public class Layout {
         return rooms;
     }
 
-    //public
-
-    public int countRoom() {
-        return rooms.length;
-    }
-
 }

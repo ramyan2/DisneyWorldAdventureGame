@@ -1,9 +1,7 @@
 package com.example;
 
 import com.google.gson.Gson;
-
 import java.net.URL;
-
 import java.util.Scanner;
 import java.io.InputStreamReader;
 
@@ -25,6 +23,11 @@ public class Adventure {
 
     String url = "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
 
+    /**
+     * parses the json file from the url
+     * @return the parsed json
+     * @throws Exception
+     */
     public Layout parsingJson() throws Exception {
         Gson gson = new Gson();
         try {
@@ -43,8 +46,8 @@ public class Adventure {
 
     /**
      * goes through the array of rooms in my json until it finds the current room and sets it to a Room object and sets the possible directions you can go from this room to a directions array
+     * @return room the current room
      */
-
     public Room setCurrentRoomObject() {
         for (int i = 0; i < arrayRooms.length; i++) {
             if (arrayRooms[i].getName().equals(currentRoom)) {
@@ -55,6 +58,11 @@ public class Adventure {
         return room;
     }
 
+    /**
+     * checks if the inputted direction is null
+     * @param inputtedDirection
+     * @return
+     */
     public String checkIfNull(String inputtedDirection) {
         if (inputtedDirection == null) {
             return null;
@@ -67,8 +75,6 @@ public class Adventure {
      * @param inputtedDirection
      * @return tracker which indicates if the input is valid (true) or not valid(false)
      */
-
-
     public boolean checkIfInputIsAValidDirection(String inputtedDirection) {
         if (inputtedDirection == null) {
             return false;
@@ -114,15 +120,11 @@ public class Adventure {
         return tracker;
     }
 
-
-
-
     /**
      * prints the room description based on the direction inputted by the user and returns a string of this description
      * @param inputtedDirection
      * @return description of currem room object
      */
-
     public String printRoomDescriptionBasedOnDirection(String inputtedDirection) {
         if (inputtedDirection == null) {
             return null;
@@ -142,7 +144,6 @@ public class Adventure {
         return setCurrentRoomObject().getDescription();
     }
 
-
     /**
      * prints the directions you can possibly go from the room based on the input and returns a string of these directions
      * @return string of possible directions
@@ -159,7 +160,6 @@ public class Adventure {
         }
         return toReturn.trim();
     }
-
 
     /**
      * starts the game by setting the current room to the starting room and prints this room's description and directions you can go from this room
@@ -199,7 +199,6 @@ public class Adventure {
         }
         return false;
     }
-
 
     public static void main (String[] args) throws Exception {
         boolean firstLoop = true;
