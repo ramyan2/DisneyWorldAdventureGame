@@ -6,14 +6,26 @@ public class Layout {
     public String endingRoom;
     public Room[] rooms;
 
+    /**
+     * gets starting room
+     * @return startingroom
+     */
     public String getStartingRoom() {
         return startingRoom;
     }
 
+    /**
+     * gets ending room
+     * @return endingroom
+     */
     public String getEndingRoom() {
         return endingRoom;
     }
 
+    /**
+     * gets array of rooms
+     * @return rooms
+     */
     public Room[] getRooms() {
         return rooms;
     }

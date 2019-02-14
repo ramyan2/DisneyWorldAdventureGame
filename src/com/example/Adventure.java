@@ -7,17 +7,29 @@ import java.io.InputStreamReader;
 
 
 public class Adventure {
+
     public String currentRoom;
+
     public Layout parsedJson;
+
     public Room[] arrayRooms;
+
     public String startRoom;
+
     public String endRoom;
+
     public static Adventure game = new Adventure();
+
     public Direction[] directions;
+
     public Direction currentDirection;
+
     public static String quitWord = "QUIT";
+
     public static String exitWord = "EXIT";
+
     public Room room;
+
     public boolean validInput = true;
 
 
@@ -39,13 +51,16 @@ public class Adventure {
             System.out.println("bad url");
         }
         arrayRooms = parsedJson.getRooms();
+        startRoom = parsedJson.getStartingRoom();
         endRoom = parsedJson.getEndingRoom();
 
         return parsedJson;
     }
 
+
     /**
-     * goes through the array of rooms in my json until it finds the current room and sets it to a Room object and sets the possible directions you can go from this room to a directions array
+     * goes through the array of rooms in my json until it finds the current room
+     * and sets it to a Room object and sets the possible directions you can go from this room to a directions array
      * @return room the current room
      */
     public Room setCurrentRoomObject() {
@@ -57,6 +72,7 @@ public class Adventure {
         }
         return room;
     }
+
 
     /**
      * checks if the inputted direction is null
@@ -70,8 +86,33 @@ public class Adventure {
         return inputtedDirection;
     }
 
+
     /**
-     * if the user inputs an invalid direction then it prints it cannot go that direction or it does not understand that input
+     * helper method for checkIfInputIsAValidDirection that declares if the input is valid
+     * @param tracker
+     * @param equalsKeyWordIndicator
+     * @param input
+     * @return
+     */
+    public boolean declareInputIsValid(boolean tracker, boolean equalsKeyWordIndicator, String input) {
+        if ((tracker && !equalsKeyWordIndicator) || (!tracker && !equalsKeyWordIndicator)) {
+            System.out.println("I don't understand " + "'" + input + "'");
+            System.out.println(room.getDescription());
+            validInput = false;
+            return false;
+        } else if (!tracker && equalsKeyWordIndicator) {
+            System.out.println("I can't " + input);
+            System.out.println(room.getDescription());
+            validInput = false;
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
+     * if the user inputs an invalid direction then it prints
+     * it cannot go that direction or it does not understand that input
      * @param inputtedDirection
      * @return tracker which indicates if the input is valid (true) or not valid(false)
      */
@@ -90,20 +131,7 @@ public class Adventure {
                     tracker = true;
                 }
             }
-            if (tracker && !x[0].toLowerCase().equals(keyword)) {
-                System.out.println("I don't understand " + "'" + inputtedDirection + "'");
-                System.out.println(room.getDescription());
-                validInput = false;
-                tracker = false;
-            } else if (!tracker && x[0].toLowerCase().equals(keyword)) {
-                System.out.println("I can't " + inputtedDirection);
-                System.out.println(room.getDescription());
-                validInput = false;
-                tracker = false;
-            } else if (!tracker && !x[0].toLowerCase().equals(keyword)) {
-                System.out.println("I don't understand " + "'" + inputtedDirection + "'");
-                System.out.println(room.getDescription());
-                validInput = false;
+            if (!(declareInputIsValid(tracker, x[0].toLowerCase().equals(keyword), inputtedDirection))) {
                 tracker = false;
             }
         } else if (x[0].toLowerCase().equals(keyword)) {
@@ -120,10 +148,11 @@ public class Adventure {
         return tracker;
     }
 
+
     /**
      * prints the room description based on the direction inputted by the user and returns a string of this description
      * @param inputtedDirection
-     * @return description of currem room object
+     * @return description of current room object
      */
     public String printRoomDescriptionBasedOnDirection(String inputtedDirection) {
         if (inputtedDirection == null) {
@@ -144,25 +173,29 @@ public class Adventure {
         return setCurrentRoomObject().getDescription();
     }
 
+
     /**
-     * prints the directions you can possibly go from the room based on the input and returns a string of these directions
+     * prints the directions you can possibly go from the room based
+     * on the input and returns a string of these directions
      * @return string of possible directions
      */
     public String printPossibleDirectionsBasedOnInput() {
         setCurrentRoomObject();
-        String toReturn = "";
+        String directionsFromInput = "";
         System.out.println("From here you can go: ");
         for (int i = 0; i < directions.length; i++) {
             System.out.println(directions[i].getDirectionName());
         }
         for (int j = 0; j < directions.length; j++) {
-            toReturn += directions[j].getDirectionName() + " ";
+            directionsFromInput += directions[j].getDirectionName() + " ";
         }
-        return toReturn.trim();
+        return directionsFromInput.trim();
     }
 
+
     /**
-     * starts the game by setting the current room to the starting room and prints this room's description and directions you can go from this room
+     * starts the game by setting the current room to the starting room
+     * and prints this room's description and directions you can go from this room
      */
     public void startGame() {
         startRoom = parsedJson.getStartingRoom();
@@ -175,10 +208,12 @@ public class Adventure {
         printPossibleDirectionsBasedOnInput();
     }
 
+
     /**
      * returns true or false based on if the user's inputted direction takes you to the ending room
      * @param inputtedDirection
-     * @return true if it does not take you to the ending room so the game can continue or false if it does take you to the ending room so it can end the game
+     * @return true if it does not take you to the ending room so the game can continue
+     * or false if it does take you to the ending room so it can end the game
      */
     public boolean indicateHavingReachedEnd(String inputtedDirection) {
         if (inputtedDirection == null) {
@@ -200,6 +235,58 @@ public class Adventure {
         return false;
     }
 
+    /**
+     * if the user inputs a url it checks if its a valid url
+     * if it is not a valid url it returns true to ask them for a valid again
+     * if it is a valid url it returns false and starts this url's game world
+     * @return true or false
+     * @throws Exception
+     */
+    public boolean urlRunner() throws Exception {
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Enter url");
+        String urlInput = scanner2.nextLine();
+        url = urlInput;
+        parsingJson();
+        // check if rooms are null and if they are its not a game world
+        if (startRoom == null || endRoom == null) {
+            System.out.println("This is not a valid adventure: ");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /**
+     * runs the game when user inputs a valid url or types no
+     * @return true if the game should continue
+     * and false if the user reached the final destination or quit
+     */
+    public boolean runGame() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a direction: ");
+        String direction = scanner.nextLine();
+        if((direction.toLowerCase().equals(quitWord.toLowerCase())) || (direction.toLowerCase().equals(exitWord.toLowerCase()))) {
+            System.out.println("EXIT");
+            return false;
+        } else if (game.indicateHavingReachedEnd(direction)) {
+            System.out.println("You have reached your final destination");
+            System.out.println("EXIT");
+            return false;
+        } else {
+            if (checkIfNull(direction) != null) {
+                checkIfInputIsAValidDirection(direction);
+                if (validInput) {
+                    printRoomDescriptionBasedOnDirection(direction);
+                } else {
+                    validInput = true;
+                }
+            }
+        }
+        return true;
+    }
+
     public static void main (String[] args) throws Exception {
         boolean firstLoop = true;
         while (firstLoop) {
@@ -207,15 +294,10 @@ public class Adventure {
             System.out.println("Do you want to change your JSON file to a new URL? (type yes or no)");
             String answer = scanner1.nextLine();
             if (answer.toLowerCase().equals("yes")) {
-                Scanner scanner2 = new Scanner(System.in);
-                System.out.println("Enter url");
-                String urlInput = scanner2.nextLine();
-                game.url = urlInput;
-                game.parsingJson();
-                // check if rooms are null and if they are its not a game world
-                if (game.startRoom == null || game.endRoom == null) {
-                    System.out.println("This is not a valid adventure: ");
+                if (game.urlRunner()) {
                     firstLoop = true;
+                } else {
+                    firstLoop = false;
                 }
             } else if (answer.toLowerCase().equals("no")) {
                 firstLoop = false;
@@ -229,25 +311,8 @@ public class Adventure {
         game.parsingJson();
         game.startGame();
         while (loop) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter a direction: ");
-            String direction = scanner.nextLine();
-            if((direction.toLowerCase().equals(quitWord.toLowerCase())) || (direction.toLowerCase().equals(exitWord.toLowerCase()))) {
-                System.out.println("EXIT");
+            if (!(game.runGame())) {
                 loop = false;
-            } else if (game.indicateHavingReachedEnd(direction)) {
-                System.out.println("You have reached your final destination");
-                System.out.println("EXIT");
-                loop = false;
-            } else {
-                if (game.checkIfNull(direction) != null) {
-                    game.checkIfInputIsAValidDirection(direction);
-                    if (game.validInput) {
-                        game.printRoomDescriptionBasedOnDirection(direction);
-                    } else {
-                        game.validInput = true;
-                    }
-                }
             }
         }
     }
