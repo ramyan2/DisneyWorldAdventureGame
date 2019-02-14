@@ -6,6 +6,7 @@ public class Room {
     public String name;
     public String description;
     public Direction[] directions;
+    public Item[] items;
 
     /**
      * gets room name
@@ -31,5 +32,10 @@ public class Room {
         return directions;
     }
 
-
+    /**
+     * get items
+     */
+    public Item[] getItems() {
+        return items;
+    }
 }

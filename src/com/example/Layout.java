@@ -5,6 +5,7 @@ public class Layout {
     public String startingRoom;
     public String endingRoom;
     public Room[] rooms;
+    public Player player;
 
     /**
      * gets starting room
@@ -30,4 +31,10 @@ public class Layout {
         return rooms;
     }
 
+    /**
+     * gets player
+     */
+    public Player getPlayer() {
+        return player;
+    }
 }

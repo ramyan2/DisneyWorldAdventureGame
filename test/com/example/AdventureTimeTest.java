@@ -260,4 +260,8 @@ public class AdventureTimeTest {
         game.currentDirection = game.directions[0];
         assertEquals(false, game.indicateHavingReachedEnd("WEST"));
     }
+
+    //-----check if jSOn is formatted properly-----//
+
+    //-----check url------//
 }
