@@ -331,16 +331,10 @@ public class Adventure {
     public boolean declareInputIsValid2(boolean tracker, boolean equalsKeyWordIndicator, String input) {
         if ((tracker && !equalsKeyWordIndicator) || (!tracker && !equalsKeyWordIndicator)) {
             System.out.println("I don't understand " + "'" + input + "'");
-            for (int i = 0; i < room.getItems().length; i++) {
-                System.out.println(room.getItems()[i]);
-            }
             validInput = false;
             return false;
         } else if (!tracker && equalsKeyWordIndicator) {
             System.out.println("I can't " + input);
-            for (int i = 0; i < room.getItems().length; i++) {
-                System.out.println(room.getItems()[i]);
-            }
             validInput = false;
             return false;
         }
@@ -374,16 +368,10 @@ public class Adventure {
             }
         } else if (x[0].toLowerCase().equals(keyword)) {
             System.out.println("I can't " + inputtedItem);
-            for (int i = 0; i < room.getItems().length; i++) {
-                System.out.println(room.getItems()[i]);
-            }
             validInput = false;
             tracker = false;
         } else {
             System.out.println("I don't understand " + "'" + inputtedItem + "'");
-            for (int i = 0; i < room.getItems().length; i++) {
-                System.out.println(room.getItems()[i]);
-            }
             validInput = false;
             tracker = false;
         }
@@ -450,17 +438,14 @@ public class Adventure {
             if (directions[i].getEnabled().equals("true")) {
                 return true;
             } else if (directions[i].getEnabled().equals("false")){
-                if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+                if (directions[i].getValidKeyNames()[i].toLowerCase().equals(playerItem) && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
                     inputDir = directions[i].getDirectionName();
                     return true;
                 } else {
+                    System.out.println("Try a different item or direction");
                     return false;
                 }
             }
-            System.out.println(directions[i].getDirectionName());
-            System.out.println(directions[i].getRoom());
-            System.out.println(directions[i].getValidKeyNames()[i]);
-            System.out.println(directions[i].getEnabled());
         }
         return false;
     }
