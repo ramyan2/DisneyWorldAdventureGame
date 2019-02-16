@@ -288,6 +288,9 @@ public class Adventure {
     }
 
     public static void main (String[] args) throws Exception {
+        for(int i = 0; i < args.length; i++) {
+            System.out.println(args[i]);
+        }
         boolean firstLoop = true;
         while (firstLoop) {
             Scanner scanner1 = new Scanner(System.in);

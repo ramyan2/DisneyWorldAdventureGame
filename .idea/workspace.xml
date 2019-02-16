@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="Based on feedback, I added vertical space to fix layout, changed my variable toReturn to directionsFromInput to make it a noun, and added helper methods to have a better design as reccommended.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_mashape_unirest_unirest_java_1_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Development.md" afterDir="false" />
+    <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/adventure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AdventuresJSON" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AdventuresJSON" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,6 +22,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/adventure_ramyan2$Adventure.ic" NAME="Adventure Coverage Results" MODIFIED="1549391157271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/adventure2_ramyan2$Adventure.ic" NAME="Adventure Coverage Results" MODIFIED="1550272225438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/adventure_ramyan2$AdventureTimeTest_testPrintNextRoomDescriptionMethodForStartingRoom.ic" NAME="AdventureTimeTest.testPrintNextRoomDescriptionMethodForStartingRoom Coverage Results" MODIFIED="1549352496865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -82,15 +83,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="AdventuresJSON" value="1801" />
+          <entry key="java" value="44" />
           <entry key="md" value="772" />
-          <entry key="txt" value="3" />
+          <entry key="txt" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="PLAIN_TEXT" value="775" />
+          <entry key="JAVA" value="44" />
+          <entry key="PLAIN_TEXT" value="2608" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -116,7 +118,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Development.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -172,7 +174,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="-140">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
@@ -181,8 +183,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4635">
-              <caret line="309" column="20" selection-start-line="309" selection-start-column="20" selection-end-line="309" selection-end-column="83" />
+            <state relative-caret-position="228">
+              <caret line="291" column="39" selection-start-line="291" selection-start-column="39" selection-end-line="291" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,11 +192,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+            <state relative-caret-position="91">
+              <caret line="175" column="4" selection-end-line="213" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -226,6 +228,7 @@
       <find>checkIfNull</find>
       <find>you have re</find>
       <find>toReturn</find>
+      <find>Adventure</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,13 +241,11 @@
         <option value="$PROJECT_DIR$/src/Room.java" />
         <option value="$PROJECT_DIR$/src/Layout.java" />
         <option value="$PROJECT_DIR$/src/Data.java" />
-        <option value="$PROJECT_DIR$/Data/AdventuresJSON" />
         <option value="$PROJECT_DIR$/test/AdventureTest.java" />
         <option value="$PROJECT_DIR$/test/AdventureTimeTestTest.java" />
         <option value="$PROJECT_DIR$/src/com/example/Output.java" />
         <option value="$PROJECT_DIR$/test/AdventureTimeTest.java" />
         <option value="$PROJECT_DIR$/src/com/example/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Adventure.java" />
         <option value="$PROJECT_DIR$/src/com/example/Item.java" />
         <option value="$PROJECT_DIR$/src/com/example/Room.java" />
         <option value="$PROJECT_DIR$/src/com/example/Player.java" />
@@ -252,6 +253,8 @@
         <option value="$PROJECT_DIR$/src/com/example/Direction.java" />
         <option value="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" />
         <option value="$PROJECT_DIR$/Development.md" />
+        <option value="$PROJECT_DIR$/src/com/example/Adventure.java" />
+        <option value="$PROJECT_DIR$/Data/AdventuresJSON" />
       </list>
     </option>
   </component>
@@ -318,7 +321,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550271614987" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550291592738" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -352,10 +355,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdventureTimeTest">
-    <configuration name="Adventure" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Adventure">
+    <configuration name="Adventure" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Adventure" />
       <module name="adventure" />
+      <option name="PROGRAM_PARAMETERS" value="here is an argument" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
@@ -366,7 +370,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -429,17 +433,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Adventure" />
       <item itemvalue="JUnit.AdventureTimeTest" />
       <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" />
-      <item itemvalue="Application.Adventure" />
       <item itemvalue="JUnit.AdventureTimeTest.testPrintNextRoomDescriptionMethodForStartingRoom" />
       <item itemvalue="JUnit.AdventureTimeTest.checkRoomNameWhenNull" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdventureTimeTest" />
         <item itemvalue="JUnit.AdventureTimeTest.checkRoomNameWhenNull" />
-        <item itemvalue="Application.Adventure" />
         <item itemvalue="JUnit.AdventureTimeTest.testPrintNextRoomDescriptionMethodForStartingRoom" />
         <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" />
       </list>
@@ -659,7 +661,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550169332230</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Wrote my Development.md.">
+      <created>1550271674627</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1550271674627</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Wrote my Development.md.">
+      <created>1550271693175</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1550271693175</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -713,7 +729,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CheckStyle" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
@@ -735,7 +751,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created main method and accessed direction from starting room" />
     <MESSAGE value="Added a method that can read the user input that is a direction and return the description of the room they are in" />
     <MESSAGE value="Added a scanner to take user input on which direction to go. Then added a getRoomDescriptionBasedOnDirection method that gets the description of the room that is in the direction the user inputs." />
     <MESSAGE value="fixed the getRoomDescriptionBasedOnDirection method to return the current room's description if the user inputs a direction that is not valid" />
@@ -760,7 +775,8 @@
     <MESSAGE value="Cleaned my formatting and method names and made sure to meet all the assignment requirements." />
     <MESSAGE value="Cleaned my formatting again in test class." />
     <MESSAGE value="Based on feedback, I added vertical space to fix layout, changed my variable toReturn to directionsFromInput to make it a noun, and added helper methods to have a better design as reccommended." />
-    <option name="LAST_COMMIT_MESSAGE" value="Based on feedback, I added vertical space to fix layout, changed my variable toReturn to directionsFromInput to make it a noun, and added helper methods to have a better design as reccommended." />
+    <MESSAGE value="Wrote my Development.md." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote my Development.md." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -823,6 +839,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Development.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -830,34 +853,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="-140">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4635">
-          <caret line="309" column="20" selection-start-line="309" selection-start-column="20" selection-end-line="309" selection-end-column="83" />
+        <state relative-caret-position="228">
+          <caret line="291" column="39" selection-start-line="291" selection-start-column="39" selection-end-line="291" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Development.md">
+    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="91">
+          <caret line="175" column="4" selection-end-line="213" selection-end-column="4" />
         </state>
       </provider>
     </entry>

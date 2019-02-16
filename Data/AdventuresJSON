@@ -1,110 +1,214 @@
 {
-   "startingRoom":"MatthewsStreet",
-   "endingRoom":"Siebel1314",
-   "rooms":[
+   "startingRoom": "DisneyWorldEntrance",
+   "endingRoom": "CinderellasCastle",
+   "rooms": [
       {
-         "name":"MatthewsStreet",
-         "description":"You are on Matthews, outside the Siebel Center",
-         "directions":[
+         "name": "DisneyWorldEntrance",
+         "description": "You are at the Disney World Magical Kingdom entrance",
+         "directions": [
+            {
+               "directionName": "North",
+               "room": "MainStreet",
+               "enabled": "false",
+               "validKeyNames": [
+                    "AdmissionsTicket"
+            ]
+            }
+         ],
+         "items":[
+                "AdmissionsTicket"
+         ]
+      },
+      {
+         "name":"MainStreet",
+         "description": "You are on MainStreet U.S.A. You can see the Cafe to the East and AdventureLand to the NorthWest and TomorrowLand to the NorthEast.",
+         "directions": [
             {
                "directionName":"East",
-               "room":"SiebelEntry"
-            }
-         ]
-      },
-      {
-         "name":"SiebelEntry",
-         "description":"You are in the west entry of Siebel Center.  You can see the elevator, the ACM office, and hallways to the north and east.",
-         "directions":[
-            {
-               "directionName":"West",
-               "room":"MatthewsStreet"
-            },
-            {
-               "directionName":"Northeast",
-               "room":"AcmOffice"
-            },
-            {
-               "directionName":"North",
-               "room":"SiebelNorthHallway"
-            },
-            {
-               "directionName":"East",
-               "room":"SiebelEastHallway"
-            }
-         ]
-      },
-      {
-         "name":"AcmOffice",
-         "description":"You are in the ACM office.  There are lots of friendly ACM people.",
-         "directions":[
-            {
-               "directionName":"South",
-               "room":"SiebelEntry"
-            }
-         ]
-      },
-      {
-         "name":"SiebelNorthHallway",
-         "description":"You are in the north hallway.  You can see Siebel 1112 and the door toward NCSA.",
-         "directions":[
-            {
-               "directionName":"South",
-               "room":"SiebelEntry"
+               "room":"Cafe",
+               "enabled": "false",
+               "validKeyNames":[
+                    "MickeysEars"
+            ]
             },
             {
                "directionName":"NorthEast",
-               "room":"Siebel1112"
-            }
-         ]
-      },
-      {
-         "name":"Siebel1112",
-         "description":"You are in Siebel 1112.  There is space for two code reviews in this room.",
-         "directions":[
+               "room":"TomorrowLand",
+               "enabled": "false",
+               "validKeyNames":[
+                    "SpaceShip"
+            ]
+            },
             {
-               "directionName":"West",
-               "room":"SiebelNorthHallway"
-            }
-         ]
-      },
-      {
-         "name":"SiebelEastHallway",
-         "description":"You are in the east hallway.  You can see Einstein Bros' Bagels and a stairway.",
-         "directions":[
-            {
-               "directionName":"West",
-               "room":"SiebelEntry"
+               "directionName":"NorthWest",
+               "room":"AdventureLand",
+               "enabled": "false",
+               "validKeyNames":[
+                    "MagicCarpet"
+            ]
             },
             {
                "directionName":"South",
-               "room":"Siebel1314"
-            },
-            {
-               "directionName":"Down",
-               "room":"SiebelBasement"
+               "room":"Entrance",
+               "enabled": "false",
+               "validKeyNames":[
+                    "FamilyPhoto"
+            ]
             }
-         ]
+         ],
+         "items":[
+                "MickeysEars",
+                "MagicCarpet",
+                "SpaceShip",
+                "FamilyPhoto"
+          ]
       },
       {
-         "name":"Siebel1314",
-         "description":"You are in Siebel 1314.  There are happy CS 126 students doing a code review.",
+         "name":"Cafe",
+         "description":"You are in the Cafe.  There are lots of food options to choose from.",
          "directions":[
             {
                "directionName":"North",
-               "room":"SiebelEastHallway"
+               "room":"TomorrowLand",
+               "enabled": "false",
+               "validKeyNames":[
+                    "SodaBottle"
+            ]
+            },
+            {
+               "directionName":"West",
+               "room":"MainStreet",
+               "enabled": "false",
+               "validKeyNames":[
+                    "IceCreamCone"
+            ]
             }
+         ],
+         "items":[
+                "SodaBottle",
+                "IceCreamCone"
          ]
       },
       {
-         "name":"SiebelBasement",
-         "description":"You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
+         "name":"TomorrowLand",
+         "description":"You are in TomorrowLand.  You can see FantasyLand and Cinderella's Castle.",
          "directions":[
             {
-               "directionName":"Up",
-               "room":"SiebelEastHallway"
+               "directionName":"North",
+               "room":"FantasyLand",
+               "enabled": "false",
+               "validKeyNames":[
+                    "MagicWand"
+            ]
+            },
+            {
+               "directionName":"South",
+               "room":"Cafe",
+               "enabled": "false",
+               "validKeyNames":[
+                    "PictureWithMickey"
+            ]
+            },
+            {
+               "directionName":"SouthWest",
+               "room":"MainStreet",
+               "enabled": "false",
+               "validKeyNames":[
+                    "TeaCup"
+            ]
             }
+         ],
+         "items":[
+                "MagicWand",
+                "TeaCup",
+                "PictureWithMickey"
+         ]
+      },
+      {
+         "name":"FantasyLand",
+         "description":"You are in FantasyLand.  You can meet all the princesses here.",
+         "directions":[
+            {
+               "directionName":"West",
+               "room":"LibertySquare",
+               "enabled": "false",
+               "validKeyNames":[
+                    "FunnelCake"
+            ]
+            },
+            {
+               "directionName":"South",
+               "room":"Tomorrowland",
+               "enabled": "false",
+               "validKeyNames":[
+                    "MinnieHat"
+            ]
+            }
+         ],
+         "items":[
+                "FunnelCake",
+                "MinnieHat"
+         ]
+      },
+      {
+         "name":"LibertySquare",
+         "description":"You are in Liberty Square.  You can see Cinderella's Castle",
+         "directions":[
+            {
+               "directionName":"South",
+               "room":"CinderellasCastle",
+               "enabled": "false",
+               "validKeyNames":[
+                    "GlassSlippers"
+            ]
+            },
+            {
+               "directionName":"East",
+               "room":"FantasyLand",
+               "enabled": "false",
+               "validKeyNames":[
+                    "GoofysHat"
+            ]
+            }
+         ],
+         "items":[
+                "GlassSlippers",
+                "GoofysHat"
+         ]
+      },
+      {
+         "name":"CinderellasCastle",
+         "description":"You are in Cinderella's Castle. You can eat dinner with many princes and princesses.",
+         "directions":[
+            {
+               "directionName":"North",
+               "room":"LibertySquare",
+               "enabled": "false",
+               "validKeyNames":[
+                    "FairyGodMother"
+            ]
+            }
+        ],
+         "items":[
+                "FairyGodMother"
+         ]
+      },
+      {
+         "name":"AdventureLand",
+         "description":"You are in AdventureLand.  You can visit the Swiss Family Treehouse",
+         "directions":[
+         {
+               "directionName":"SouthEast",
+               "room":"MainStreet",
+               "enabled":"false",
+               "validKeyNames":[
+                    "EyePatch"
+            ]
+            }
+         ],
+         "items":[
+                "EyePatch"
          ]
       }
-   ]
-}
+      ]
+   }
