@@ -10,3 +10,6 @@ Outline for the plan of changes for this assignment:
 * This should be done as an argument on the command line
 * Then work on extending the game engine by incorporating hidden rooms which can only be accessed if one has possession of a special item(golden key)
 * To acquire this golden key the user has to solve a riddle or answer a question, once they do so they can access hidden rooms that get you to the end of the game much faster
+
+Process:
+* Wrote my JSON file and encountered some formatting issues but fixed them.

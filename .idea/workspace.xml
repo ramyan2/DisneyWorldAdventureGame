@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/AdventuresJSON" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AdventuresJSON" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,13 +84,13 @@
           <entry key="AdventuresJSON" value="1801" />
           <entry key="java" value="44" />
           <entry key="md" value="772" />
-          <entry key="txt" value="35" />
+          <entry key="txt" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="44" />
-          <entry key="PLAIN_TEXT" value="2608" />
+          <entry key="PLAIN_TEXT" value="2662" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -162,7 +160,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -192,11 +190,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="175" column="4" selection-end-line="213" selection-end-column="4" />
+            <state relative-caret-position="3485">
+              <caret line="205" column="13" lean-forward="true" selection-start-line="205" selection-start-column="13" selection-end-line="205" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -321,7 +319,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550291592738" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550291921585" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -675,7 +673,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550271693175</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Wrote my own JSON file of Disney World.">
+      <created>1550291639060</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1550291639060</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -751,7 +756,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a method that can read the user input that is a direction and return the description of the room they are in" />
     <MESSAGE value="Added a scanner to take user input on which direction to go. Then added a getRoomDescriptionBasedOnDirection method that gets the description of the room that is in the direction the user inputs." />
     <MESSAGE value="fixed the getRoomDescriptionBasedOnDirection method to return the current room's description if the user inputs a direction that is not valid" />
     <MESSAGE value="Added a while loop in my main method so it can repeat asking for the user input. Added a printRoomDirectionsBasedOnInput method that prints the directions the person can go based on the room they are in. Fixed my printRoomDescriptionBasedOnDirection by printing the right description of a room based on the user inputted direction. Also fixed by indicateHavingReachedEnd method to return a boolean based on if the user's inputted direction points them to the ending room, and if so it exits the game." />
@@ -776,7 +780,8 @@
     <MESSAGE value="Cleaned my formatting again in test class." />
     <MESSAGE value="Based on feedback, I added vertical space to fix layout, changed my variable toReturn to directionsFromInput to make it a noun, and added helper methods to have a better design as reccommended." />
     <MESSAGE value="Wrote my Development.md." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote my Development.md." />
+    <MESSAGE value="Wrote my own JSON file of Disney World." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote my own JSON file of Disney World." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -846,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-140">
@@ -872,8 +870,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="175" column="4" selection-end-line="213" selection-end-column="4" />
+        <state relative-caret-position="3485">
+          <caret line="205" column="13" lean-forward="true" selection-start-line="205" selection-start-column="13" selection-end-line="205" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
