@@ -34,11 +34,17 @@ public class Adventure {
 
     public Room room;
 
+    public String[] enablers;
+
+    public String enabler;
+
     Player player = new Player();
 
     public boolean validInput = true;
 
     private static final String AdventuresJSON = Data.getFileContentsAsString("AdventuresJSON");
+
+    public String inputDir;
 
     String url = "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
 
@@ -133,29 +139,28 @@ public class Adventure {
 //    }
 
 
-//    /**
-//     * prints the room description based on the direction inputted by the user and returns a string of this description
-//     * @param inputtedDirection
-//     * @return description of current room object
-//     */
-//    public String printRoomDescriptionBasedOnDirection(String inputtedDirection) {
-//        if (inputtedDirection == null) {
-//            return null;
-//        }
-//        String[] x = inputtedDirection.split(" ");
-//        String actualDirection = x[1].toLowerCase();
-//        for (int i = 0; i < directions.length; i++) {
-//            if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
-//                currentDirection = directions[i];
-//                currentRoom = currentDirection.getRoom();
-//
-//                System.out.println(setCurrentRoomObject().getDescription());
-//                printPossibleDirectionsBasedOnInput(inputtedDirection);
-//                break;
-//            }
-//        }
-//        return setCurrentRoomObject().getDescription();
-//    }
+    /**
+     * prints the room description based on the direction inputted by the user and returns a string of this description
+     * @param inputtedDirection
+     * @return description of current room object
+     */
+    public String printRoomDescriptionBasedOnDirection(String inputtedDirection) {
+        if (inputtedDirection == null) {
+            return null;
+        }
+        String actualDirection = inputtedDirection.toLowerCase();
+        for (int i = 0; i < directions.length; i++) {
+            if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
+                currentDirection = directions[i];
+                currentRoom = currentDirection.getRoom();
+
+                System.out.println(setCurrentRoomObject().getDescription());
+          //      printPossibleDirectionsBasedOnInput(inputtedDirection);
+                break;
+            }
+        }
+        return setCurrentRoomObject().getDescription();
+    }
 
 
 //    /**
@@ -305,6 +310,7 @@ public class Adventure {
                 player.setItems(items);
                 currentRoom = player.getItems()[i].getRoom();
 
+
                 for (int j = 0; j < setCurrentRoomObject().getDirections().length; j++) {
                     System.out.println("From here you can go: " + setCurrentRoomObject().getDirections()[j].getDirectionName());
                 }
@@ -313,6 +319,7 @@ public class Adventure {
         }
         return setCurrentRoomObject().getDescription();
     }
+
 
     /**
      * helper method for checkIfInputIsAValidDirection that declares if the input is valid
@@ -351,7 +358,7 @@ public class Adventure {
         if (inputtedItem == null) {
             return false;
         }
-        String keyword = "grab";
+        String keyword = "pickup";
         boolean tracker = false;
         String[] x = inputtedItem.split(" ");
 
@@ -395,15 +402,23 @@ public class Adventure {
         if((item.toLowerCase().equals(quitWord.toLowerCase())) || (item.toLowerCase().equals(exitWord.toLowerCase()))) {
             System.out.println("EXIT");
             return false;
-        } else if (game.indicateHavingReachedEnd(item)) {
-            System.out.println("You have reached your final destination");
-            System.out.println("EXIT");
-            return false;
+//        } else if (game.indicateHavingReachedEnd(item)) {
+//            System.out.println("You have reached your final destination");
+//            System.out.println("EXIT");
+//            return false;
         } else {
             if (checkIfNull(item) != null) {
                 checkIfInputIsAValidItem(item);
                 if (validInput) {
                     printDirectionsBasedOnItem(item);
+                    Scanner scanner2 = new Scanner(System.in);
+                    String itemAndDirection = scanner2.nextLine();
+
+                   if (enableDirectionBasedOnInput(itemAndDirection)) {
+                       printRoomDescriptionBasedOnDirection(inputDir);
+                       validInput = true;
+                       return true;
+                   }
                 } else {
                     validInput = true;
                 }
@@ -411,6 +426,74 @@ public class Adventure {
         }
         return true;
     }
+
+//    public boolean checkItemIsValidKey() {
+//        Direction[] directions = room.getDirections();
+//        for (int i = 0; i < directions.length; i++) {
+//            System.out.println(directions[i].getDirectionName());
+//            System.out.println(directions[i].getRoom());
+//            System.out.println(directions[i].getValidKeyNames()[i]);
+//            System.out.println(directions[i].getEnabled());
+//        }
+//        return true;
+//    }
+
+    public boolean enableDirectionBasedOnInput(String input) {
+
+        String[] splitInput = input.split(" ");
+        String playerItem = splitInput[1].toLowerCase();
+        String inputtedDirection = splitInput[3].toLowerCase();
+
+
+        Direction[] directions = room.getDirections();
+        for (int i = 0; i < directions.length; i++) {
+            if (directions[i].getEnabled().equals("true")) {
+                return true;
+            } else if (directions[i].getEnabled().equals("false")){
+                if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+                    inputDir = directions[i].getDirectionName();
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            System.out.println(directions[i].getDirectionName());
+            System.out.println(directions[i].getRoom());
+            System.out.println(directions[i].getValidKeyNames()[i]);
+            System.out.println(directions[i].getEnabled());
+        }
+        return false;
+    }
+
+//    public String enableDirectionBasedOnInput(String input) {
+//        System.out.println("test");
+//        String[] splitInput = input.split(" ");
+//        String playerItem = splitInput[1].toLowerCase();
+//        String inputtedDirection = splitInput[3].toLowerCase();
+//
+//        for (int i = 0; i < player.getItems().length; i++) {
+//            if (player.getItems()[i].getName().equals(playerItem)) {
+//                currentItem = player.getItems()[i];
+//            }
+//        }
+//        for (int j = 0; j < directions.length; j++) {
+//            if (directions[j].getDirectionName().equals(inputtedDirection)) {
+//                System.out.println("test2");
+//                currentDirection = directions[j];
+//                currentRoom = currentDirection.getRoom();
+//                System.out.println("test3");
+//                System.out.println(setCurrentRoomObject().getDescription());
+//            }
+//        }
+//        return setCurrentRoomObject().getDescription();
+//    }
+
+
+//    public
+//
+//    public boolean enableDisabledDirection() {
+//
+//    }
 //--------//
     /**
      * returns true or false based on if the user's inputted direction takes you to the ending room
@@ -418,25 +501,25 @@ public class Adventure {
      * @return true if it does not take you to the ending room so the game can continue
      * or false if it does take you to the ending room so it can end the game
      */
-    public boolean indicateHavingReachedEnd(String inputtedDirection) {
-        if (inputtedDirection == null) {
-            return false;
-        }
-        String[] x = inputtedDirection.split(" ");
-        if (x.length == 2) {
-            String actualDirection = x[1].toLowerCase();
-            for (int i = 0; i < directions.length; i++) {
-                if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
-                    currentDirection = directions[i];
-                    currentRoom = currentDirection.getRoom();
-                }
-            }
-        }
-        if (currentRoom.equals(endRoom)) {
-            return true;
-        }
-        return false;
-    }
+//    public boolean indicateHavingReachedEnd(String inputtedDirection) {
+//        if (inputtedDirection == null) {
+//            return false;
+//        }
+//        String[] x = inputtedDirection.split(" ");
+//        if (x.length == 2) {
+//            String actualDirection = x[1].toLowerCase();
+//            for (int i = 0; i < directions.length; i++) {
+//                if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
+//                    currentDirection = directions[i];
+//                    currentRoom = currentDirection.getRoom();
+//                }
+//            }
+//        }
+//        if (currentRoom.equals(endRoom)) {
+//            return true;
+//        }
+//        return false;
+//    }
 
     /**
      * if the user inputs a url it checks if its a valid url
