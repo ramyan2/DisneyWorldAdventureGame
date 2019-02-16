@@ -16,7 +16,9 @@
             }
          ],
          "items":[
-                "AdmissionsTicket"
+          {
+                "name": "AdmissionsTicket"
+           }
          ]
       },
       {
@@ -57,11 +59,19 @@
             }
          ],
          "items":[
-                "MickeysEars",
-                "MagicCarpet",
-                "SpaceShip",
-                "FamilyPhoto"
-          ]
+         {
+                "name": "MickeysEars"
+         },
+         {
+                "name": "MagicCarpet"
+         },
+         {
+                "name": "SpaceShip"
+         },
+         {
+                "name": "FamilyPhoto"
+         }
+        ]
       },
       {
          "name":"Cafe",
@@ -85,8 +95,12 @@
             }
          ],
          "items":[
-                "SodaBottle",
-                "IceCreamCone"
+         {
+               "name": "SodaBottle"
+         },
+         {
+               "name": "IceCreamCone"
+         }
          ]
       },
       {
@@ -119,9 +133,15 @@
             }
          ],
          "items":[
-                "MagicWand",
-                "TeaCup",
-                "PictureWithMickey"
+         {
+                "name": "MagicWand"
+         },
+         {
+                "name": "TeaCup"
+         },
+         {
+                "name": "PictureWithMickey"
+         }
          ]
       },
       {
@@ -146,8 +166,12 @@
             }
          ],
          "items":[
-                "FunnelCake",
-                "MinnieHat"
+         {
+                "name": "FunnelCake"
+         },
+         {
+                "name": "MinnieHat"
+         }
          ]
       },
       {
@@ -172,8 +196,12 @@
             }
          ],
          "items":[
-                "GlassSlippers",
-                "GoofysHat"
+         {
+                "name": "GlassSlippers"
+         },
+         {
+                "name": "GoofysHat"
+         }
          ]
       },
       {
@@ -190,7 +218,9 @@
             }
         ],
          "items":[
-                "FairyGodMother"
+         {
+                "name": "FairyGodMother"
+         }
          ]
       },
       {
@@ -207,7 +237,9 @@
             }
          ],
          "items":[
-                "EyePatch"
+         {
+                "name": "EyePatch"
+         }
          ]
       }
       ]

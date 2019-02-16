@@ -32,6 +32,7 @@ public class Adventure {
 
     public boolean validInput = true;
 
+    private static final String AdventuresJSON = Data.getFileContentsAsString("AdventuresJSON");
 
     String url = "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
 
@@ -42,14 +43,16 @@ public class Adventure {
      */
     public Layout parsingJson() throws Exception {
         Gson gson = new Gson();
-        try {
-            URL obj = new URL(url);
-            InputStreamReader reader = new InputStreamReader(obj.openStream());
-            parsedJson = gson.fromJson(reader, Layout.class);
+        parsedJson = gson.fromJson(AdventuresJSON, Layout.class);
 
-        } catch(Exception e) {
-            System.out.println("bad url");
-        }
+//        try {
+//            URL obj = new URL(url);
+//            InputStreamReader reader = new InputStreamReader(obj.openStream());
+//            parsedJson = gson.fromJson(reader, Layout.class);
+//
+//        } catch(Exception e) {
+//            System.out.println("bad url");
+//        }
         arrayRooms = parsedJson.getRooms();
         startRoom = parsedJson.getStartingRoom();
         endRoom = parsedJson.getEndingRoom();
@@ -288,9 +291,6 @@ public class Adventure {
     }
 
     public static void main (String[] args) throws Exception {
-        for(int i = 0; i < args.length; i++) {
-            System.out.println(args[i]);
-        }
         boolean firstLoop = true;
         while (firstLoop) {
             Scanner scanner1 = new Scanner(System.in);
@@ -310,7 +310,7 @@ public class Adventure {
         }
 
         boolean loop = true;
-        game.url =  "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
+//        game.url =  "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
         game.parsingJson();
         game.startGame();
         while (loop) {
