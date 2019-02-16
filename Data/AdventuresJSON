@@ -1,6 +1,10 @@
 {
    "startingRoom": "DisneyWorldEntrance",
    "endingRoom": "CinderellasCastle",
+   "player":
+   {
+        "items": []
+   },
    "rooms": [
       {
          "name": "DisneyWorldEntrance",
@@ -52,9 +56,8 @@
             {
                "directionName":"South",
                "room":"Entrance",
-               "enabled": "false",
+               "enabled": "true",
                "validKeyNames":[
-                    "FamilyPhoto"
             ]
             }
          ],
@@ -67,9 +70,6 @@
          },
          {
                 "name": "SpaceShip"
-         },
-         {
-                "name": "FamilyPhoto"
          }
         ]
       },
@@ -88,18 +88,14 @@
             {
                "directionName":"West",
                "room":"MainStreet",
-               "enabled": "false",
+               "enabled": "true",
                "validKeyNames":[
-                    "IceCreamCone"
             ]
             }
          ],
          "items":[
          {
                "name": "SodaBottle"
-         },
-         {
-               "name": "IceCreamCone"
          }
          ]
       },
@@ -118,29 +114,21 @@
             {
                "directionName":"South",
                "room":"Cafe",
-               "enabled": "false",
+               "enabled": "true",
                "validKeyNames":[
-                    "PictureWithMickey"
             ]
             },
             {
                "directionName":"SouthWest",
                "room":"MainStreet",
-               "enabled": "false",
+               "enabled": "true",
                "validKeyNames":[
-                    "TeaCup"
             ]
             }
          ],
          "items":[
          {
                 "name": "MagicWand"
-         },
-         {
-                "name": "TeaCup"
-         },
-         {
-                "name": "PictureWithMickey"
          }
          ]
       },
@@ -159,18 +147,14 @@
             {
                "directionName":"South",
                "room":"Tomorrowland",
-               "enabled": "false",
+               "enabled": "true",
                "validKeyNames":[
-                    "MinnieHat"
             ]
             }
          ],
          "items":[
          {
                 "name": "FunnelCake"
-         },
-         {
-                "name": "MinnieHat"
          }
          ]
       },
@@ -189,18 +173,14 @@
             {
                "directionName":"East",
                "room":"FantasyLand",
-               "enabled": "false",
+               "enabled": "true",
                "validKeyNames":[
-                    "GoofysHat"
             ]
             }
          ],
          "items":[
          {
                 "name": "GlassSlippers"
-         },
-         {
-                "name": "GoofysHat"
          }
          ]
       },
@@ -230,7 +210,7 @@
          {
                "directionName":"SouthEast",
                "room":"MainStreet",
-               "enabled":"false",
+               "enabled":"true",
                "validKeyNames":[
                     "EyePatch"
             ]
