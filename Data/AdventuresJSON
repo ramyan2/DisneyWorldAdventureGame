@@ -185,6 +185,25 @@
          ]
       },
       {
+               "name":"AdventureLand",
+               "description":"You are in AdventureLand.  You can visit the Swiss Family Treehouse",
+               "directions":[
+               {
+                     "directionName":"SouthEast",
+                     "room":"MainStreet",
+                     "enabled":"true",
+                     "validKeyNames":[
+                          "EyePatch"
+                  ]
+                  }
+               ],
+               "items":[
+               {
+                      "name": "EyePatch"
+               }
+               ]
+            },
+      {
          "name":"CinderellasCastle",
          "description":"You are in Cinderella's Castle. You can eat dinner with many princes and princesses.",
          "directions":[
@@ -201,26 +220,7 @@
          {
                 "name": "FairyGodMother"
          }
-         ]
-      },
-      {
-         "name":"AdventureLand",
-         "description":"You are in AdventureLand.  You can visit the Swiss Family Treehouse",
-         "directions":[
-         {
-               "directionName":"SouthEast",
-               "room":"MainStreet",
-               "enabled":"true",
-               "validKeyNames":[
-                    "EyePatch"
-            ]
-            }
-         ],
-         "items":[
-         {
-                "name": "EyePatch"
-         }
-         ]
-      }
+           ]
+        }
       ]
    }

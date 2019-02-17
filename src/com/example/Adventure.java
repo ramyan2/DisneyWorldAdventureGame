@@ -266,7 +266,6 @@ public class Adventure {
         System.out.println("Your journey begins here. ");
         System.out.println(arrayRooms[0].getDescription());
 
-        printPossibleItemsBasedOnInput();
 
 
     }
@@ -384,6 +383,7 @@ public class Adventure {
      * and false if the user reached the final destination or quit
      */
     public boolean runGame2() {
+        printPossibleItemsBasedOnInput();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an item: ");
         String item = scanner.nextLine();
@@ -415,16 +415,6 @@ public class Adventure {
         return true;
     }
 
-//    public boolean checkItemIsValidKey() {
-//        Direction[] directions = room.getDirections();
-//        for (int i = 0; i < directions.length; i++) {
-//            System.out.println(directions[i].getDirectionName());
-//            System.out.println(directions[i].getRoom());
-//            System.out.println(directions[i].getValidKeyNames()[i]);
-//            System.out.println(directions[i].getEnabled());
-//        }
-//        return true;
-//    }
 
     public boolean enableDirectionBasedOnInput(String input) {
 
@@ -432,53 +422,32 @@ public class Adventure {
         String playerItem = splitInput[1].toLowerCase();
         String inputtedDirection = splitInput[3].toLowerCase();
 
+        System.out.println(directions.length);
+
+        for(int j = 0; j < directions.length; j++) {
+            System.out.println(directions[j].getDirectionName());
+            System.out.println(inputtedDirection);
+        }
 
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getEnabled().equals("true")) {
-                return true;
-            } else if (directions[i].getEnabled().equals("false")){
-                if (directions[i].getValidKeyNames()[i].toLowerCase().equals(playerItem) && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+            if (directions[i].getEnabled().equals("false")) {
+                if (directions[i].getValidKeyNames()[0].toLowerCase().equals(playerItem) && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
                     inputDir = directions[i].getDirectionName();
                     return true;
-                } else {
-                    System.out.println("Try a different item or direction");
-                    return false;
                 }
+            } else if (directions[i].getEnabled().equals("true") && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)){
+                inputDir = directions[i].getDirectionName();
+                return true;
             }
         }
+
+
+
+        System.out.println("Try a different item or direction");
         return false;
     }
 
-//    public String enableDirectionBasedOnInput(String input) {
-//        System.out.println("test");
-//        String[] splitInput = input.split(" ");
-//        String playerItem = splitInput[1].toLowerCase();
-//        String inputtedDirection = splitInput[3].toLowerCase();
-//
-//        for (int i = 0; i < player.getItems().length; i++) {
-//            if (player.getItems()[i].getName().equals(playerItem)) {
-//                currentItem = player.getItems()[i];
-//            }
-//        }
-//        for (int j = 0; j < directions.length; j++) {
-//            if (directions[j].getDirectionName().equals(inputtedDirection)) {
-//                System.out.println("test2");
-//                currentDirection = directions[j];
-//                currentRoom = currentDirection.getRoom();
-//                System.out.println("test3");
-//                System.out.println(setCurrentRoomObject().getDescription());
-//            }
-//        }
-//        return setCurrentRoomObject().getDescription();
-//    }
-
-
-//    public
-//
-//    public boolean enableDisabledDirection() {
-//
-//    }
 //--------//
     /**
      * returns true or false based on if the user's inputted direction takes you to the ending room
