@@ -72,73 +72,6 @@ public class Adventure {
         return parsedJson;
     }
 
-
-
-
-
-
-//    /**
-//     * helper method for checkIfInputIsAValidDirection that declares if the input is valid
-//     * @param tracker
-//     * @param equalsKeyWordIndicator
-//     * @param input
-//     * @return
-//     */
-//    public boolean declareInputIsValid(boolean tracker, boolean equalsKeyWordIndicator, String input) {
-//        if ((tracker && !equalsKeyWordIndicator) || (!tracker && !equalsKeyWordIndicator)) {
-//            System.out.println("I don't understand " + "'" + input + "'");
-//            System.out.println(room.getDescription());
-//            validInput = false;
-//            return false;
-//        } else if (!tracker && equalsKeyWordIndicator) {
-//            System.out.println("I can't " + input);
-//            System.out.println(room.getDescription());
-//            validInput = false;
-//            return false;
-//        }
-//        return true;
-//    }
-
-
-//    /**
-//     * if the user inputs an invalid direction then it prints
-//     * it cannot go that direction or it does not understand that input
-//     * @param inputtedDirection
-//     * @return tracker which indicates if the input is valid (true) or not valid(false)
-//     */
-//    public boolean checkIfInputIsAValidDirection(String inputtedDirection) {
-//        if (inputtedDirection == null) {
-//            return false;
-//        }
-//        String keyword = "grab";
-//        boolean tracker = false;
-//        String[] x = inputtedDirection.split(" ");
-//
-//        if (x.length == 2) {
-//            String actualDirection = x[1].toLowerCase();
-//            for (int i = 0; i < directions.length; i++) {
-//                if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
-//                    tracker = true;
-//                }
-//            }
-//            if (!(declareInputIsValid(tracker, x[0].toLowerCase().equals(keyword), inputtedDirection))) {
-//                tracker = false;
-//            }
-//        } else if (x[0].toLowerCase().equals(keyword)) {
-//            System.out.println("I can't " + inputtedDirection);
-//            System.out.println(room.getDescription());
-//            validInput = false;
-//            tracker = false;
-//        } else {
-//            System.out.println("I don't understand " + "'" + inputtedDirection + "'");
-//            System.out.println(room.getDescription());
-//            validInput = false;
-//            tracker = false;
-//        }
-//        return tracker;
-//    }
-
-
     /**
      * prints the room description based on the direction inputted by the user and returns a string of this description
      * @param inputtedDirection
@@ -161,70 +94,6 @@ public class Adventure {
         }
         return setCurrentRoomObject().getDescription();
     }
-
-
-//    /**
-//     * prints the directions you can possibly go from the room based
-//     * on the input and returns a string of these directions
-//     * @return string of possible directions
-//     */
-//    public String printPossibleItemsBasedOnInput() {
-//        setCurrentRoomObject();
-//        String itemsFromInput = "";
-//        System.out.println("Here you can pick up: ");
-//        for (int i = 0; i < items.length; i++) {
-//            System.out.println(items[i].getName());
-//        }
-////        for (int i = 0; i < directions.length; i++) {
-////            System.out.println(directions[i].getDirectionName());
-////        }
-//        for (int j = 0; j < items.length; j++) {
-//            itemsFromInput += items[j].getName() + " ";
-//        }
-//        return itemsFromInput.trim();
-//    }
-
-//    /**
-//     * prints the directions you can possibly go from the room based
-//     * on the input and returns a string of these directions
-//     * @return string of possible directions
-//     */
-//    public String printPossibleDirectionsBasedOnInput(String inputtedDirection) {
-//        if (inputtedDirection == null) {
-//            return null;
-//        }
-//        setCurrentRoomObject();
-//
-//        String directionsFromInput = "";
-//        System.out.println("From here you can go: ");
-//        for (int i = 0; i < directions.length; i++) {
-//            System.out.println(directions[i].getDirectionName());
-//        }
-//        for (int j = 0; j < items.length; j++) {
-//            directionsFromInput += items[j].getName() + " ";
-//        }
-//        return directionsFromInput.trim();
-//    }
-
-
-//    /**
-//     * starts the game by setting the current room to the starting room
-//     * and prints this room's description and directions you can go from this room
-//     */
-//    public void startGame() {
-//        startRoom = parsedJson.getStartingRoom();
-//        currentRoom = startRoom;
-//        game.setCurrentRoomObject();
-//
-//        System.out.println("Your journey begins here.");
-//        System.out.println(arrayRooms[0].getDescription());
-//
-//        printPossibleDirectionsBasedOnInput();
-//    }
-
-//--------------//
-
-
 
     /**
      * goes through the array of rooms in my json until it finds the current room
@@ -282,9 +151,6 @@ public class Adventure {
         for (int i = 0; i < items.length; i++) {
             System.out.println(items[i].getName());
         }
-//        for (int i = 0; i < directions.length; i++) {
-//            System.out.println(directions[i].getDirectionName());
-//        }
         for (int j = 0; j < items.length; j++) {
             itemsFromInput += items[j].getName() + " ";
         }
@@ -390,10 +256,6 @@ public class Adventure {
         if((item.toLowerCase().equals(quitWord.toLowerCase())) || (item.toLowerCase().equals(exitWord.toLowerCase()))) {
             System.out.println("EXIT");
             return false;
-//        } else if (game.indicateHavingReachedEnd(item)) {
-//            System.out.println("You have reached your final destination");
-//            System.out.println("EXIT");
-//            return false;
         } else {
             if (checkIfNull(item) != null) {
                 checkIfInputIsAValidItem(item);
@@ -420,8 +282,45 @@ public class Adventure {
         return true;
     }
 
+//    public boolean fightUrsula() {
+//        System.out.println("Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:");
+//        System.out.println("1) How many tentacles does ursula have?");
+//        Scanner scanner = new Scanner(System.in);
+//        String firstAnswer = scanner.nextLine();
+//        if (!(firstAnswer.toLowerCase().equals("eight"))) {
+//            return false;
+//        } else {
+//            System.out.println("2) What is 2 + 3 equal to?");
+//            Scanner scanner2 = new Scanner(System.in);
+//            String secondAnswer = scanner2.nextLine();
+//            if (secondAnswer.toLowerCase().equals("five")) {
+//                System.out.println("3) What is the color of Ursula's skin?");
+//                Scanner scanner3 = new Scanner(System.in);
+//                String thirdAnswer = scanner3.nextLine();
+//                if (thirdAnswer.toLowerCase().equals("purple")) {
+//                    System.out.println("4) Which Disney princess does she hate?");
+//                    Scanner scanner4 = new Scanner(System.in);
+//                    String fourthAnswer = scanner4.nextLine();
+//                    if (fourthAnswer.toLowerCase().equals("ariel")) {
+//                        System.out.println("5) What did Ursula take from Ariel?");
+//                        Scanner scanner5 = new Scanner(System.in);
+//                        String fifthAnswer = scanner5.nextLine();
+//                        if (fifthAnswer.toLowerCase().equals("voice")) {
+//                            System.out.println("You have defeated Ursula, congratulations!!!");
+//                            return true;
+//                        }
+//                    }
+//                }
+//            } else {
+//                System.out.println("Ursula has defeated you, try again!");
+//                return false;
+//            }
+//        }
+//    }
 
     public boolean enableDirectionBasedOnInput(String input) {
+
+        boolean tracker = true;
 
         String[] splitInput = input.split(" ");
 
@@ -435,40 +334,42 @@ public class Adventure {
 
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getRoom().toLowerCase().equals("libertysquare")) {
-                System.out.println("Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:");
-                System.out.println("1) How many tentacles does ursula have?");
-                Scanner scanner = new Scanner(System.in);
-                String firstAnswer = scanner.nextLine();
-                if (!(firstAnswer.toLowerCase().equals("eight"))) {
-                    return false;
-                } else {
-
-                    System.out.println("2) What is 2 + 3 equal to?");
-                    Scanner scanner2 = new Scanner(System.in);
-                    String secondAnswer = scanner2.nextLine();
-                    if (secondAnswer.toLowerCase().equals("five")) {
-                        System.out.println("3) What is the color of Ursula's skin?");
-                        Scanner scanner3 = new Scanner(System.in);
-                        String thirdAnswer = scanner3.nextLine();
-                        if (thirdAnswer.toLowerCase().equals("purple")) {
-                            System.out.println("4) Which Disney princess does she hate?");
-                            Scanner scanner4 = new Scanner(System.in);
-                            String fourthAnswer = scanner4.nextLine();
-                            if (fourthAnswer.toLowerCase().equals("ariel")) {
-                                System.out.println("5) What did Ursula take from Ariel?");
-                                Scanner scanner5 = new Scanner(System.in);
-                                String fifthAnswer = scanner5.nextLine();
-                                if (fifthAnswer.toLowerCase().equals("voice")) {
-                                    System.out.println("You have defeated Ursula, congratulations!!!");
-                                    return true;
+            while(tracker) {
+                if (directions[i].getRoom().toLowerCase().equals("libertysquare")) {
+                    System.out.println("Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:");
+                    System.out.println("1) How many tentacles does ursula have?");
+                    Scanner scanner = new Scanner(System.in);
+                    String firstAnswer = scanner.nextLine();
+                    if (firstAnswer.toLowerCase().equals("eight")) {
+                        System.out.println("2) What is 2 + 3 equal to?");
+                        Scanner scanner2 = new Scanner(System.in);
+                        String secondAnswer = scanner2.nextLine();
+                        if (secondAnswer.toLowerCase().equals("five")) {
+                            System.out.println("3) What is the color of Ursula's skin?");
+                            Scanner scanner3 = new Scanner(System.in);
+                            String thirdAnswer = scanner3.nextLine();
+                            if (thirdAnswer.toLowerCase().equals("purple")) {
+                                System.out.println("4) Which Disney princess does she hate?");
+                                Scanner scanner4 = new Scanner(System.in);
+                                String fourthAnswer = scanner4.nextLine();
+                                if (fourthAnswer.toLowerCase().equals("ariel")) {
+                                    System.out.println("5) What did Ursula take from Ariel?");
+                                    Scanner scanner5 = new Scanner(System.in);
+                                    String fifthAnswer = scanner5.nextLine();
+                                    if (fifthAnswer.toLowerCase().equals("voice")) {
+                                        System.out.println("You have defeated Ursula, congratulations!!!");
+                                        tracker = false;
+                                        return true;
+                                    }
                                 }
                             }
                         }
                     } else {
                         System.out.println("Ursula has defeated you, try again!");
-                        return false;
+                        tracker = true;
                     }
+                } else {
+                    tracker = false;
                 }
             }
             if (directions[i].getEnabled().equals("false")) {
@@ -481,14 +382,10 @@ public class Adventure {
                 return true;
             }
         }
-
-
-
         System.out.println("Try a different item or direction");
         return false;
     }
 
-//--------//
     /**
      * returns true or false based on if the user's inputted direction takes you to the ending room
      * @param input
@@ -504,9 +401,6 @@ public class Adventure {
             return false;
         }
         String inputtedDirection = splitInput[3].toLowerCase();
-
-
-
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
             if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
@@ -545,35 +439,6 @@ public class Adventure {
         }
     }
 
-//
-//    /**
-//     * runs the game when user inputs a valid url or types no
-//     * @return true if the game should continue
-//     * and false if the user reached the final destination or quit
-//     */
-//    public boolean runGame() {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter a direction: ");
-//        String direction = scanner.nextLine();
-//        if((direction.toLowerCase().equals(quitWord.toLowerCase())) || (direction.toLowerCase().equals(exitWord.toLowerCase()))) {
-//            System.out.println("EXIT");
-//            return false;
-//        } else if (game.indicateHavingReachedEnd(direction)) {
-//            System.out.println("You have reached your final destination");
-//            System.out.println("EXIT");
-//            return false;
-//        } else {
-//            if (checkIfNull(direction) != null) {
-//                checkIfInputIsAValidDirection(direction);
-//                if (validInput) {
-//                    printRoomDescriptionBasedOnDirection(direction);
-//                } else {
-//                    validInput = true;
-//                }
-//            }
-//        }
-//        return true;
-//    }
 
     public static void main (String[] args) throws Exception {
         boolean firstLoop = true;
@@ -595,7 +460,6 @@ public class Adventure {
         }
 
         boolean loop = true;
-//        game.url =  "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
         game.parsingJson();
         game.startGame2();
         while (loop) {

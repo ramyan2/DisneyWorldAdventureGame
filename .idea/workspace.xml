@@ -83,15 +83,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="AdventuresJSON" value="2167" />
-          <entry key="java" value="4989" />
+          <entry key="java" value="5223" />
           <entry key="md" value="868" />
-          <entry key="txt" value="869" />
+          <entry key="txt" value="1076" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4989" />
-          <entry key="PLAIN_TEXT" value="3904" />
+          <entry key="JAVA" value="5223" />
+          <entry key="PLAIN_TEXT" value="4111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -185,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="508" column="25" selection-start-line="508" selection-start-column="25" selection-end-line="508" selection-end-column="25" />
+            <state relative-caret-position="286">
+              <caret line="365" column="25" lean-forward="true" selection-start-line="365" selection-start-column="25" selection-end-line="365" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -257,6 +257,9 @@
       <find>Here you</find>
       <find>Here you can</find>
       <find>printPossibleItems</find>
+      <find>getValid</find>
+      <find>key</find>
+      <find>items</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -348,7 +351,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550377328663" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550382399968" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -751,7 +754,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550371540682</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Allowed the user to know when the game reached the end, and also added the game extension which involves fighting a monster(Ursula) and defeating her by answering 5 questions correctly.">
+      <created>1550377462383</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1550377462383</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -798,7 +808,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -856,7 +866,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Prints the current room's description even if the user types an invalid input" />
     <MESSAGE value="When the user inputs an invalid direction or inputs a command that is not even a direction it prints out the correct response and their current room description." />
     <MESSAGE value="Added the main method to print out &quot;You have reached the final destination&quot; when the user reaches the ending room" />
     <MESSAGE value="If the user inputted only one word direction such as &quot;east&quot; it should print it does not understand what that is and allow them to retype a valid input." />
@@ -881,7 +890,8 @@
     <MESSAGE value="Accessed enabler and validkey names to continue the game by creating a enableDirectionBasedOnInput method." />
     <MESSAGE value="Fixed enabler method to correctly output when a user picks up an item that can take them to the next place." />
     <MESSAGE value="Fixed a bug in the enable method to accurately print the right description when the user inputs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug in the enable method to accurately print the right description when the user inputs." />
+    <MESSAGE value="Allowed the user to know when the game reached the end, and also added the game extension which involves fighting a monster(Ursula) and defeating her by answering 5 questions correctly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Allowed the user to know when the game reached the end, and also added the game extension which involves fighting a monster(Ursula) and defeating her by answering 5 questions correctly." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -1000,8 +1010,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="508" column="25" selection-start-line="508" selection-start-column="25" selection-end-line="508" selection-end-column="25" />
+        <state relative-caret-position="286">
+          <caret line="365" column="25" lean-forward="true" selection-start-line="365" selection-start-column="25" selection-end-line="365" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
