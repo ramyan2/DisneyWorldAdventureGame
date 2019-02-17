@@ -401,12 +401,17 @@ public class Adventure {
                     printDirectionsBasedOnItem(item);
                     Scanner scanner2 = new Scanner(System.in);
                     String itemAndDirection = scanner2.nextLine();
-
-                   if (enableDirectionBasedOnInput(itemAndDirection)) {
-                       printRoomDescriptionBasedOnDirection(inputDir);
-                       validInput = true;
-                       return true;
-                   }
+                    if (indicateHavingReachedEnd(itemAndDirection)) {
+                        System.out.println("You have reached your final destination");
+                        System.out.println("EXIT");
+                        return false;
+                    } else {
+                        if (enableDirectionBasedOnInput(itemAndDirection)) {
+                            printRoomDescriptionBasedOnDirection(inputDir);
+                            validInput = true;
+                            return true;
+                        }
+                    }
                 } else {
                     validInput = true;
                 }
@@ -419,18 +424,53 @@ public class Adventure {
     public boolean enableDirectionBasedOnInput(String input) {
 
         String[] splitInput = input.split(" ");
+
+        if (splitInput.length != 4) {
+            System.out.println("Wrong input, try again");
+            return false;
+        }
         String playerItem = splitInput[1].toLowerCase();
         String inputtedDirection = splitInput[3].toLowerCase();
 
-        System.out.println(directions.length);
-
-        for(int j = 0; j < directions.length; j++) {
-            System.out.println(directions[j].getDirectionName());
-            System.out.println(inputtedDirection);
-        }
 
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
+            if (directions[i].getRoom().toLowerCase().equals("libertysquare")) {
+                System.out.println("Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:");
+                System.out.println("1) How many tentacles does ursula have?");
+                Scanner scanner = new Scanner(System.in);
+                String firstAnswer = scanner.nextLine();
+                if (!(firstAnswer.toLowerCase().equals("eight"))) {
+                    return false;
+                } else {
+
+                    System.out.println("2) What is 2 + 3 equal to?");
+                    Scanner scanner2 = new Scanner(System.in);
+                    String secondAnswer = scanner2.nextLine();
+                    if (secondAnswer.toLowerCase().equals("five")) {
+                        System.out.println("3) What is the color of Ursula's skin?");
+                        Scanner scanner3 = new Scanner(System.in);
+                        String thirdAnswer = scanner3.nextLine();
+                        if (thirdAnswer.toLowerCase().equals("purple")) {
+                            System.out.println("4) Which Disney princess does she hate?");
+                            Scanner scanner4 = new Scanner(System.in);
+                            String fourthAnswer = scanner4.nextLine();
+                            if (fourthAnswer.toLowerCase().equals("ariel")) {
+                                System.out.println("5) What did Ursula take from Ariel?");
+                                Scanner scanner5 = new Scanner(System.in);
+                                String fifthAnswer = scanner5.nextLine();
+                                if (fifthAnswer.toLowerCase().equals("voice")) {
+                                    System.out.println("You have defeated Ursula, congratulations!!!");
+                                    return true;
+                                }
+                            }
+                        }
+                    } else {
+                        System.out.println("Ursula has defeated you, try again!");
+                        return false;
+                    }
+                }
+            }
             if (directions[i].getEnabled().equals("false")) {
                 if (directions[i].getValidKeyNames()[0].toLowerCase().equals(playerItem) && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
                     inputDir = directions[i].getDirectionName();
@@ -451,29 +491,37 @@ public class Adventure {
 //--------//
     /**
      * returns true or false based on if the user's inputted direction takes you to the ending room
-     * @param inputtedDirection
+     * @param input
      * @return true if it does not take you to the ending room so the game can continue
      * or false if it does take you to the ending room so it can end the game
      */
-//    public boolean indicateHavingReachedEnd(String inputtedDirection) {
-//        if (inputtedDirection == null) {
-//            return false;
-//        }
-//        String[] x = inputtedDirection.split(" ");
-//        if (x.length == 2) {
-//            String actualDirection = x[1].toLowerCase();
-//            for (int i = 0; i < directions.length; i++) {
-//                if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
-//                    currentDirection = directions[i];
-//                    currentRoom = currentDirection.getRoom();
-//                }
-//            }
-//        }
-//        if (currentRoom.equals(endRoom)) {
-//            return true;
-//        }
-//        return false;
-//    }
+    public boolean indicateHavingReachedEnd(String input) {
+        if (input == null) {
+            return false;
+        }
+        String[] splitInput = input.split(" ");
+        if (splitInput.length != 4) {
+            return false;
+        }
+        String inputtedDirection = splitInput[3].toLowerCase();
+
+
+
+        Direction[] directions = room.getDirections();
+        for (int i = 0; i < directions.length; i++) {
+            if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+                currentDirection = directions[i];
+                currentRoom = currentDirection.getRoom();
+            }
+        }
+        if (currentRoom == null) {
+            return false;
+        }
+        if (currentRoom.equals(endRoom)) {
+            return true;
+        }
+        return false;
+    }
 
     /**
      * if the user inputs a url it checks if its a valid url
