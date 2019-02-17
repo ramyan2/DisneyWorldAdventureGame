@@ -188,6 +188,13 @@
                "name":"AdventureLand",
                "description":"You are in AdventureLand.  You can visit the Swiss Family Treehouse",
                "directions":[
+            {
+               "directionName":"Northeast",
+               "room":"CinderellasCastle",
+               "enabled": "false",
+               "validKeyNames":[
+            ]
+            },
                {
                      "directionName":"SouthEast",
                      "room":"MainStreet",
@@ -200,7 +207,10 @@
                "items":[
                {
                       "name": "EyePatch"
-               }
+               },
+                {
+                                     "name": "SecretItem"
+                              }
                ]
             },
       {

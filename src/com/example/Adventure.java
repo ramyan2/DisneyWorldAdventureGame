@@ -264,6 +264,10 @@ public class Adventure {
                             System.out.println("You have reached your final destination");
                             System.out.println("EXIT");
                             return false;
+                        } else if (teleportPlayer(itemAndDirection)) {
+                            System.out.println("You have reached your final destinaton through teleportation");
+                            System.out.println("EXIT");
+                            return false;
                         } else {
                             if (enableDirectionBasedOnInput(itemAndDirection)) {
                                 printRoomDescriptionBasedOnDirection(inputDir);
@@ -324,12 +328,44 @@ public class Adventure {
 
 
     /**
+     * teleports a player to the end room if they answer the question right
+     * @param input
+     * @return
+     */
+    public boolean teleportPlayer(String input) {
+        String[] splitInput = input.split(" ");
+        if (splitInput.length != 4) {
+            System.out.println("Wrong input, try again");
+            return false;
+        }
+
+        String inputtedDirection = splitInput[3].toLowerCase();
+        Direction[] directions = room.getDirections();
+
+        for (int i = 0; i < directions.length; i++) {
+            if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+                if (directions[i].getRoom().toLowerCase().equals("adventureland")) {
+                    System.out.println("Look it's a fairy godmother, she can grant your wish of teleporting!");
+                    System.out.println("You have one chance to answer this question right: What is the color of Cinderella's ball gown?");
+                    Scanner scanner = new Scanner(System.in);
+                    String answer = scanner.nextLine();
+                    if (answer.toLowerCase().equals("blue")) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
      * enables or disables the direction a player can go based on their input
      * @param input
      * @return true or false
      */
     public boolean enableDirectionBasedOnInput(String input) {
-        boolean tracker = true;
 
         String[] splitInput = input.split(" ");
         if (splitInput.length != 4) {
@@ -342,6 +378,7 @@ public class Adventure {
 
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
+            boolean tracker = true;
             while(tracker) {
                 if (directions[i].getRoom().toLowerCase().equals("libertysquare")) {
                     if (fightUrsula()) {
@@ -353,11 +390,12 @@ public class Adventure {
                     tracker = false;
                 }
             }
-            if (directions[i].getEnabled().equals("false")) {
-                if (directions[i].getValidKeyNames()[0].toLowerCase().equals(playerItem) && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
-                    inputDir = directions[i].getDirectionName();
-                    return true;
-                }
+            if (directions[i].getEnabled().equals("false") && directions[i].getValidKeyNames().length != 0) {
+                if (directions[i].getValidKeyNames()[0].toLowerCase().equals(playerItem) &&
+                        directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+                            inputDir = directions[i].getDirectionName();
+                            return true;
+                    }
             } else if (directions[i].getEnabled().equals("true") && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)){
                 inputDir = directions[i].getDirectionName();
                 return true;
@@ -385,7 +423,7 @@ public class Adventure {
         String inputtedDirection = splitInput[3].toLowerCase();
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+            if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection) && directions[i].getValidKeyNames().length != 0) {
                 currentDirection = directions[i];
                 currentRoom = currentDirection.getRoom();
             }

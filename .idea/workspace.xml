@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AdventuresJSON" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AdventuresJSON" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -82,16 +83,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="AdventuresJSON" value="2167" />
-          <entry key="java" value="5972" />
+          <entry key="AdventuresJSON" value="2202" />
+          <entry key="java" value="7432" />
           <entry key="md" value="868" />
-          <entry key="txt" value="1176" />
+          <entry key="txt" value="1299" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5972" />
-          <entry key="PLAIN_TEXT" value="4211" />
+          <entry key="JAVA" value="7432" />
+          <entry key="PLAIN_TEXT" value="4369" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -185,8 +186,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4395">
-              <caret line="293" column="13" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
+            <state relative-caret-position="2681">
+              <caret line="462" column="62" lean-forward="true" selection-start-line="462" selection-start-column="62" selection-end-line="462" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,8 +198,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3264">
-              <caret line="192" column="56" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
+            <state>
+              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -218,8 +219,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-485">
-              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            <state relative-caret-position="2830">
+              <caret line="194" column="32" selection-start-line="194" selection-start-column="32" selection-end-line="194" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -261,6 +262,8 @@
       <find>key</find>
       <find>items</find>
       <find>printDirectionsBasedOnItem</find>
+      <find>test</find>
+      <find>wrong input</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -352,7 +355,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550399737518" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550446028220" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -769,7 +772,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550382422681</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Cleaned up helper methods and fixed runGame method to have proper output when user types an invalid input.">
+      <created>1550399777501</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1550399777501</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -817,7 +827,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39973262" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39438504" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -875,7 +885,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added the main method to print out &quot;You have reached the final destination&quot; when the user reaches the ending room" />
     <MESSAGE value="If the user inputted only one word direction such as &quot;east&quot; it should print it does not understand what that is and allow them to retype a valid input." />
     <MESSAGE value="Fixed invalid inputs method to check if the user inputted a direction that didn't match any of the other directions possible then it printed the CORRECT output which is &quot;I cant go 'some direction'&quot;" />
     <MESSAGE value="Wrote test cases for the method setCurrentRoomObject in adventures class" />
@@ -900,7 +909,8 @@
     <MESSAGE value="Fixed a bug in the enable method to accurately print the right description when the user inputs." />
     <MESSAGE value="Allowed the user to know when the game reached the end, and also added the game extension which involves fighting a monster(Ursula) and defeating her by answering 5 questions correctly." />
     <MESSAGE value="Fixed game extension so that it loops until user types in the correct answers to finish the game." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed game extension so that it loops until user types in the correct answers to finish the game." />
+    <MESSAGE value="Cleaned up helper methods and fixed runGame method to have proper output when user types an invalid input." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up helper methods and fixed runGame method to have proper output when user types an invalid input." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -980,6 +990,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2830">
+          <caret line="194" column="32" selection-start-line="194" selection-start-column="32" selection-end-line="194" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -993,34 +1027,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3264">
-          <caret line="192" column="56" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-485">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4395">
-          <caret line="293" column="13" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
+        <state relative-caret-position="2681">
+          <caret line="462" column="62" lean-forward="true" selection-start-line="462" selection-start-column="62" selection-end-line="462" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
