@@ -1,60 +1,60 @@
-//package com.example;
-//
-//import org.junit.Before;
-//import org.junit.Test;
-//import static org.junit.Assert.assertEquals;
-//
-//public class AdventureTimeTest {
-//
-//    private Adventure game = new Adventure();
-//    private Layout parsedJSon;
-//
-//
-//    @Before
-//    public void setUpGame() throws Exception {
-//        parsedJSon = game.parsingJson();
-//    }
-//
-//    //------tests setCurrentRoomObject method------//
-//
-//    @Test
-//    public void returnsStartingRoomName() {
-//        game.currentRoom = "MatthewsStreet";
-//        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
-//    }
-//
-//    @Test
-//    public void returnsStartingRoomDescription() {
-//        game.currentRoom = "MatthewsStreet";
-//        assertEquals("You are on Matthews, outside the Siebel Center", game.setCurrentRoomObject().getDescription());
-//    }
-//
-//    @Test
-//    public void returnsAnotherRoomName() {
-//        game.currentRoom = "AcmOffice";
-//        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
-//    }
-//
-//    @Test
-//    public void returnsAnotherRoomDescription() {
-//        game.currentRoom = "AcmOffice";
-//        assertEquals("You are in the ACM office.  There are lots of friendly ACM people.",game.setCurrentRoomObject().getDescription());
-//    }
-//
-//    @Test
-//    public void returnsEndingRoomName() {
-//        game.currentRoom = "Siebel1314";
-//        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
-//    }
-//
-//    @Test
-//    public void returnsEndingRoomDescription() {
-//        game.currentRoom = "Siebel1314";
-//        assertEquals("You are in Siebel 1314.  There are happy CS 126 students doing a code review.",game.setCurrentRoomObject().getDescription());
-//    }
-//
-////------Checks Invalid Inputs-------//
-//
+package com.example;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class AdventureTimeTest {
+
+    private Adventure game = new Adventure();
+    private Layout parsedJSon;
+
+
+    @Before
+    public void setUpGame() throws Exception {
+        parsedJSon = game.parsingJson();
+    }
+
+    //------tests setCurrentRoomObject method------//
+
+    @Test
+    public void returnsStartingRoomName() {
+        game.currentRoom = "DisneyWorldEntrance";
+        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
+    }
+
+    @Test
+    public void returnsStartingRoomDescription() {
+        game.currentRoom = "DisneyWorldEntrance";
+        assertEquals("You are at the Disney World Magical Kingdom entrance", game.setCurrentRoomObject().getDescription());
+    }
+
+    @Test
+    public void returnsAnotherRoomName() {
+        game.currentRoom = "AcmOffice";
+        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
+    }
+
+    @Test
+    public void returnsAnotherRoomDescription() {
+        game.currentRoom = "AcmOffice";
+        assertEquals("You are in the ACM office.  There are lots of friendly ACM people.",game.setCurrentRoomObject().getDescription());
+    }
+
+    @Test
+    public void returnsEndingRoomName() {
+        game.currentRoom = "Siebel1314";
+        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
+    }
+
+    @Test
+    public void returnsEndingRoomDescription() {
+        game.currentRoom = "Siebel1314";
+        assertEquals("You are in Siebel 1314.  There are happy CS 126 students doing a code review.",game.setCurrentRoomObject().getDescription());
+    }
+
+//------Checks Invalid Inputs-------//
+
 //    @Test
 //    public void testWhenStartingInputDoesNotMatchAnyPossibleDirections() {
 //        game.currentRoom = "MatthewsStreet";
@@ -239,29 +239,29 @@
 ////        game.directions = game.arrayRooms[5].getDirections();
 ////        assertEquals("West South Down", game.printPossibleDirectionsBasedOnInput());
 ////    }
-//
-//    //------Test Cases for indicateHavingReachedEnd method-------//
-//
-//    @Test
-//    public void testWhenReachedEnd() {
-//        game.endRoom = "Siebel1314";
-//        game.directions = game.arrayRooms[5].getDirections();
-//        game.currentDirection = game.directions[1];
-//        game.currentRoom = game.currentDirection.getRoom();
-//        System.out.println(game.currentRoom);
-//        assertEquals(true, game.indicateHavingReachedEnd("SoUTh"));
-//    }
-//
-//    @Test
-//    public void testWhenNotReachedEnd() {
-//        game.currentRoom = "SiebelEastHallway";
-//        game.endRoom = "Siebel1314";
-//        game.directions = game.arrayRooms[5].getDirections();
-//        game.currentDirection = game.directions[0];
-//        assertEquals(false, game.indicateHavingReachedEnd("WEST"));
-//    }
-//
-//    //-----check if jSOn is formatted properly-----//
-//
-//    //-----check url------//
-//}
+
+    //------Test Cases for indicateHavingReachedEnd method-------//
+
+    @Test
+    public void testWhenReachedEnd() {
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[5].getDirections();
+        game.currentDirection = game.directions[1];
+        game.currentRoom = game.currentDirection.getRoom();
+        System.out.println(game.currentRoom);
+        assertEquals(true, game.indicateHavingReachedEnd("SoUTh"));
+    }
+
+    @Test
+    public void testWhenNotReachedEnd() {
+        game.currentRoom = "SiebelEastHallway";
+        game.endRoom = "Siebel1314";
+        game.directions = game.arrayRooms[5].getDirections();
+        game.currentDirection = game.directions[0];
+        assertEquals(false, game.indicateHavingReachedEnd("WEST"));
+    }
+
+    //-----check if jSOn is formatted properly-----//
+
+    //-----check url------//
+}

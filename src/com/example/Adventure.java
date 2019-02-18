@@ -265,7 +265,7 @@ public class Adventure {
                             System.out.println("EXIT");
                             return false;
                         } else if (teleportPlayer(itemAndDirection)) {
-                            System.out.println("You have reached your final destinaton through teleportation");
+                            System.out.println("You have reached your final destination through teleportation");
                             System.out.println("EXIT");
                             return false;
                         } else {
