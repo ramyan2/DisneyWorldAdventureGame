@@ -41,12 +41,10 @@ public class Adventure {
     public String inputDir;
 
     String url;
-           // = "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
 
     /**
      * parses the json file from the url
      * @return the parsed json
-     * @throws Exception
      */
     public Layout parsingJson() {
         Gson gson = new Gson();
@@ -122,12 +120,11 @@ public class Adventure {
         }
         String actualDirection = inputtedDirection.toLowerCase();
         for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getDirectionName().toLowerCase().equals(actualDirection)) {
+            if (directions[i].getDirectionName().equalsIgnoreCase(actualDirection)) {
                 currentDirection = directions[i];
                 currentRoom = currentDirection.getRoom();
 
                 System.out.println(setCurrentRoomObject().getDescription());
-          //      printPossibleDirectionsBasedOnInput(inputtedDirection);
                 break;
             }
         }
@@ -156,29 +153,33 @@ public class Adventure {
 
 
     /**
-     * prints the room description based on the direction inputted by the user and returns a string of this description
+     * prints the possible directions a player can go based on the room they are in
+     * identifies which room a player is in based on the object they just picked up
      * @param inputtedItem
-     * @return description of current room object
+     * @return description of current room
      */
-    public String printDirectionsBasedOnItem(String inputtedItem) {
+    public String printPossibleDirectionsPlayerCanGo(String inputtedItem) {
         if (inputtedItem == null) {
             return null;
         }
         String[] x = inputtedItem.split(" ");
         String actualItem = x[1].toLowerCase();
         for (int i = 0; i < items.length; i++) {
-            if (items[i].getName().toLowerCase().equals(actualItem)) {
+            if (items[i].getName().equalsIgnoreCase(actualItem)) {
                 player.setItems(items);
                 currentRoom = player.getItems()[i].getRoom();
-
-
                 for (int j = 0; j < setCurrentRoomObject().getDirections().length; j++) {
                     System.out.println("From here you can go: " + setCurrentRoomObject().getDirections()[j].getDirectionName());
                 }
                 break;
             }
         }
-        return setCurrentRoomObject().getDescription();
+
+        String directionNames = "";
+        for (int k = 0; k < setCurrentRoomObject().getDirections().length; k++) {
+            directionNames += setCurrentRoomObject().getDirections()[k].getDirectionName();
+        }
+        return directionNames.trim();
     }
 
 
@@ -189,7 +190,7 @@ public class Adventure {
      * @param input
      * @return
      */
-    public boolean declareInputIsValid2(boolean tracker, boolean equalsKeyWordIndicator, String input) {
+    public boolean declareInputIsValid(boolean tracker, boolean equalsKeyWordIndicator, String input) {
         if ((tracker && !equalsKeyWordIndicator) || (!tracker && !equalsKeyWordIndicator)) {
             System.out.println("I don't understand " + "'" + input + "'");
             validInput = false;
@@ -220,14 +221,14 @@ public class Adventure {
         if (x.length == 2) {
             String actualItem = x[1].toLowerCase();
             for (int i = 0; i < items.length; i++) {
-                if (items[i].getName().toLowerCase().equals(actualItem)) {
+                if (items[i].getName().equalsIgnoreCase(actualItem)) {
                     tracker = true;
                 }
             }
-            if (!(declareInputIsValid2(tracker, x[0].toLowerCase().equals(keyword), inputtedItem))) {
+            if (!(declareInputIsValid(tracker, x[0].equalsIgnoreCase(keyword), inputtedItem))) {
                 tracker = false;
             }
-        } else if (x[0].toLowerCase().equals(keyword)) {
+        } else if (x[0].equalsIgnoreCase(keyword)) {
             System.out.println("I can't " + inputtedItem);
             validInput = false;
             tracker = false;
@@ -250,7 +251,7 @@ public class Adventure {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an item: ");
         String item = scanner.nextLine();
-        if((item.toLowerCase().equals(quitWord.toLowerCase())) || (item.toLowerCase().equals(exitWord.toLowerCase()))) {
+        if((item.equalsIgnoreCase(quitWord) || (item.equalsIgnoreCase(exitWord)))) {
             System.out.println("EXIT");
             return false;
         } else {
@@ -258,7 +259,7 @@ public class Adventure {
                 checkIfInputIsAValidItem(item);
                 if (validInput) {
                     while(tracker) {
-                        printDirectionsBasedOnItem(item);
+                        printPossibleDirectionsPlayerCanGo(item);
                         Scanner scanner2 = new Scanner(System.in);
                         String itemAndDirection = scanner2.nextLine();
                         if (indicateHavingReachedEnd(itemAndDirection)) {
@@ -297,23 +298,23 @@ public class Adventure {
         System.out.println("1) How many tentacles does ursula have?");
         Scanner scanner = new Scanner(System.in);
         String firstAnswer = scanner.nextLine();
-        if (firstAnswer.toLowerCase().equals("eight")) {
+        if (firstAnswer.equalsIgnoreCase("eight")) {
             System.out.println("2) What is 2 + 3 equal to?");
             Scanner scanner2 = new Scanner(System.in);
             String secondAnswer = scanner2.nextLine();
-            if (secondAnswer.toLowerCase().equals("five")) {
+            if (secondAnswer.equalsIgnoreCase("five")) {
                 System.out.println("3) What is the color of Ursula's skin?");
                 Scanner scanner3 = new Scanner(System.in);
                 String thirdAnswer = scanner3.nextLine();
-                if (thirdAnswer.toLowerCase().equals("purple")) {
+                if (thirdAnswer.equalsIgnoreCase("purple")) {
                     System.out.println("4) Which Disney princess does she hate?");
                     Scanner scanner4 = new Scanner(System.in);
                     String fourthAnswer = scanner4.nextLine();
-                    if (fourthAnswer.toLowerCase().equals("ariel")) {
+                    if (fourthAnswer.equalsIgnoreCase("ariel")) {
                         System.out.println("5) What did Ursula take from Ariel?");
                         Scanner scanner5 = new Scanner(System.in);
                         String fifthAnswer = scanner5.nextLine();
-                        if (fifthAnswer.toLowerCase().equals("voice")) {
+                        if (fifthAnswer.equalsIgnoreCase("voice")) {
                             System.out.println("You have defeated Ursula, congratulations!!!");
                             return true;
                         }
@@ -344,13 +345,13 @@ public class Adventure {
         Direction[] directions = room.getDirections();
 
         for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
-                if (directions[i].getRoom().toLowerCase().equals("adventureland")) {
+            if (directions[i].getDirectionName().equalsIgnoreCase(inputtedDirection)) {
+                if (directions[i].getRoom().equalsIgnoreCase("adventureland")) {
                     System.out.println("Look it's a fairy godmother, she can grant your wish of teleporting!");
                     System.out.println("You have one chance to answer this question right: What is the color of Cinderella's ball gown?");
                     Scanner scanner = new Scanner(System.in);
                     String answer = scanner.nextLine();
-                    if (answer.toLowerCase().equals("blue")) {
+                    if (answer.equalsIgnoreCase("blue")) {
                         return true;
                     } else {
                         return false;
@@ -381,7 +382,7 @@ public class Adventure {
         for (int i = 0; i < directions.length; i++) {
             boolean tracker = true;
             while(tracker) {
-                if (directions[i].getRoom().toLowerCase().equals("libertysquare")) {
+                if (directions[i].getRoom().equalsIgnoreCase("libertysquare")) {
                     if (fightUrsula()) {
                         tracker = false;
                     } else {
@@ -392,12 +393,13 @@ public class Adventure {
                 }
             }
             if (directions[i].getEnabled().equals("false") && directions[i].getValidKeyNames().length != 0) {
-                if (directions[i].getValidKeyNames()[0].toLowerCase().equals(playerItem) &&
-                        directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)) {
+                if (directions[i].getValidKeyNames()[0].equalsIgnoreCase(playerItem) &&
+                        directions[i].getDirectionName().equalsIgnoreCase(inputtedDirection)) {
                             inputDir = directions[i].getDirectionName();
                             return true;
                     }
-            } else if (directions[i].getEnabled().equals("true") && directions[i].getDirectionName().toLowerCase().equals(inputtedDirection)){
+            } else if (directions[i].getEnabled().equals("true")
+                    && directions[i].getDirectionName().equalsIgnoreCase(inputtedDirection)){
                 inputDir = directions[i].getDirectionName();
                 return true;
             }
@@ -424,7 +426,7 @@ public class Adventure {
         String inputtedDirection = splitInput[3].toLowerCase();
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getDirectionName().toLowerCase().equals(inputtedDirection) && directions[i].getValidKeyNames().length != 0) {
+            if (directions[i].getDirectionName().equalsIgnoreCase(inputtedDirection) && directions[i].getValidKeyNames().length != 0) {
                 currentDirection = directions[i];
                 currentRoom = currentDirection.getRoom();
             }
@@ -467,13 +469,13 @@ public class Adventure {
             Scanner scanner1 = new Scanner(System.in);
             System.out.println("Do you want to change your JSON file to a new URL? (type yes or no)");
             String answer = scanner1.nextLine();
-            if (answer.toLowerCase().equals("yes")) {
+            if (answer.equalsIgnoreCase("yes")) {
                 if (game.urlRunner()) {
                     firstLoop = true;
                 } else {
                     firstLoop = false;
                 }
-            } else if (answer.toLowerCase().equals("no")) {
+            } else if (answer.equalsIgnoreCase("no")) {
                 firstLoop = false;
             } else {
                 throw new IllegalArgumentException();

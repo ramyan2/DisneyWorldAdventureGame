@@ -34,7 +34,7 @@ public class AdventureTimeTest {
     @Test
     public void returnsStartingRoomName() {
         game.currentRoom = "DisneyWorldEntrance";
-        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
+        assertEquals("DisneyWorldEntrance",game.setCurrentRoomObject().getName());
     }
 
     @Test
@@ -46,7 +46,7 @@ public class AdventureTimeTest {
     @Test
     public void returnsAnotherRoomName() {
         game.currentRoom = "Cafe";
-        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
+        assertEquals("Cafe",game.setCurrentRoomObject().getName());
     }
 
     @Test
@@ -58,7 +58,7 @@ public class AdventureTimeTest {
     @Test
     public void returnsEndingRoomName() {
         game.currentRoom = "CinderellasCastle";
-        assertEquals(game.currentRoom,game.setCurrentRoomObject().getName());
+        assertEquals("CinderellasCastle", game.setCurrentRoomObject().getName());
     }
 
     @Test
@@ -213,61 +213,80 @@ public class AdventureTimeTest {
         assertEquals(true,game.checkIfInputIsAValidItem("pickup eyePATch"));
     }
 
-//--------Tests printRoomDescriptionBasedOnDirection method---------//
-    //start//
+//--------Tests printRoomDescriptionBasedOnInputtedDirection method---------//
 
-//    @Test
-//    public void testPrintNextRoomDescriptionMethodForRoom() {
-//        game.currentRoom = "MainStreet";
-//        game.endRoom = "CinderellasCastle";
-//        game.directions = game.arrayRooms[1].getDirections();
-//        assertEquals("You are on MainStreet U.S.A. You can see the Cafe to the East and AdventureLand to the NorthWest and TomorrowLand to the NorthEast.",
-//                game.printRoomDescriptionBasedOnDirection("use ticket with south"));
-//    }
-//
-//    @Test
-//    public void testPrintNextRoomDescriptionMethodForRoom2() {
-//        game.currentRoom = "TomorrowLand";
-//        game.endRoom = "CinderellasCastle";
-//        game.directions = game.arrayRooms[3].getDirections();
-//        assertEquals("You are in TomorrowLand.  You can see FantasyLand and Cinderella's Castle.",
-//                game.printRoomDescriptionBasedOnDirection("go northeast"));
-//    }
-//
-//    @Test
-//    public void testPrintNextRoomDescriptionMethodForLastRoom() {
-//        game.currentRoom = "SiebelEastHallway";
-//        game.endRoom = "Siebel1314";
-//        game.directions = game.arrayRooms[5].getDirections();
-//        assertEquals("You are in Siebel 1314.  There are happy CS 126 students doing a code review.",
-//                game.printRoomDescriptionBasedOnDirection("go south"));
-//    }
+    @Test
+    public void testPrintNextRoomDescriptionMethodForRoom() {
+        game.currentRoom = "MainStreet";
+        game.endRoom = "CinderellasCastle";
+        game.directions = game.arrayRooms[1].getDirections();
+        assertEquals("You are on MainStreet U.S.A. You can see the Cafe to the East and AdventureLand to the NorthWest and TomorrowLand to the NorthEast.",
+                game.printRoomDescriptionBasedOnDirection("use ticket with south"));
+    }
+
+    @Test
+    public void testPrintNextRoomDescriptionMethodForRoom2() {
+        game.currentRoom = "TomorrowLand";
+        game.endRoom = "CinderellasCastle";
+        game.directions = game.arrayRooms[3].getDirections();
+        assertEquals("You are in TomorrowLand.  You can see FantasyLand and Cinderella's Castle.",
+                game.printRoomDescriptionBasedOnDirection("use sodabottle with north"));
+    }
+
+    @Test
+    public void testPrintNextRoomDescriptionMethodForLastRoom() {
+        game.currentRoom = "CinderellasCastle";
+        game.endRoom = "CinderellasCastle";
+        game.directions = game.arrayRooms[5].getDirections();
+        assertEquals("You are in Cinderella's Castle. You can eat dinner with many princes and princesses.",
+                game.printRoomDescriptionBasedOnDirection("use glassSLIppers with SOUth"));
+    }
 
     //--------Tests printPossibleDirectionsBasedOnInputDirection method---------//
-//
-//    @Test
-//    public void testPrintPossibleDirectionsFromStartingRoom() {
-//        game.currentRoom = "MatthewsStreet";
-//        game.endRoom = "Siebel1314";
-//        game.directions = game.arrayRooms[0].getDirections();
-//        assertEquals("East", game.printPossibleDirectionsBasedOnInput());
-//    }
-//
-//    @Test
-//    public void testPrintPossibleDirectionsFromRandomRoom() {
-//        game.currentRoom = "AcmOffice";
-//        game.endRoom = "Siebel1314";
-//        game.directions = game.arrayRooms[2].getDirections();
-//        assertEquals("South", game.printPossibleDirectionsBasedOnInput());
-//    }
-//
-//    @Test
-//    public void testPrintPossibleDirectionsForMoreThanOneOutputtedDirection() {
-//        game.currentRoom = "SiebelEastHallway";
-//        game.endRoom = "Siebel1314";
-//        game.directions = game.arrayRooms[5].getDirections();
-//        assertEquals("West South Down", game.printPossibleDirectionsBasedOnInput());
-//    }
+
+    @Test
+    public void testPrintPossibleItemsFromStartingRoom() {
+        game.currentRoom = "DisneyWorldEntrance";
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[0].getItems();
+        assertEquals("AdmissionsTicket", game.printPossibleItemsBasedOnInput());
+    }
+
+    @Test
+    public void testPrintPossibleItemsFromRandomRoom() {
+        game.currentRoom = "Cafe";
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[2].getItems();
+        assertEquals("SodaBottle", game.printPossibleItemsBasedOnInput());
+    }
+
+    @Test
+    public void testPrintPossibleItemsForMoreThanOneOutputtedDirection() {
+        game.currentRoom = "MainStreet";
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[1].getItems();
+        assertEquals("MickeysEars MagicCarpet SpaceShip", game.printPossibleItemsBasedOnInput());
+    }
+
+    //----test printDirectionsBasedOnItem method----//
+
+    @Test
+    public void testPrintPossibleDirectionsFromInput() {
+        game.currentRoom = "MainStreet";
+        game.setCurrentRoomObject();
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[1].getItems();
+        assertEquals("EastNorthEastNorthWestSouth", game.printPossibleDirectionsPlayerCanGo("pickup mickeysears"));
+    }
+
+    @Test
+    public void testPrintPossibleDirectionsFromInput2() {
+        game.currentRoom = "LibertySquare";
+        game.setCurrentRoomObject();
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[5].getItems();
+        assertEquals("SouthEast", game.printPossibleDirectionsPlayerCanGo("pickup glassslippers"));
+    }
 
     //------Test Cases for indicateHavingReachedEnd method-------//
 
