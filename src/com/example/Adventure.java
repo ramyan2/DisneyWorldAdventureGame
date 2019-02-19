@@ -42,6 +42,8 @@ public class Adventure {
 
     String url;
 
+    public String itemAndDirection = "";
+
     /**
      * parses the json file from the url
      * @return the parsed json
@@ -261,7 +263,7 @@ public class Adventure {
                     while(tracker) {
                         printPossibleDirectionsPlayerCanGo(item);
                         Scanner scanner2 = new Scanner(System.in);
-                        String itemAndDirection = scanner2.nextLine();
+                        itemAndDirection = scanner2.nextLine();
                         if (indicateHavingReachedEnd(itemAndDirection)) {
                             System.out.println("You have reached your final destination");
                             System.out.println("EXIT");
@@ -447,7 +449,7 @@ public class Adventure {
      * @return true or false
      * @throws Exception
      */
-    public boolean urlRunner() throws Exception {
+    public boolean urlRunner() {
         Scanner scanner2 = new Scanner(System.in);
         System.out.println("Enter url");
         url = scanner2.nextLine();

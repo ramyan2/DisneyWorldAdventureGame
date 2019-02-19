@@ -2,6 +2,9 @@ package com.example;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+
 import static org.junit.Assert.assertEquals;
 
 public class AdventureTimeTest {
@@ -288,28 +291,63 @@ public class AdventureTimeTest {
         assertEquals("SouthEast", game.printPossibleDirectionsPlayerCanGo("pickup glassslippers"));
     }
 
-    //------Test Cases for indicateHavingReachedEnd method-------//
+    //--check if runs game properly-----//
 
-//    @Test
-//    public void testWhenReachedEnd() {
-//        game.endRoom = "CinderellasCastle";
-//        game.directions = game.arrayRooms[5].getDirections();
-//        game.currentDirection = game.directions[1];
-//        game.currentRoom = game.currentDirection.getRoom();
-//        game.setCurrentRoomObject();
-//        System.out.println(game.currentRoom);
-//        assertEquals(true, game.indicateHavingReachedEnd("use glassslippers with south"));
-//    }
-//
-//    @Test
-//    public void testWhenNotReachedEnd() {
-//        game.currentRoom = "SiebelEastHallway";
-//        game.endRoom = "Siebel1314";
-//        game.directions = game.arrayRooms[5].getDirections();
-//        game.currentDirection = game.directions[0];
-//        assertEquals(false, game.indicateHavingReachedEnd("WEST"));
-//    }
+    @Test
+    public void testRunGameWhenTrue() {
+        String data = "pickup admissionsticket" +
+                "\n use admissionsticket with north";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+
+        game.startRoom = "DisneyWorldEntrance";
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[0].getItems();
+        game.currentRoom = "MainStreet";
+        game.setCurrentRoomObject();
+        assertEquals(true, game.runGame());
+    }
+
+    //-------check enabler-----//
 
 
-    //-----check url------//
+    //-----check if game has reached end properly----//
+
+    @Test
+    public void testWhenReachedEnd() {
+        game.parsingJson();
+        game.endRoom = "CinderellasCastle";
+        game.currentRoom = "CinderellasCastle";
+        game.room = game.arrayRooms[6];
+        assertEquals(true, game.indicateHavingReachedEnd("use GLASsslippers with south"));
+    }
+
+    @Test
+    public void testWhenNotReachedEnd() {
+        game.parsingJson();
+        game.endRoom = "CinderellasCastle";
+        game.currentRoom = "MainStreet";
+        game.room = game.arrayRooms[1];
+        assertEquals(false, game.indicateHavingReachedEnd("use mickeysears with east"));
+    }
+
+
+    //-----checks good and bad URLs-----//
+
+    //returns false if it is a valid url and true if it is not a valid game url
+    @Test
+    public void testGoodUrlScanner() {
+        String data = "https://pastebin.com/raw/Vze8b20f";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        assertEquals(false, game.urlRunner());
+    }
+
+    //if user inputs a bad website it indicates its a bad url and defaults to disney url
+    @Test
+    public void testBadUrlScanner() {
+        String data = "https://randomWebsite.com";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        System.out.println(game.startRoom);
+        assertEquals("DisneyWorldEntrance", game.startRoom);
+    }
+
 }
