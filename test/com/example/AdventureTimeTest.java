@@ -15,8 +15,19 @@ public class AdventureTimeTest {
         parsedJSon = game.parsingJson();
     }
 
-    //test JSON
+    //------test JSON-------//
 
+    @Test
+    public void testparsedJson() {
+        game.parsingJson();
+        assertEquals("DisneyWorldEntrance",game.startRoom);
+    }
+
+    @Test
+    public void testparsedJson2() {
+        game.parsingJson();
+        assertEquals("CinderellasCastle",game.endRoom);
+    }
 
     //------tests setCurrentRoomObject method------//
 

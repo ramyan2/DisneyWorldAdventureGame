@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,13 +86,13 @@
           <entry key="AdventuresJSON" value="2202" />
           <entry key="java" value="8068" />
           <entry key="md" value="1439" />
-          <entry key="txt" value="1695" />
+          <entry key="txt" value="1759" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="8068" />
-          <entry key="PLAIN_TEXT" value="5336" />
+          <entry key="PLAIN_TEXT" value="5400" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -177,8 +176,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="450" column="34" selection-start-line="450" selection-start-column="34" selection-end-line="450" selection-end-column="34" />
+            <state relative-caret-position="4017">
+              <caret line="312" column="82" lean-forward="true" selection-start-line="312" selection-start-column="82" selection-end-line="312" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -267,6 +266,7 @@
       <find>checkIfInputIs</find>
       <find>bad</find>
       <find>bad ur</find>
+      <find>url</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -311,7 +311,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550555833130" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550595574722" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -345,7 +345,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Adventure">
+  <component name="RunManager" selected="JUnit.AdventureTimeTest.testparsedJson2">
     <configuration name="Adventure" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Adventure" />
       <module name="adventure" />
@@ -370,38 +370,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="adventure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testInvalidInputMethodWhenUserTypesInValidInput2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="adventure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example" />
-      <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testInvalidInputMethodWhenUserTypesInValidInput3" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -454,22 +422,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AdventureTimeTest.testparsedJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adventure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
+      <option name="METHOD_NAME" value="testparsedJson" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdventureTimeTest.testparsedJson2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adventure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
+      <option name="METHOD_NAME" value="testparsedJson2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Adventure" />
       <item itemvalue="JUnit.AdventureTimeTest" />
-      <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput2" />
-      <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" />
       <item itemvalue="JUnit.AdventureTimeTest.testPrintNextRoomDescriptionMethodForStartingRoom" />
       <item itemvalue="JUnit.AdventureTimeTest.testPrintNextRoomDescriptionMethodForRoom" />
       <item itemvalue="JUnit.AdventureTimeTest.testWhenReachedEnd" />
+      <item itemvalue="JUnit.AdventureTimeTest.testparsedJson" />
+      <item itemvalue="JUnit.AdventureTimeTest.testparsedJson2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdventureTimeTest.testparsedJson2" />
+        <item itemvalue="JUnit.AdventureTimeTest.testparsedJson" />
         <item itemvalue="JUnit.AdventureTimeTest.testWhenReachedEnd" />
         <item itemvalue="JUnit.AdventureTimeTest.testPrintNextRoomDescriptionMethodForRoom" />
         <item itemvalue="JUnit.AdventureTimeTest.testPrintNextRoomDescriptionMethodForStartingRoom" />
-        <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput3" />
-        <item itemvalue="JUnit.AdventureTimeTest.testInvalidInputMethodWhenUserTypesInValidInput2" />
       </list>
     </recent_temporary>
   </component>
@@ -806,7 +806,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550548451122</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Extended my game so that it can take a URL and load the JSON from that and this is done as an argument on the command line.">
+      <created>1550555934612</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1550555934612</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -843,6 +850,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="840" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -853,7 +861,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39438504" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39438504" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -911,7 +919,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wrote more test cases for invalid inputs that the user can possibly input to try and break my code, and fixed this method in Adventure class when it did break my code by updating my tracker variable." />
     <MESSAGE value="Wrote test cases to try and break my printDescriptionBasedOnDirection method in the Adventure class by checking edge cases(starting and ending rooms) as well as a random room" />
     <MESSAGE value="Wrote test cases to try and break my printPossibleDirectionsBasedOnInput method in the Adventure class by checking random rooms and if the output had more than one direction I ensured it printed all of those direction." />
     <MESSAGE value="Wrote test cases for the indicateHavingReachedEnd method that returned true if the user reached the end of the game and false if they did not reach the end of the game." />
@@ -936,7 +943,8 @@
     <MESSAGE value="Edited Development.md file." />
     <MESSAGE value="Wrote test cases for startGame method." />
     <MESSAGE value="Wrote test cases for null and invalid inputs for helper methods to try and break code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote test cases for null and invalid inputs for helper methods to try and break code." />
+    <MESSAGE value="Extended my game so that it can take a URL and load the JSON from that and this is done as an argument on the command line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Extended my game so that it can take a URL and load the JSON from that and this is done as an argument on the command line." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -1048,8 +1056,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="450" column="34" selection-start-line="450" selection-start-column="34" selection-end-line="450" selection-end-column="34" />
+        <state relative-caret-position="4017">
+          <caret line="312" column="82" lean-forward="true" selection-start-line="312" selection-start-column="82" selection-end-line="312" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
