@@ -40,7 +40,8 @@ public class Adventure {
 
     public String inputDir;
 
-    String url = "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
+    String url;
+           // = "https://courses.engr.illinois.edu/cs126/adventure/siebel.json";
 
     /**
      * parses the json file from the url
@@ -51,14 +52,14 @@ public class Adventure {
         Gson gson = new Gson();
         parsedJson = gson.fromJson(AdventuresJSON, Layout.class);
 
-//        try {
-//            URL obj = new URL(url);
-//            InputStreamReader reader = new InputStreamReader(obj.openStream());
-//            parsedJson = gson.fromJson(reader, Layout.class);
-//
-//        } catch(Exception e) {
-//            System.out.println("bad url");
-//        }
+        try {
+            URL obj = new URL(url);
+            InputStreamReader reader = new InputStreamReader(obj.openStream());
+            parsedJson = gson.fromJson(reader, Layout.class);
+
+        } catch(Exception e) {
+            System.out.println("bad url");
+        }
         arrayRooms = parsedJson.getRooms();
         startRoom = parsedJson.getStartingRoom();
         endRoom = parsedJson.getEndingRoom();
@@ -447,8 +448,7 @@ public class Adventure {
     public boolean urlRunner() throws Exception {
         Scanner scanner2 = new Scanner(System.in);
         System.out.println("Enter url");
-        String urlInput = scanner2.nextLine();
-        url = urlInput;
+        url = scanner2.nextLine();
         parsingJson();
         // check if rooms are null and if they are its not a game world
         if (startRoom == null || endRoom == null) {
@@ -461,6 +461,7 @@ public class Adventure {
 
 
     public static void main (String[] args) throws Exception {
+        game.url = args[0];
         boolean firstLoop = true;
         while (firstLoop) {
             Scanner scanner1 = new Scanner(System.in);
