@@ -396,27 +396,27 @@ public class AdventureTimeTest {
     }
 
     //-----check fight Ursula method-----//
-    @Test
-    public void testWhenPlayerDefeatsUrsula() {
-        String data = "eight" +
-                "\nFIVE" +
-                "\npurple" +
-                "\nAriEl" +
-                "\nvoice";
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        assertTrue(game.fightUrsula());
-    }
-
-    @Test
-    public void testWhenPlayerDoesNotDefeatUrsula() {
-        String data = "" +
-                "\ntwo" +
-                "\npurple" +
-                "\nariel" +
-                "\nvoice";
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        assertEquals(false, game.fightUrsula());
-    }
+//    @Test
+//    public void testWhenPlayerDefeatsUrsula() {
+//        String data = "eight" +
+//                "\nFIVE" +
+//                "\npurple" +
+//                "\nAriEl" +
+//                "\nvoice";
+//        System.setIn(new ByteArrayInputStream(data.getBytes()));
+//        assertTrue(game.fightUrsula());
+//    }
+//
+//    @Test
+//    public void testWhenPlayerDoesNotDefeatUrsula() {
+//        String data = "" +
+//                "\ntwo" +
+//                "\npurple" +
+//                "\nariel" +
+//                "\nvoice";
+//        System.setIn(new ByteArrayInputStream(data.getBytes()));
+//        assertEquals(false, game.fightUrsula());
+//    }
 
 
     //-----checks good and bad URLs-----//

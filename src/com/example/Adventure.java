@@ -51,6 +51,7 @@ public class Adventure {
      * @return the parsed json
      */
     public Layout parsingJson() {
+        System.out.println(url);
         Gson gson = new Gson();
         parsedJson = gson.fromJson(AdventuresJSON, Layout.class);
 
@@ -60,7 +61,7 @@ public class Adventure {
             parsedJson = gson.fromJson(reader, Layout.class);
 
         } catch(Exception e) {
-            System.out.println("bad url");
+            System.out.println(e);
         }
         arrayRooms = parsedJson.getRooms();
         startRoom = parsedJson.getStartingRoom();
@@ -292,40 +293,21 @@ public class Adventure {
         return true;
     }
 
-
     /**
-     * fight ursula by answering the 5 questions asked
-     * @return true or false based on if they defeated the villain
+     * fights a monster
+     * @return true if defeated the monster false otherwise
      */
-    public boolean fightUrsula() {
-        System.out.println("Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:");
-        System.out.println("1) How many tentacles does ursula have?");
-        Scanner scanner = new Scanner(System.in);
-        String firstAnswer = scanner.nextLine();
-        if (firstAnswer.equalsIgnoreCase("eight")) {
-            System.out.println("2) What is 2 + 3 equal to?");
-            String secondAnswer = scanner.nextLine();
-            if (secondAnswer.equalsIgnoreCase("five")) {
-                System.out.println("3) What is the color of Ursula's skin?");
-                String thirdAnswer = scanner.nextLine();
-                if (thirdAnswer.equalsIgnoreCase("purple")) {
-                    System.out.println("4) Which Disney princess does she hate?");
-                    String fourthAnswer = scanner.nextLine();
-                    if (fourthAnswer.equalsIgnoreCase("ariel")) {
-                        System.out.println("5) What did Ursula take from Ariel?");
-                        String fifthAnswer = scanner.nextLine();
-                        if (fifthAnswer.equalsIgnoreCase("voice")) {
-                            System.out.println("You have defeated Ursula, congratulations!!!");
-                            return true;
-                        }
-                    }
-                }
+    public boolean fightMonster() {
+        System.out.println(room.monster.description);
+        for (int i = 0; i < room.monster.questions.length; i++) {
+            System.out.println(room.monster.questions[i].name);
+            Scanner scanner = new Scanner(System.in);
+            answer = scanner.nextLine();
+            if (!(answer.equalsIgnoreCase(room.monster.questions[i].answer))) {
+                return false;
             }
-        } else {
-            System.out.println("Ursula has defeated you, try again!");
-            return false;
         }
-        return false;
+        return true;
     }
 
 
@@ -375,23 +357,18 @@ public class Adventure {
             return false;
         }
 
+        if (room.monster != null) {
+            boolean beatMonster = false;
+            while (!beatMonster) {
+                beatMonster = fightMonster();
+            }
+        }
+
         String playerItem = splitInput[1].toLowerCase();
         String inputtedDirection = splitInput[3].toLowerCase();
 
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
-            boolean tracker = true;
-            while(tracker) {
-                if (directions[i].getRoom().equalsIgnoreCase("libertysquare")) {
-                    if (fightUrsula()) {
-                        tracker = false;
-                    } else {
-                        tracker = true;
-                    }
-                } else {
-                    tracker = false;
-                }
-            }
             if (directions[i].getEnabled().equals("false") && directions[i].getValidKeyNames().length != 0) {
                 if (directions[i].getValidKeyNames()[0].equalsIgnoreCase(playerItem) &&
                         directions[i].getDirectionName().equalsIgnoreCase(inputtedDirection)) {

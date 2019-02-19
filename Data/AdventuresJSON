@@ -182,7 +182,34 @@
          {
                 "name": "GlassSlippers"
          }
-         ]
+         ],
+         "monster":{
+           "description": "Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:",
+           "questions": [
+             {
+                "name": "How many tentacles does ursula have?",
+                "answer": "eight"
+             },
+             {
+                "name": " What is 2 + 3 equal to?",
+                "answer": "five"
+
+             },
+             {
+                "name": "What is the color of Ursula's skin?",
+                "answer": "purple"
+             },
+             {
+                "name": "Which Disney princess does she hate?",
+                "answer": "ariel"
+             },
+             {
+                "name": "What did Ursula take from Ariel?",
+                "answer": "voice"
+             }
+
+           ]
+         }
       },
       {
                "name":"AdventureLand",

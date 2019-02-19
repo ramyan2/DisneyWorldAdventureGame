@@ -7,6 +7,7 @@ public class Room {
     public String description;
     public Direction[] directions;
     public Item[] items;
+    public Monster monster;
 
     /**
      * gets room name
