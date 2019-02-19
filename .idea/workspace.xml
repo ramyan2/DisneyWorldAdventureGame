@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -86,15 +85,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="AdventuresJSON" value="2202" />
-          <entry key="java" value="10992" />
+          <entry key="java" value="11200" />
           <entry key="md" value="1439" />
-          <entry key="txt" value="1971" />
+          <entry key="txt" value="2234" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10992" />
-          <entry key="PLAIN_TEXT" value="5612" />
+          <entry key="JAVA" value="11200" />
+          <entry key="PLAIN_TEXT" value="5875" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -169,7 +168,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4818">
+            <state relative-caret-position="-4856">
               <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -181,8 +180,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
+            <state relative-caret-position="200">
+              <caret line="337" column="92" selection-start-line="337" selection-start-column="92" selection-end-line="337" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#269#270#0" expanded="true" />
@@ -211,8 +210,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="161" column="30" selection-start-line="161" selection-start-column="17" selection-end-line="161" selection-end-column="30" />
+            <state relative-caret-position="1124">
+              <caret line="102" column="29" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -306,7 +305,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/ramya/IdeaProjects/adventure2-ramyan2/test/com/example/AdventureTimeTest.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550610868027" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550611813929" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -340,7 +339,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdventureTimeTest">
+  <component name="RunManager" selected="JUnit.AdventureTimeTest.testWhenGameShouldNotEnable2">
     <configuration name="Adventure" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Adventure" />
       <module name="adventure" />
@@ -369,7 +368,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.testBadUrlScanner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testWhenGameShouldEnable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -379,13 +378,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testBadUrlScanner" />
+      <option name="METHOD_NAME" value="testWhenGameShouldEnable" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.testRunGameWhenFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testWhenGameShouldEnable2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -395,13 +394,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testRunGameWhenFalse" />
+      <option name="METHOD_NAME" value="testWhenGameShouldEnable2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.testUrlScanner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testWhenGameShouldNotEnable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -411,13 +410,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testUrlScanner" />
+      <option name="METHOD_NAME" value="testWhenGameShouldNotEnable" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.testWhenNotReachedEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testWhenGameShouldNotEnable2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -427,13 +426,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testWhenNotReachedEnd" />
+      <option name="METHOD_NAME" value="testWhenGameShouldNotEnable2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdventureTimeTest.testWhenReachedEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdventureTimeTest.testWhenGameShouldNotEnableBecauseWrongDirectionWithItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventure" />
       <extension name="coverage">
         <pattern>
@@ -443,7 +442,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.AdventureTimeTest" />
-      <option name="METHOD_NAME" value="testWhenReachedEnd" />
+      <option name="METHOD_NAME" value="testWhenGameShouldNotEnableBecauseWrongDirectionWithItem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -452,19 +451,19 @@
     <list>
       <item itemvalue="Application.Adventure" />
       <item itemvalue="JUnit.AdventureTimeTest" />
-      <item itemvalue="JUnit.AdventureTimeTest.testRunGameWhenFalse" />
-      <item itemvalue="JUnit.AdventureTimeTest.testWhenReachedEnd" />
-      <item itemvalue="JUnit.AdventureTimeTest.testWhenNotReachedEnd" />
-      <item itemvalue="JUnit.AdventureTimeTest.testUrlScanner" />
-      <item itemvalue="JUnit.AdventureTimeTest.testBadUrlScanner" />
+      <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldEnable" />
+      <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldNotEnable" />
+      <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldEnable2" />
+      <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldNotEnableBecauseWrongDirectionWithItem" />
+      <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldNotEnable2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdventureTimeTest.testBadUrlScanner" />
-        <item itemvalue="JUnit.AdventureTimeTest.testUrlScanner" />
-        <item itemvalue="JUnit.AdventureTimeTest.testWhenNotReachedEnd" />
-        <item itemvalue="JUnit.AdventureTimeTest.testWhenReachedEnd" />
-        <item itemvalue="JUnit.AdventureTimeTest.testRunGameWhenFalse" />
+        <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldNotEnable2" />
+        <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldNotEnableBecauseWrongDirectionWithItem" />
+        <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldEnable2" />
+        <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldNotEnable" />
+        <item itemvalue="JUnit.AdventureTimeTest.testWhenGameShouldEnable" />
       </list>
     </recent_temporary>
   </component>
@@ -478,13 +477,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549049367401</updated>
-    </task>
-    <task id="LOCAL-00001" summary="created three classes under src directory: Direction, Room, and Layout that accepts the description of the game world">
-      <created>1549051600030</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1549051600030</updated>
     </task>
     <task id="LOCAL-00002" summary="added a data class to read the inputted url">
       <created>1549054218791</created>
@@ -822,25 +814,17 @@
       <option name="project" value="LOCAL" />
       <updated>1550604094283</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Wrote test cases for indicating when the game has reached an end and test cases for good and bad URLs. Through this I broke my urlRunner method but then fixed it.">
+      <created>1550611016871</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1550611016873</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AdventureTimeTest_testBadUrlScanner - 2019.02.19 at 15h 06m 45s.xml">
-      <configuration name="AdventureTimeTest.testBadUrlScanner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testBadUrlScanner - 2019.02.19 at 15h 07m 36s.xml">
-      <configuration name="AdventureTimeTest.testBadUrlScanner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testBadUrlScanner - 2019.02.19 at 15h 08m 19s.xml">
-      <configuration name="AdventureTimeTest.testBadUrlScanner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testBadUrlScanner - 2019.02.19 at 15h 09m 56s.xml">
-      <configuration name="AdventureTimeTest.testBadUrlScanner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testBadUrlScanner - 2019.02.19 at 15h 11m 06s.xml">
-      <configuration name="AdventureTimeTest.testBadUrlScanner" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AdventureTimeTest_testBadUrlScanner - 2019.02.19 at 15h 11m 51s.xml">
       <configuration name="AdventureTimeTest.testBadUrlScanner" configurationId="JUnit" />
     </history-entry>
@@ -856,6 +840,21 @@
     <history-entry file="AdventureTimeTest - 2019.02.19 at 15h 14m 33s.xml">
       <configuration name="AdventureTimeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AdventureTimeTest_testWhenGameShouldEnable - 2019.02.19 at 15h 19m 12s.xml">
+      <configuration name="AdventureTimeTest.testWhenGameShouldEnable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testWhenGameShouldEnable - 2019.02.19 at 15h 19m 28s.xml">
+      <configuration name="AdventureTimeTest.testWhenGameShouldEnable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testWhenGameShouldNotEnable - 2019.02.19 at 15h 22m 19s.xml">
+      <configuration name="AdventureTimeTest.testWhenGameShouldNotEnable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testWhenGameShouldNotEnable - 2019.02.19 at 15h 22m 24s.xml">
+      <configuration name="AdventureTimeTest.testWhenGameShouldNotEnable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testWhenGameShouldEnable2 - 2019.02.19 at 15h 23m 38s.xml">
+      <configuration name="AdventureTimeTest.testWhenGameShouldEnable2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="840" extended-state="0" />
@@ -870,7 +869,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39438504" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39438504" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -928,7 +927,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wrote test cases for the indicateHavingReachedEnd method that returned true if the user reached the end of the game and false if they did not reach the end of the game." />
     <MESSAGE value="Wrote more test cases to try and break my checkIfInputIsAValidDirection method to see if it returns true if user inputs a valid input and see if it returns false when user inputs only the direction name." />
     <MESSAGE value="Added a try catch to my parsingJson method to gracefully detect and handle the case where user provided a bad URL. Also allowed users to specify an alternate URL on the command line in my main method." />
     <MESSAGE value="Added some more test cases like null and valid inputs to try and break my code, then cleaned my formatting and method names and made sure to meet all the assignment requirements." />
@@ -953,7 +951,8 @@
     <MESSAGE value="Extended my game so that it can take a URL and load the JSON from that and this is done as an argument on the command line." />
     <MESSAGE value="Wrote test cases for checking if I parsed my JSON properly." />
     <MESSAGE value="Wrote more test cases for my helper method to test if I print the next room description and possible directions properly to try and break my code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote more test cases for my helper method to test if I print the next room description and possible directions properly to try and break my code." />
+    <MESSAGE value="Wrote test cases for indicating when the game has reached an end and test cases for good and bad URLs. Through this I broke my urlRunner method but then fixed it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote test cases for indicating when the game has reached an end and test cases for good and bad URLs. Through this I broke my urlRunner method but then fixed it." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -1040,13 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="161" column="30" selection-start-line="161" selection-start-column="17" selection-end-line="161" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1056,7 +1048,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4818">
+        <state relative-caret-position="-4856">
           <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1064,10 +1056,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1124">
+          <caret line="102" column="29" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
+        <state relative-caret-position="200">
+          <caret line="337" column="92" selection-start-line="337" selection-start-column="92" selection-end-line="337" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#269#270#0" expanded="true" />

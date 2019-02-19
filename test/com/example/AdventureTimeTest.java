@@ -308,7 +308,45 @@ public class AdventureTimeTest {
     }
 
     //-------check enabler-----//
+    @Test
+    public void testWhenGameShouldEnable() {
+        game.parsingJson();
+        game.currentRoom = "MainStreet";
+        game.setCurrentRoomObject();
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[1].getItems();
+        assertEquals(true, game.enableDirectionBasedOnInput("use mickeysears with east"));
+    }
 
+    @Test
+    public void testWhenGameShouldEnable2() {
+        game.parsingJson();
+        game.currentRoom = "LibertySquare";
+        game.setCurrentRoomObject();
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[5].getItems();
+        assertEquals(true, game.enableDirectionBasedOnInput("use glassslippers with south"));
+    }
+
+    @Test
+    public void testWhenGameShouldNotEnableBecauseWrongDirectionWithItem() {
+        game.parsingJson();
+        game.currentRoom = "MainStreet";
+        game.setCurrentRoomObject();
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[1].getItems();
+        assertEquals(false, game.enableDirectionBasedOnInput("use mickeysears with northeast"));
+    }
+
+    @Test
+    public void testWhenGameShouldNotEnable2() {
+        game.parsingJson();
+        game.currentRoom = "LibertySquare";
+        game.setCurrentRoomObject();
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[5].getItems();
+        assertEquals(false, game.enableDirectionBasedOnInput("use slippers with south"));
+    }
 
     //-----check if game has reached end properly----//
 
