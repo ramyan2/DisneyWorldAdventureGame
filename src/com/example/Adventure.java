@@ -47,7 +47,7 @@ public class Adventure {
      * @return the parsed json
      * @throws Exception
      */
-    public Layout parsingJson() throws Exception {
+    public Layout parsingJson() {
         Gson gson = new Gson();
         parsedJson = gson.fromJson(AdventuresJSON, Layout.class);
 
