@@ -348,6 +348,32 @@ public class AdventureTimeTest {
         assertEquals(false, game.enableDirectionBasedOnInput("use slippers with south"));
     }
 
+    //-----check teleporting method-------//
+    @Test
+    public void testWhenGameShouldTeleportPlayer() {
+        String data = "BLUE";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        game.currentRoom = "MainStreet";
+        game.setCurrentRoomObject();
+        game.itemAndDirection = "use magiccarpet with northwest";
+
+
+        assertEquals(true, game.teleportPlayer(game.itemAndDirection));
+    }
+
+    @Test
+    public void testWhenGameShouldNotTeleportPlayer() {
+        String data = "red";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        game.currentRoom = "MainStreet";
+        game.setCurrentRoomObject();
+        game.itemAndDirection = "use magiccarpet with northwest";
+
+
+        assertEquals(false, game.teleportPlayer(game.itemAndDirection));
+    }
+
+
     //-----check if game has reached end properly----//
 
     @Test

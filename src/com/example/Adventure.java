@@ -44,6 +44,8 @@ public class Adventure {
 
     public String itemAndDirection = "";
 
+    public String answer = "";
+
     /**
      * parses the json file from the url
      * @return the parsed json
@@ -352,7 +354,7 @@ public class Adventure {
                     System.out.println("Look it's a fairy godmother, she can grant your wish of teleporting!");
                     System.out.println("You have one chance to answer this question right: What is the color of Cinderella's ball gown?");
                     Scanner scanner = new Scanner(System.in);
-                    String answer = scanner.nextLine();
+                    answer = scanner.nextLine();
                     if (answer.equalsIgnoreCase("blue")) {
                         return true;
                     } else {
