@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AdventureTimeTest {
 
@@ -392,6 +393,29 @@ public class AdventureTimeTest {
         game.currentRoom = "MainStreet";
         game.room = game.arrayRooms[1];
         assertEquals(false, game.indicateHavingReachedEnd("use mickeysears with east"));
+    }
+
+    //-----check fight Ursula method-----//
+    @Test
+    public void testWhenPlayerDefeatsUrsula() {
+        String data = "eight" +
+                "\nFIVE" +
+                "\npurple" +
+                "\nAriEl" +
+                "\nvoice";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        assertTrue(game.fightUrsula());
+    }
+
+    @Test
+    public void testWhenPlayerDoesNotDefeatUrsula() {
+        String data = "" +
+                "\ntwo" +
+                "\npurple" +
+                "\nariel" +
+                "\nvoice";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        assertEquals(false, game.fightUrsula());
     }
 
 

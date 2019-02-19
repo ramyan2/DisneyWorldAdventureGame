@@ -304,20 +304,16 @@ public class Adventure {
         String firstAnswer = scanner.nextLine();
         if (firstAnswer.equalsIgnoreCase("eight")) {
             System.out.println("2) What is 2 + 3 equal to?");
-            Scanner scanner2 = new Scanner(System.in);
-            String secondAnswer = scanner2.nextLine();
+            String secondAnswer = scanner.nextLine();
             if (secondAnswer.equalsIgnoreCase("five")) {
                 System.out.println("3) What is the color of Ursula's skin?");
-                Scanner scanner3 = new Scanner(System.in);
-                String thirdAnswer = scanner3.nextLine();
+                String thirdAnswer = scanner.nextLine();
                 if (thirdAnswer.equalsIgnoreCase("purple")) {
                     System.out.println("4) Which Disney princess does she hate?");
-                    Scanner scanner4 = new Scanner(System.in);
-                    String fourthAnswer = scanner4.nextLine();
+                    String fourthAnswer = scanner.nextLine();
                     if (fourthAnswer.equalsIgnoreCase("ariel")) {
                         System.out.println("5) What did Ursula take from Ariel?");
-                        Scanner scanner5 = new Scanner(System.in);
-                        String fifthAnswer = scanner5.nextLine();
+                        String fifthAnswer = scanner.nextLine();
                         if (fifthAnswer.equalsIgnoreCase("voice")) {
                             System.out.println("You have defeated Ursula, congratulations!!!");
                             return true;
