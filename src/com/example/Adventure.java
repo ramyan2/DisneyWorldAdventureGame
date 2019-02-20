@@ -298,10 +298,10 @@ public class Adventure {
      * @return true if defeated the monster false otherwise
      */
     public boolean fightMonster() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println(room.monster.description);
         for (int i = 0; i < room.monster.questions.length; i++) {
             System.out.println(room.monster.questions[i].name);
-            Scanner scanner = new Scanner(System.in);
             answer = scanner.nextLine();
             if (!(answer.equalsIgnoreCase(room.monster.questions[i].answer))) {
                 return false;

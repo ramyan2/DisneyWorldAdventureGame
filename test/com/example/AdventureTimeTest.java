@@ -316,17 +316,17 @@ public class AdventureTimeTest {
         game.setCurrentRoomObject();
         game.endRoom = "CinderellasCastle";
         game.items = game.arrayRooms[1].getItems();
-        assertEquals(true, game.enableDirectionBasedOnInput("use mickeysears with east"));
+        assertEquals(true, game.enableDirectionBasedOnInput("use mickeysEARS with east"));
     }
 
     @Test
     public void testWhenGameShouldEnable2() {
         game.parsingJson();
-        game.currentRoom = "LibertySquare";
+        game.currentRoom = "Cafe";
         game.setCurrentRoomObject();
         game.endRoom = "CinderellasCastle";
-        game.items = game.arrayRooms[5].getItems();
-        assertEquals(true, game.enableDirectionBasedOnInput("use glassslippers with south"));
+        game.items = game.arrayRooms[2].getItems();
+        assertEquals(true, game.enableDirectionBasedOnInput("use SODAbottle with north"));
     }
 
     @Test
@@ -342,11 +342,11 @@ public class AdventureTimeTest {
     @Test
     public void testWhenGameShouldNotEnable2() {
         game.parsingJson();
-        game.currentRoom = "LibertySquare";
+        game.currentRoom = "TomorrowLand";
         game.setCurrentRoomObject();
         game.endRoom = "CinderellasCastle";
-        game.items = game.arrayRooms[5].getItems();
-        assertEquals(false, game.enableDirectionBasedOnInput("use slippers with south"));
+        game.items = game.arrayRooms[3].getItems();
+        assertEquals(false, game.enableDirectionBasedOnInput("use tissue with north"));
     }
 
     //-----check teleporting method-------//
@@ -395,28 +395,32 @@ public class AdventureTimeTest {
         assertEquals(false, game.indicateHavingReachedEnd("use mickeysears with east"));
     }
 
-    //-----check fight Ursula method-----//
-//    @Test
-//    public void testWhenPlayerDefeatsUrsula() {
-//        String data = "eight" +
-//                "\nFIVE" +
-//                "\npurple" +
-//                "\nAriEl" +
-//                "\nvoice";
-//        System.setIn(new ByteArrayInputStream(data.getBytes()));
-//        assertTrue(game.fightUrsula());
-//    }
-//
-//    @Test
-//    public void testWhenPlayerDoesNotDefeatUrsula() {
-//        String data = "" +
-//                "\ntwo" +
-//                "\npurple" +
-//                "\nariel" +
-//                "\nvoice";
-//        System.setIn(new ByteArrayInputStream(data.getBytes()));
-//        assertEquals(false, game.fightUrsula());
-//    }
+   // -----check fight monster method-----//
+    @Test
+    public void testWhenPlayerDefeatsUrsula() {
+        game.parsingJson();
+        game.room = game.arrayRooms[5];
+        String data = "eight" +
+                "\nFIVE" +
+                "\npurple" +
+                "\nAriEl" +
+                "\nvoice";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        assertTrue(game.fightMonster());
+    }
+
+    @Test
+    public void testWhenPlayerDoesNotDefeatUrsula() {
+        game.parsingJson();
+        game.room = game.arrayRooms[5];
+        String data = "" +
+                "\ntwo" +
+                "\npurple" +
+                "\nariel" +
+                "\nvoice";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        assertEquals(false, game.fightMonster());
+    }
 
 
     //-----checks good and bad URLs-----//
@@ -424,7 +428,7 @@ public class AdventureTimeTest {
     //returns false if it is a valid url and true if it is not a valid game url
     @Test
     public void testGoodUrlScanner() {
-        String data = "https://pastebin.com/raw/Vze8b20f";
+        String data = "https://pastebin.com/raw/YEXEe5XC";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         assertEquals(false, game.urlRunner());
     }
