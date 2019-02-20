@@ -18,3 +18,5 @@ Issues encountered during process:
 * Wrote my JSON file and encountered some formatting issues but fixed them.
 * Had trouble continuing the game with invalid inputs when I wanted the player to teleport
 * Enabling a room was a difficult process since there were many conditions I had to make sure were met before enabling a certain room
+* Figuring out how to incorporate my game extension of fighting a monster and adding it to my JSON
+* Writing test cases for methods with user input
