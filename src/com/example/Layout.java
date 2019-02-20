@@ -3,8 +3,11 @@ package com.example;
 public class Layout {
 
     public String startingRoom;
+
     public String endingRoom;
+
     public Room[] rooms;
+
     public Player player;
 
     /**

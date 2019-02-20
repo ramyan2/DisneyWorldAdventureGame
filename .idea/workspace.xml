@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cb14871b-d06f-4526-be58-aaca4786d34a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/AdventuresJSON" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AdventuresJSON" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/Adventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Adventure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Layout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Room.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,15 +88,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="AdventuresJSON" value="2374" />
-          <entry key="java" value="13517" />
+          <entry key="java" value="13679" />
           <entry key="md" value="1439" />
-          <entry key="txt" value="2642" />
+          <entry key="txt" value="2754" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13517" />
-          <entry key="PLAIN_TEXT" value="6455" />
+          <entry key="JAVA" value="13679" />
+          <entry key="PLAIN_TEXT" value="6567" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -116,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="495">
+              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
               <folding>
                 <element signature="e#632#633#0" expanded="true" />
                 <element signature="e#660#661#0" expanded="true" />
@@ -129,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -139,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#628#629#0" expanded="true" />
                 <element signature="e#657#658#0" expanded="true" />
@@ -148,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="301" selection-start-line="301" selection-end-line="301" />
+            <state relative-caret-position="6195">
+              <caret line="413" column="20" selection-start-line="413" selection-start-column="20" selection-end-line="413" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,11 +162,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="363" column="38" selection-start-line="363" selection-start-column="38" selection-end-line="363" selection-end-column="38" />
+            <state relative-caret-position="5475">
+              <caret line="365" column="34" lean-forward="true" selection-start-line="365" selection-start-column="34" selection-end-line="365" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#269#270#0" expanded="true" />
@@ -193,7 +195,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="922">
+            <state relative-caret-position="883">
               <caret line="212" column="8" lean-forward="true" selection-start-line="212" selection-start-column="8" selection-end-line="212" selection-end-column="8" />
             </state>
           </provider>
@@ -202,13 +204,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Questions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
-                <element signature="e#140#141#0" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#204#205#0" expanded="true" />
-                <element signature="e#230#231#0" expanded="true" />
+                <element signature="e#128#129#0" expanded="true" />
+                <element signature="e#155#156#0" expanded="true" />
+                <element signature="e#188#189#0" expanded="true" />
+                <element signature="e#217#218#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -289,18 +291,18 @@
         <option value="$PROJECT_DIR$/test/AdventureTimeTestTest.java" />
         <option value="$PROJECT_DIR$/src/com/example/Output.java" />
         <option value="$PROJECT_DIR$/test/AdventureTimeTest.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Layout.java" />
         <option value="$PROJECT_DIR$/src/com/example/Direction.java" />
         <option value="$PROJECT_DIR$/src/com/example/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Item.java" />
         <option value="$PROJECT_DIR$/src/com/example/Player.java" />
         <option value="$PROJECT_DIR$/Development.md" />
-        <option value="$PROJECT_DIR$/src/com/example/Questions.java" />
         <option value="$PROJECT_DIR$/src/com/example/Monster.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Room.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Adventure.java" />
         <option value="$PROJECT_DIR$/Data/AdventuresJSON" />
         <option value="$PROJECT_DIR$/test/com/example/AdventureTimeTest.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Room.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Item.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Layout.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Adventure.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Questions.java" />
       </list>
     </option>
   </component>
@@ -367,7 +369,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/ramya/IdeaProjects/adventure2-ramyan2/test/com/example/AdventureTimeTest.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550621911491" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550622753781" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="10" />
@@ -401,7 +403,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdventureTimeTest">
+  <component name="RunManager" selected="Application.Adventure">
     <configuration name="Adventure" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Adventure" />
       <module name="adventure" />
@@ -539,13 +541,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549049367401</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added a method that can read the user input that is a direction and return the description of the room they are in">
-      <created>1549242396146</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1549242396146</updated>
     </task>
     <task id="LOCAL-00008" summary="Added a scanner to take user input on which direction to go. Then added a getRoomDescriptionBasedOnDirection method that gets the description of the room that is in the direction the user inputs.">
       <created>1549255654536</created>
@@ -883,44 +878,50 @@
       <option name="project" value="LOCAL" />
       <updated>1550621175289</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Wrote more test cases for my run game to see if the entire game stops running when end room is reached.">
+      <created>1550621941607</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1550621941607</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AdventureTimeTest_testWhenPlayerDefeatsUrsula - 2019.02.19 at 18h 08m 37s.xml">
-      <configuration name="AdventureTimeTest.testWhenPlayerDefeatsUrsula" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest - 2019.02.19 at 18h 08m 50s.xml">
-      <configuration name="AdventureTimeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testWhenPlayerDefeatsUrsula2 - 2019.02.19 at 18h 09m 24s.xml">
-      <configuration name="AdventureTimeTest.testWhenPlayerDefeatsUrsula2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testWhenPlayerDoesNotDefeatUrsula2 - 2019.02.19 at 18h 09m 50s.xml">
-      <configuration name="AdventureTimeTest.testWhenPlayerDoesNotDefeatUrsula2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testRunGame2 - 2019.02.19 at 18h 12m 20s.xml">
-      <configuration name="AdventureTimeTest.testRunGame2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testRunGame2 - 2019.02.19 at 18h 12m 37s.xml">
-      <configuration name="AdventureTimeTest.testRunGame2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testRunGame2 - 2019.02.19 at 18h 12m 58s.xml">
-      <configuration name="AdventureTimeTest.testRunGame2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testRunGame3 - 2019.02.19 at 18h 13m 41s.xml">
-      <configuration name="AdventureTimeTest.testRunGame3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest - 2019.02.19 at 18h 13m 51s.xml">
-      <configuration name="AdventureTimeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AdventureTimeTest_testRunGame4 - 2019.02.19 at 18h 16m 15s.xml">
+    <history-entry file="AdventureTimeTest_testRunGame4 - 2019.02.19 at 18h 16m 45s.xml">
       <configuration name="AdventureTimeTest.testRunGame4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testRunGame4 - 2019.02.19 at 18h 17m 03s.xml">
+      <configuration name="AdventureTimeTest.testRunGame4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testRunGame4 - 2019.02.19 at 18h 17m 49s.xml">
+      <configuration name="AdventureTimeTest.testRunGame4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testRunGame4 - 2019.02.19 at 18h 18m 18s.xml">
+      <configuration name="AdventureTimeTest.testRunGame4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest - 2019.02.19 at 18h 18m 34s.xml">
+      <configuration name="AdventureTimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest - 2019.02.19 at 18h 22m 21s.xml">
+      <configuration name="AdventureTimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testRunGame4 - 2019.02.19 at 18h 22m 33s.xml">
+      <configuration name="AdventureTimeTest.testRunGame4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest_testRunGame4 - 2019.02.19 at 18h 23m 25s.xml">
+      <configuration name="AdventureTimeTest.testRunGame4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest - 2019.02.19 at 18h 26m 04s.xml">
+      <configuration name="AdventureTimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdventureTimeTest - 2019.02.19 at 18h 31m 06s.xml">
+      <configuration name="AdventureTimeTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="840" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -931,7 +932,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27272728" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.47058824" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -989,7 +990,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wrote my Development.md." />
     <MESSAGE value="Wrote my own JSON file of Disney World." />
     <MESSAGE value="Updated Development.md file" />
     <MESSAGE value="Made the game work with my JSON." />
@@ -1014,7 +1014,8 @@
     <MESSAGE value="Wrote test cases for the method where I fight ursula." />
     <MESSAGE value="Added my monster extension to my Json and created a Monster and Questions class to allow the player to fight this monster." />
     <MESSAGE value="Wrote test cases for my monster game extension." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote test cases for my monster game extension." />
+    <MESSAGE value="Wrote more test cases for my run game to see if the entire game stops running when end room is reached." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote more test cases for my run game to see if the entire game stops running when end room is reached." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure.iml">
@@ -1069,17 +1070,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="212" column="8" lean-forward="true" selection-start-line="212" selection-start-column="8" selection-end-line="212" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding>
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Layout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#628#629#0" expanded="true" />
             <element signature="e#657#658#0" expanded="true" />
@@ -1100,61 +1129,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Questions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#128#129#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="301" selection-start-line="301" selection-end-line="301" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/AdventuresJSON">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="212" column="8" lean-forward="true" selection-start-line="212" selection-start-column="8" selection-end-line="212" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/example/AdventureTimeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="363" column="38" selection-start-line="363" selection-start-column="38" selection-end-line="363" selection-end-column="38" />
+        <state relative-caret-position="5475">
+          <caret line="365" column="34" lean-forward="true" selection-start-line="365" selection-start-column="34" selection-end-line="365" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#269#270#0" expanded="true" />
@@ -1163,6 +1154,16 @@
             <element signature="e#5480#5481#0" expanded="true" />
             <element signature="e#5531#5532#0" expanded="true" />
             <element signature="e#5607#5608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Adventure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6195">
+          <caret line="413" column="20" selection-start-line="413" selection-start-column="20" selection-end-line="413" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

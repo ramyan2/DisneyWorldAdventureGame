@@ -2,6 +2,7 @@ package com.example;
 
 public class Item {
     private String name;
+
     private String room;
 
 

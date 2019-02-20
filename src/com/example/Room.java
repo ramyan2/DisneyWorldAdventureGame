@@ -4,9 +4,13 @@ package com.example;
 
 public class Room {
     public String name;
+
     public String description;
+
     public Direction[] directions;
+
     public Item[] items;
+
     public Monster monster;
 
     /**

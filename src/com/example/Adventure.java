@@ -46,6 +46,7 @@ public class Adventure {
 
     public String answer = "";
 
+
     /**
      * parses the json file from the url
      * @return the parsed json
@@ -70,9 +71,10 @@ public class Adventure {
         return parsedJson;
     }
 
+
     /**
      * goes through the array of rooms in my json until it finds the current room
-     * and sets it to a Room object and sets the possible directions you can go from this room to a directions array
+     * and sets it to a Room object and sets an array of directions and items
      * @return room the current room
      */
     public Room setCurrentRoomObject() {
@@ -138,9 +140,9 @@ public class Adventure {
 
 
     /**
-     * prints the directions you can possibly go from the room based
-     * on the input and returns a string of these directions
-     * @return string of possible directions
+     * prints the items you can possibly pickup from the room based
+     * on the input and returns a string of these items
+     * @return string of possible items
      */
     public String printPossibleItemsBasedOnInput() {
         setCurrentRoomObject();
@@ -154,7 +156,6 @@ public class Adventure {
         }
         return itemsFromInput.trim();
     }
-
 
 
     /**
@@ -174,7 +175,8 @@ public class Adventure {
                 player.setItems(items);
                 currentRoom = player.getItems()[i].getRoom();
                 for (int j = 0; j < setCurrentRoomObject().getDirections().length; j++) {
-                    System.out.println("From here you can go: " + setCurrentRoomObject().getDirections()[j].getDirectionName());
+                    System.out.println("From here you can go: "
+                            + setCurrentRoomObject().getDirections()[j].getDirectionName());
                 }
                 break;
             }
@@ -245,6 +247,7 @@ public class Adventure {
         return tracker;
     }
 
+
     /**
      * runs the game when user inputs a valid url or types no
      * @return true if the game should continue
@@ -256,6 +259,7 @@ public class Adventure {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an item: ");
         String item = scanner.nextLine();
+
         if((item.equalsIgnoreCase(quitWord) || (item.equalsIgnoreCase(exitWord)))) {
             System.out.println("EXIT");
             return false;
@@ -292,6 +296,7 @@ public class Adventure {
         return true;
     }
 
+
     /**
      * fights a monster
      * @return true if defeated the monster false otherwise
@@ -301,6 +306,7 @@ public class Adventure {
         System.out.println(room.monster.description);
         for (int i = 0; i < room.monster.questions.length; i++) {
             System.out.println(room.monster.questions[i].name);
+
             answer = scanner.nextLine();
             if (!(answer.equalsIgnoreCase(room.monster.questions[i].answer))) {
                 return false;
@@ -342,6 +348,7 @@ public class Adventure {
         }
         return false;
     }
+
 
     /**
      * enables or disables the direction a player can go based on their input
@@ -385,8 +392,9 @@ public class Adventure {
         return false;
     }
 
+
     /**
-     * returns true or false based on if the user's inputted direction takes you to the ending room
+     * returns true or false based on if the user's inputted item and direction takes you to the ending room
      * @param input
      * @return true if it does not take you to the ending room so the game can continue
      * or false if it does take you to the ending room so it can end the game
@@ -402,7 +410,8 @@ public class Adventure {
         String inputtedDirection = splitInput[3].toLowerCase();
         Direction[] directions = room.getDirections();
         for (int i = 0; i < directions.length; i++) {
-            if (directions[i].getDirectionName().equalsIgnoreCase(inputtedDirection) && directions[i].getValidKeyNames().length != 0) {
+            if (directions[i].getDirectionName().equalsIgnoreCase(inputtedDirection)
+                    && directions[i].getValidKeyNames().length != 0) {
                 currentDirection = directions[i];
                 currentRoom = currentDirection.getRoom();
             }
@@ -415,6 +424,7 @@ public class Adventure {
         }
         return false;
     }
+
 
     /**
      * if the user inputs a url it checks if its a valid url
