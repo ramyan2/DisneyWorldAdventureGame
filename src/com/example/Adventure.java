@@ -265,8 +265,7 @@ public class Adventure {
                 if (validInput) {
                     while(tracker) {
                         printPossibleDirectionsPlayerCanGo(item);
-                        Scanner scanner2 = new Scanner(System.in);
-                        itemAndDirection = scanner2.nextLine();
+                        itemAndDirection = scanner.nextLine();
                         if (indicateHavingReachedEnd(itemAndDirection)) {
                             System.out.println("You have reached your final destination");
                             System.out.println("EXIT");

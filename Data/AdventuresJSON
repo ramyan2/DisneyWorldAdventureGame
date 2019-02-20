@@ -1,79 +1,77 @@
 {
-   "startingRoom":"DisneyWorldEntrance",
-   "endingRoom":"CinderellasCastle",
-   "player":{
-      "items":[
-
-      ]
+   "startingRoom": "DisneyWorldEntrance",
+   "endingRoom": "CinderellasCastle",
+   "player":
+   {
+        "items": []
    },
-   "rooms":[
+   "rooms": [
       {
-         "name":"DisneyWorldEntrance",
-         "description":"You are at the Disney World Magical Kingdom entrance",
-         "directions":[
+         "name": "DisneyWorldEntrance",
+         "description": "You are at the Disney World Magical Kingdom entrance",
+         "directions": [
             {
-               "directionName":"North",
-               "room":"MainStreet",
-               "enabled":"false",
-               "validKeyNames":[
-                  "AdmissionsTicket"
-               ]
+               "directionName": "North",
+               "room": "MainStreet",
+               "enabled": "false",
+               "validKeyNames": [
+                    "AdmissionsTicket"
+            ]
             }
          ],
          "items":[
-            {
-               "name":"AdmissionsTicket"
-            }
+          {
+                "name": "AdmissionsTicket"
+           }
          ]
       },
       {
          "name":"MainStreet",
-         "description":"You are on MainStreet U.S.A. You can see the Cafe to the East and AdventureLand to the NorthWest and TomorrowLand to the NorthEast.",
-         "directions":[
+         "description": "You are on MainStreet U.S.A. You can see the Cafe to the East and AdventureLand to the NorthWest and TomorrowLand to the NorthEast.",
+         "directions": [
             {
                "directionName":"East",
                "room":"Cafe",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "MickeysEars"
-               ]
+                    "MickeysEars"
+            ]
             },
             {
                "directionName":"NorthEast",
                "room":"TomorrowLand",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "SpaceShip"
-               ]
+                    "SpaceShip"
+            ]
             },
             {
                "directionName":"NorthWest",
                "room":"AdventureLand",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "MagicCarpet"
-               ]
+                    "MagicCarpet"
+            ]
             },
             {
                "directionName":"South",
                "room":"Entrance",
-               "enabled":"true",
+               "enabled": "true",
                "validKeyNames":[
-
-               ]
+            ]
             }
          ],
          "items":[
-            {
-               "name":"MickeysEars"
-            },
-            {
-               "name":"MagicCarpet"
-            },
-            {
-               "name":"SpaceShip"
-            }
-         ]
+         {
+                "name": "MickeysEars"
+         },
+         {
+                "name": "MagicCarpet"
+         },
+         {
+                "name": "SpaceShip"
+         }
+        ]
       },
       {
          "name":"Cafe",
@@ -82,24 +80,23 @@
             {
                "directionName":"North",
                "room":"TomorrowLand",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "SodaBottle"
-               ]
+                    "SodaBottle"
+            ]
             },
             {
                "directionName":"West",
                "room":"MainStreet",
-               "enabled":"true",
+               "enabled": "true",
                "validKeyNames":[
-
-               ]
+            ]
             }
          ],
          "items":[
-            {
-               "name":"SodaBottle"
-            }
+         {
+               "name": "SodaBottle"
+         }
          ]
       },
       {
@@ -109,32 +106,30 @@
             {
                "directionName":"North",
                "room":"FantasyLand",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "MagicWand"
-               ]
+                    "MagicWand"
+            ]
             },
             {
                "directionName":"South",
                "room":"Cafe",
-               "enabled":"true",
+               "enabled": "true",
                "validKeyNames":[
-
-               ]
+            ]
             },
             {
                "directionName":"SouthWest",
                "room":"MainStreet",
-               "enabled":"true",
+               "enabled": "true",
                "validKeyNames":[
-
-               ]
+            ]
             }
          ],
          "items":[
-            {
-               "name":"MagicWand"
-            }
+         {
+                "name": "MagicWand"
+         }
          ]
       },
       {
@@ -144,50 +139,24 @@
             {
                "directionName":"West",
                "room":"LibertySquare",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "FunnelCake"
-               ]
+                    "FunnelCake"
+            ]
             },
             {
                "directionName":"South",
                "room":"Tomorrowland",
-               "enabled":"true",
+               "enabled": "true",
                "validKeyNames":[
-
-               ]
+            ]
             }
          ],
          "items":[
-            {
-               "name":"FunnelCake"
-            }
-         ],
-         "monster":{
-            "description":"Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:",
-            "questions":[
-               {
-                  "name":"How many tentacles does ursula have?",
-                  "answer":"eight"
-               },
-               {
-                  "name":" What is 2 + 3 equal to?",
-                  "answer":"five"
-               },
-               {
-                  "name":"What is the color of Ursula's skin?",
-                  "answer":"purple"
-               },
-               {
-                  "name":"Which Disney princess does she hate?",
-                  "answer":"ariel"
-               },
-               {
-                  "name":"What did Ursula take from Ariel?",
-                  "answer":"voice"
-               }
-            ]
+         {
+                "name": "FunnelCake"
          }
+         ]
       },
       {
          "name":"LibertySquare",
@@ -196,56 +165,81 @@
             {
                "directionName":"South",
                "room":"CinderellasCastle",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "GlassSlippers"
-               ]
+                    "GlassSlippers"
+            ]
             },
             {
                "directionName":"East",
                "room":"FantasyLand",
-               "enabled":"true",
+               "enabled": "true",
                "validKeyNames":[
-
-               ]
+            ]
             }
          ],
          "items":[
-            {
-               "name":"GlassSlippers"
-            }
-         ]
+         {
+                "name": "GlassSlippers"
+         }
+         ],
+         "monster":{
+           "description": "Oh no! Ursula has found you. In order to defeat her and continue the game you must answer 5 questions:",
+           "questions": [
+             {
+                "name": "How many tentacles does ursula have?",
+                "answer": "eight"
+             },
+             {
+                "name": " What is 2 + 3 equal to?",
+                "answer": "five"
+
+             },
+             {
+                "name": "What is the color of Ursula's skin?",
+                "answer": "purple"
+             },
+             {
+                "name": "Which Disney princess does she hate?",
+                "answer": "ariel"
+             },
+             {
+                "name": "What did Ursula take from Ariel?",
+                "answer": "voice"
+             }
+
+           ]
+         }
       },
       {
-         "name":"AdventureLand",
-         "description":"You are in AdventureLand.  You can visit the Swiss Family Treehouse",
-         "directions":[
+               "name":"AdventureLand",
+               "description":"You are in AdventureLand.  You can visit the Swiss Family Treehouse",
+               "directions":[
             {
                "directionName":"Northeast",
                "room":"CinderellasCastle",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-
+            ]
+            },
+               {
+                     "directionName":"SouthEast",
+                     "room":"MainStreet",
+                     "enabled":"true",
+                     "validKeyNames":[
+                          "EyePatch"
+                  ]
+                  }
+               ],
+               "items":[
+               {
+                      "name": "EyePatch"
+               },
+                {
+                                     "name": "SecretItem"
+                              }
                ]
             },
-            {
-               "directionName":"SouthEast",
-               "room":"MainStreet",
-               "enabled":"true",
-               "validKeyNames":[
-                  "EyePatch"
-               ]
-            }
-         ],
-         "items":[
-            {
-               "name":"EyePatch"
-            },
-            {
-               "name":"SecretItem"
-            }
-         ]
-      },
       {
          "name":"CinderellasCastle",
          "description":"You are in Cinderella's Castle. You can eat dinner with many princes and princesses.",
@@ -253,17 +247,17 @@
             {
                "directionName":"North",
                "room":"LibertySquare",
-               "enabled":"false",
+               "enabled": "false",
                "validKeyNames":[
-                  "FairyGodMother"
-               ]
+                    "FairyGodMother"
+            ]
             }
-         ],
+        ],
          "items":[
-            {
-               "name":"FairyGodMother"
-            }
-         ]
-      }
-   ]
-}
+         {
+                "name": "FairyGodMother"
+         }
+           ]
+        }
+      ]
+   }

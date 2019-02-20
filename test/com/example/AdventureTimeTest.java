@@ -21,6 +21,7 @@ public class AdventureTimeTest {
 
     //------test JSON-------//
 
+
     @Test
     public void testparsedJson() {
         game.parsingJson();
@@ -33,7 +34,9 @@ public class AdventureTimeTest {
         assertEquals("CinderellasCastle",game.endRoom);
     }
 
+
     //------tests setCurrentRoomObject method------//
+
 
     @Test
     public void returnsStartingRoomName() {
@@ -71,7 +74,9 @@ public class AdventureTimeTest {
         assertEquals("You are in Cinderella's Castle. You can eat dinner with many princes and princesses.",game.setCurrentRoomObject().getDescription());
     }
 
+
 //------Checks Invalid Inputs-------//
+
 
     @Test
     public void testWhenStartingInputDoesNotMatchAnyPossibleItems() {
@@ -163,7 +168,9 @@ public class AdventureTimeTest {
         assertEquals(false,game.checkIfInputIsAValidItem(""));
     }
 
+
     //------Test null cases------//
+
 
     @Test
     public void returnRightOutputWhenUserInputIsNull() {
@@ -185,7 +192,9 @@ public class AdventureTimeTest {
         assertEquals(false,game.indicateHavingReachedEnd(null));
     }
 
+
     //-----Test InvalidInputMethod for valid cases------//
+
 
     @Test
     public void testInvalidInputMethodWhenUserTypesInValidInput() {
@@ -217,7 +226,9 @@ public class AdventureTimeTest {
         assertEquals(true,game.checkIfInputIsAValidItem("pickup eyePATch"));
     }
 
+
 //--------Tests printRoomDescriptionBasedOnInputtedDirection method---------//
+
 
     @Test
     public void testPrintNextRoomDescriptionMethodForRoom() {
@@ -246,7 +257,9 @@ public class AdventureTimeTest {
                 game.printRoomDescriptionBasedOnDirection("use glassSLIppers with SOUth"));
     }
 
+
     //--------Tests printPossibleDirectionsBasedOnInputDirection method---------//
+
 
     @Test
     public void testPrintPossibleItemsFromStartingRoom() {
@@ -272,7 +285,9 @@ public class AdventureTimeTest {
         assertEquals("MickeysEars MagicCarpet SpaceShip", game.printPossibleItemsBasedOnInput());
     }
 
+
     //----test printDirectionsBasedOnItem method----//
+
 
     @Test
     public void testPrintPossibleDirectionsFromInput() {
@@ -292,10 +307,12 @@ public class AdventureTimeTest {
         assertEquals("SouthEast", game.printPossibleDirectionsPlayerCanGo("pickup glassslippers"));
     }
 
+
     //--check if runs game properly-----//
 
+
     @Test
-    public void testRunGameWhenTrue() {
+    public void testRunGame() {
         String data = "pickup admissionsticket" +
                 "\n use admissionsticket with north";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
@@ -308,7 +325,52 @@ public class AdventureTimeTest {
         assertEquals(true, game.runGame());
     }
 
+    @Test
+    public void testRunGame2() {
+        String data = "pickup mickeysears" +
+                "\n use mickeysears with east";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+
+        game.startRoom = "DisneyWorldEntrance";
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[1].getItems();
+        game.currentRoom = "Cafe";
+        game.setCurrentRoomObject();
+        assertEquals(true, game.runGame());
+    }
+
+    @Test
+    public void testRunGame3() {
+        String data = "pickup sodabottle" +
+                "\n use sodabottle with north";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+
+        game.startRoom = "DisneyWorldEntrance";
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[2].getItems();
+        game.currentRoom = "TomorrowLand";
+        game.setCurrentRoomObject();
+        assertEquals(true, game.runGame());
+    }
+
+    @Test
+    public void testRunGame4() {
+        String data = "pickup glassslippers" +
+                "\nuse glassslippers with south";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+
+        game.startRoom = "DisneyWorldEntrance";
+        game.endRoom = "CinderellasCastle";
+        game.items = game.arrayRooms[6].getItems();
+        game.currentRoom = "LibertySquare";
+        game.setCurrentRoomObject();
+        assertEquals(false, game.runGame());
+    }
+
+
     //-------check enabler-----//
+
+
     @Test
     public void testWhenGameShouldEnable() {
         game.parsingJson();
@@ -349,7 +411,10 @@ public class AdventureTimeTest {
         assertEquals(false, game.enableDirectionBasedOnInput("use tissue with north"));
     }
 
+
     //-----check teleporting method-------//
+
+
     @Test
     public void testWhenGameShouldTeleportPlayer() {
         String data = "BLUE";
@@ -377,6 +442,7 @@ public class AdventureTimeTest {
 
     //-----check if game has reached end properly----//
 
+
     @Test
     public void testWhenReachedEnd() {
         game.parsingJson();
@@ -395,7 +461,10 @@ public class AdventureTimeTest {
         assertEquals(false, game.indicateHavingReachedEnd("use mickeysears with east"));
     }
 
+
    // -----check fight monster method-----//
+
+
     @Test
     public void testWhenPlayerDefeatsUrsula() {
         game.parsingJson();
@@ -410,6 +479,19 @@ public class AdventureTimeTest {
     }
 
     @Test
+    public void testWhenPlayerDefeatsUrsula2() {
+        game.parsingJson();
+        game.room = game.arrayRooms[5];
+        String data = "eight" +
+                "\nFIVE" +
+                "\nPUrple" +
+                "\nAriEl" +
+                "\nVOIce";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        assertTrue(game.fightMonster());
+    }
+
+    @Test
     public void testWhenPlayerDoesNotDefeatUrsula() {
         game.parsingJson();
         game.room = game.arrayRooms[5];
@@ -418,6 +500,19 @@ public class AdventureTimeTest {
                 "\npurple" +
                 "\nariel" +
                 "\nvoice";
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        assertEquals(false, game.fightMonster());
+    }
+
+    @Test
+    public void testWhenPlayerDoesNotDefeatUrsula2() {
+        game.parsingJson();
+        game.room = game.arrayRooms[5];
+        String data = "" +
+                "\n#$%^&*" +
+                "\npurple" +
+                "\nariel" +
+                "\n   ";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         assertEquals(false, game.fightMonster());
     }
