@@ -1,3 +1,25 @@
+HW 0
+----------
+
+## Watch the videos and write up your answers to the following questions
+
+**Important!**
+
+The virtual machine-in-your-browser and the videos you need for HW0 are here:
+
+http://cs-education.github.io/sys/
+
+The coursebook:
+
+http://cs241.cs.illinois.edu/coursebook/index.html
+
+Questions? Comments? Use Piazza:
+https://piazza.com/illinois/spring2020/cs241
+
+The in-browser virtual machine runs entirely in Javascript and is fastest in Chrome. Note the VM and any code you write is reset when you reload the page, *so copy your code to a separate document.* The post-video challenges (e.g. Haiku poem) are not part of homework 0 but you learn the most by doing (rather than just passively watching) - so we suggest you have some fun with each end-of-video challenge.
+
+HW0 questions are below. Copy your answers into a text document because you'll need to submit them later in the course. More information will be in the first lab.
+
 ## Chapter 1
 
 In which our intrepid hero battles standard out, standard error, file descriptors and writing to files.
