@@ -187,7 +187,7 @@ Program arguments, environment variables, and working with character arrays (str
 1. What are two ways to find the length of `argv`? 
 
 ` 
-Argc is the first parameter of main(), and this indicated the length of argv. looping until argv[index] points to NULL
+Argc is the first parameter of main(), and this indicates the length of argv. Also looping until argv[index] points to NULL indicates the length of argv.
 `
 
 2. What does `argv[0]` represent?
@@ -226,7 +226,7 @@ Heap and stack memory, and working with structs
 1. If I want to use data after the lifetime of the function it was created in ends, where should I put it? How do I put it there?
 
 `
-By using "static" to define a variable, or by using malloc/realloc/calloc you can put in the heap and use data after the lifetime of the function. 
+By using "static" to define a variable, or by using malloc/realloc/calloc you can put it in the heap and use data after the lifetime of the function. 
 `
 
 2. What are the differences between heap and stack memory?
@@ -244,9 +244,11 @@ free()
 ```
 ### Heap allocation gotchas
 5. What is one reason `malloc` can fail?
-```C 
+
+`
 Malloc can fail when there is a buffer overflow, not enough memory space, or when asked for more bytes than you can ask for in a single allocation.
-```
+`
+
 6. What are some differences between `time()` and `ctime()`?
 ```C 
 time() returns seconds after 1970 as a time_t object
