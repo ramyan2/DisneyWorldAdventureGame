@@ -129,7 +129,7 @@ At least 8 bits in a byte
 3. How many bytes the following are on your machine?
    - `int`, `double`, `float`, `long`, and `long long`
 ```C  
-int=4; double=8; float=4; long=4; long long=8
+int=4, double=8, float=4, long=4, long long=8
 ```
 ### Follow the int pointer
 4. On a machine with 8 byte integers:
@@ -185,12 +185,18 @@ Program arguments, environment variables, and working with character arrays (str
 
 ### Program arguments, `argc`, `argv`
 1. What are two ways to find the length of `argv`? 
-`Argc is the first parameter of main(), and this indicated the length of argv. looping until argv[index] points to NULL`
+```C  
+Argc is the first parameter of main(), and this indicated the length of argv. looping until argv[index] points to NULL
+```
 2. What does `argv[0]` represent?
-`It is the name of the program, so ./program`
+```C  
+It is the name of the program, so ./program
+```
 ### Environment Variables
 3. Where are the pointers to environment variables stored (on the stack, the heap, somewhere else)?
-`Somewhere else: top of process memory layout, so above the stack, in processors' own memory`
+```C  
+Somewhere else: top of process memory layout, so above the stack, in processors' own memory
+```
 ### String searching (strings are just char arrays)
 4. On a machine where pointers are 8 bytes, and with the following code:
 ```C
@@ -198,13 +204,17 @@ char *ptr = "Hello";
 char array[] = "Hello";
 ```
 What are the values of `sizeof(ptr)` and `sizeof(array)`? Why?
-`sizeof(ptr) = 8 -> pointer is 8 bytes in this machine
-sizeof(array) = 6 -> 5 bytes for "Hello" + 1 byte for null char at the end`
+```C 
+sizeof(ptr) = 8 -> pointer is 8 bytes in this machine
+sizeof(array) = 6 -> 5 bytes for "Hello" + 1 byte for null char at the end
+```
 
 ### Lifetime of automatic variables
 
 5. What data structure manages the lifetime of automatic variables?
-`The stack`
+```C 
+The stack
+```
 
 ## Chapter 4
 
@@ -212,23 +222,54 @@ Heap and stack memory, and working with structs
 
 ### Memory allocation using `malloc`, the heap, and time
 1. If I want to use data after the lifetime of the function it was created in ends, where should I put it? How do I put it there?
+```C 
+By using "static" to define a variable, or by using malloc/realloc/calloc you can put in the heap and use data after the lifetime of the function. 
+```
 2. What are the differences between heap and stack memory?
+```C 
+Heap: dynamic memory allocation, allocate and deallocate by programmer 
+Stack: static memory allocation, stored directly to memory so it has fast access 
+```
 3. Are there other kinds of memory in a process?
+```C 
+Yes, Initialized data, uninitialized data, text segment
+```
 4. Fill in the blank: "In a good C program, for every malloc, there is a ___".
+```C 
+free()
+```
 ### Heap allocation gotchas
 5. What is one reason `malloc` can fail?
+```C 
+Malloc can fail when there is a buffer overflow, not enough memory space, or when asked for more bytes than you can ask for in a single allocation.
+```
 6. What are some differences between `time()` and `ctime()`?
+```C 
+time() returns seconds after 1970 as a time_t object
+ctime() returns a string that represents the local time based on the argument timer.
+```
 7. What is wrong with this code snippet?
 ```C
 free(ptr);
 free(ptr);
+```
+
+```C 
+You freed the pointer twice, and after it has been freed it has never been set to null.
 ```
 8. What is wrong with this code snippet?
 ```C
 free(ptr);
 printf("%s\n", ptr);
 ```
+
+```C 
+You are using a pointer that has been freed
+```
 9. How can one avoid the previous two mistakes? 
+```C 
+Set pointer to null right after freeing it, and do not double free().
+```
 ### `struct`, `typedef`s, and a linked list
 10. Create a `struct` that represents a `Person`. Then make a `typedef`, so that `struct Person` can be replaced with a single word. A person should contain the following information: their name (a string), their age (an integer), and a list of their friends (stored as a pointer to an array of pointers to `Person`s).
 11. Now, make two persons on the heap, "Agent Smith" and "Sonny Moore", who are 128 and 256 years old respectively and are friends with each other.
@@ -236,7 +277,55 @@ printf("%s\n", ptr);
 Create functions to create and destroy a Person (Person's and their names should live on the heap).
 12. `create()` should take a name and age. The name should be copied onto the heap. Use malloc to reserve sufficient memory for everyone having up to ten friends. Be sure initialize all fields (why?).
 13. `destroy()` should free up not only the memory of the person struct, but also free all of its attributes that are stored on the heap. Destroying one person should not destroy any others.
+```C 
+#include <stdio.h>
 
+
+struct Person {
+	char* name;
+	int age;
+	struct Person* friends[];
+};
+
+typedef struct Person person_t;
+
+
+int main() {
+	
+	person_t* person1 = (person_t*) malloc(sizeof(person_t));
+	person_t* person2 = (person_t*) malloc(sizeof(person_t));
+	
+	person1->name = "Agent Smith";
+	person2->name = "Sonny Moore";
+	person1->age = 128;
+	person2->age = 256;
+	
+	person1->friends[0] = person2;
+	person2->friends[0] = person1;
+	
+	return 0;
+	
+}
+
+
+
+person_t*  create(char* name_, int age_) {
+	person_t* result = (person_t*) malloc(48);
+	result->name = strdup(name_);
+	result->age = age_;
+	Return result;
+}
+
+Why should you initialize all fields??
+Void destroy(person_t* p) {
+	free(p->name);
+	free(p->age);
+	free(p->friends);
+	memset(p, 0, 48);
+	free(p);
+}
+
+```
 ## Chapter 5 
 
 Text input and output and parsing using `getchar`, `gets`, and `getline`.
