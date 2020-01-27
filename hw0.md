@@ -31,10 +31,8 @@ In which our intrepid hero battles standard out, standard error, file descriptor
 #include <unistd.h>
 
 int main() {
-
-	write(1, "Hi! My name is Ramya.", 21);
-
-	return 0;
+    write(1, "Hi! My name is Ramya.", 21);
+    return 0;
 }
 ```
 
@@ -52,24 +50,24 @@ int main() {
 #define STDERR_FILENO 2
 
 void write_triangle(int n) {
-	if (n < 1) {
-		exit(1);
+    if (n < 1) {
+        exit(1);
+    }
+
+    int len;
+    int currlen;
+    
+    for (len = 1; len <= n; len++) {
+        for (currlen = 0; currlen < len; currlen++) {
+	    write(2, "*", 1);
 	}
-
-	int len;
-	int currlen;
-
-  	for(len = 1; len <= n; len++){
-		for (currlen = 0; currlen < len; currlen++) {
-    			write(2, "*", 1);
-		}
-		write(2, "\n", 1);
-  	}  	
+	write(2, "\n", 1);
+    }  	
 }
 
 int main() {
-	write_triangle(3);
-  	return 0;
+    write_triangle(3);
+    return 0;
 }
 ```
 
@@ -120,13 +118,13 @@ write() is a system call which is basic and costly. On the other hand, printf() 
 Sizing up C types and their limits, `int` and `char` arrays, and incrementing pointers
 
 ### Not all bytes are 8 bits?
-1. How many bits are there in a byte? 
-`At least 8 bits in a byte`
+1. How many bits are there in a byte?
+```CAt least 8 bits in a byte```
 2. How many bytes are there in a `char`?
-`1 byte in a char`
+```C1 byte in a char```
 3. How many bytes the following are on your machine?
    - `int`, `double`, `float`, `long`, and `long long`
-`int=4; double=8; float=4; long=4; long long=8`
+```Cint=4; double=8; float=4; long=4; long long=8```
 ### Follow the int pointer
 4. On a machine with 8 byte integers:
 ```C
@@ -136,11 +134,11 @@ int main(){
 ```
 If the address of data is `0x7fbd9d40`, then what is the address of `data+2`?
 
-`0x7fbd9d50`
+```C0x7fbd9d50```
 
 5. What is `data[3]` equivalent to in C?
    - Hint: what does C convert `data[3]` to before dereferencing the address?
-`*(data+3)`
+```C*(data+3)```
 
 ### `sizeof` character arrays, incrementing pointers
   
@@ -153,7 +151,8 @@ char *ptr = "hello";
 ```
 `"hello" is a string so it is immutable and constant`
 
-7. What does `sizeof("Hello\0World")` return?`12`
+7. What does `sizeof("Hello\0World")` return?
+```C12```
 8. What does `strlen("Hello\0World")` return?`5`
 9. Give an example of X such that `sizeof(X)` is 3. `sizeof("ab")`
 10. Give an example of Y such that `sizeof(Y)` might be 4 or 8 depending on the machine. `sizeof(3)`
