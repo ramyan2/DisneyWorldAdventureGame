@@ -187,7 +187,6 @@ Program arguments, environment variables, and working with character arrays (str
 1. What are two ways to find the length of `argv`? 
 
 ` 
-
 Argc is the first parameter of main(), and this indicated the length of argv. looping until argv[index] points to NULL
 `
 
@@ -227,7 +226,6 @@ Heap and stack memory, and working with structs
 1. If I want to use data after the lifetime of the function it was created in ends, where should I put it? How do I put it there?
 
 `
-
 By using "static" to define a variable, or by using malloc/realloc/calloc you can put in the heap and use data after the lifetime of the function. 
 `
 
