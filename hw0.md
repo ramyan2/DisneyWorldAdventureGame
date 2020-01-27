@@ -185,9 +185,12 @@ Program arguments, environment variables, and working with character arrays (str
 
 ### Program arguments, `argc`, `argv`
 1. What are two ways to find the length of `argv`? 
-```C  
+
+` 
+
 Argc is the first parameter of main(), and this indicated the length of argv. looping until argv[index] points to NULL
-```
+`
+
 2. What does `argv[0]` represent?
 ```C  
 It is the name of the program, so ./program
@@ -222,9 +225,12 @@ Heap and stack memory, and working with structs
 
 ### Memory allocation using `malloc`, the heap, and time
 1. If I want to use data after the lifetime of the function it was created in ends, where should I put it? How do I put it there?
-```C 
+
+`
+
 By using "static" to define a variable, or by using malloc/realloc/calloc you can put in the heap and use data after the lifetime of the function. 
-```
+`
+
 2. What are the differences between heap and stack memory?
 ```C 
 Heap: dynamic memory allocation, allocate and deallocate by programmer 
