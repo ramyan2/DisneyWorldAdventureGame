@@ -332,25 +332,106 @@ Text input and output and parsing using `getchar`, `gets`, and `getline`.
 
 ### Reading characters, trouble with gets
 1. What functions can be used for getting characters from `stdin` and writing them to `stdout`?
+```C 
+gets(), puts(), getchar(), putchar()
+```
 2. Name one issue with `gets()`.
+```C 
+gets() does not do array bound testing so it does not recognize if the input is too long, and it can end up in buffer overflow
+```
 ### Introducing `sscanf` and friends
 3. Write code that parses the string "Hello 5 World" and initializes 3 variables to "Hello", 5, and "World".
+```C 
+#include <stdio.h>
+
+int main() {
+	
+	char* data = "Hello 5 World";
+	
+	char buffer1[15];
+	char buffer2[15];
+	int n = 15;
+	
+	sscanf(data, "%s %d %s", buffer1, &n, buffer2); 
+	return 0;
+}
+```
 ### `getline` is useful
 4. What does one need to define before including `getline()`?
+```C 
+buffer variable and size of buffer variable
+
+#define _GNU_SOURCE
+```
 5. Write a C program to print out the content of a file line-by-line using `getline()`.
+```C 
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	FILE *f = fopen("file", "r");
+	if (f == NULL) {
+		exit(EXIT_FAILURE);
+	}
+	
+	char *line = NULL;
+	size_t length = 0;
+	ssize_t read_line = getline(&line, &length, f);
+	
+	while (read_line != -1) {
+		printf("Retrieved line of length %zu:\n", read_line);
+		printf("%s", line);
+		read_line = getline(&line, &length, f);
+	}
+	
+	return 0;
+}
+```
 
 ## C Development
 
 These are general tips for compiling and developing using a compiler and git. Some web searches will be useful here
 
 1. What compiler flag is used to generate a debug build?
+```C 
+-g
+```
 2. You modify the Makefile to generate debug builds and type `make` again. Explain why this is insufficient to generate a new build.
+```C 
+Insufficient because you want to clear previous .o files so its best to "make clean".
+```
 3. Are tabs or spaces used to indent the commands after the rule in a Makefile?
+```C 
+Yes, tabs
+```
 4. What does `git commit` do? What's a `sha` in the context of git?
+```C 
+A commit is a change to file(s), and git commit allows you to save your changes to the local repository, it only saves the new commit object in the local Git repository.
+
+When you save in Git, a unique ID is created which allows you to keep record of what changes were made when and by who, this unique ID is "SHA".
+```
 5. What does `git log` show you?
+```C 
+Git log is a running record of commits, it allows you to view information about previous commits that have occurred in a project. It lets you list the project history, filter it, and search for specific changes. 
+
+```
 6. What does `git status` tell you and how would the contents of `.gitignore` change its output?
+```C 
+git status is used to know the status of the working tree. It shows the current state of the working directory, it displays changes that have and have not been staged, it shows differences in the current tree and the HEAD pointer.
+
+The .gitignore file contains files that are intentionally supposed to be ignored. Since git status also displays paths in the working tree that are not tracked by Git, but are not ignored by gitignore, the contents of .gitignore would change the output of git status.
+
+```
 7. What does `git push` do? Why is it not just sufficient to commit with `git commit -m 'fixed all bugs' `?
+```C 
+Git push pushes commits made on your local branch to a remote repository. We can't just do git commit -m ’fixed all bugs’ because we end up commiting files to the local, whereas pushing it specifies the remote and branch names. 
+```
 8. What does a non-fast-forward error `git push` reject mean? What is the most common way of dealing with this?
+```C 
+Git push reject is when git cannot push changes you made because someone else pushed to the same branch. The most common way of dealing with this is to fetch and merge changes made on the remote branch with changes made locally.
+```
 
 ## Optional (Just for fun)
 - Convert your a song lyrics into System Programming and C code and share on Piazza.
