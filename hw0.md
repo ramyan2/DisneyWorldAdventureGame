@@ -407,26 +407,27 @@ Insufficient because you want to clear previous .o files so its best to "make cl
 Yes, tabs
 ```
 4. What does `git commit` do? What's a `sha` in the context of git?
-`
-A commit is a change to file(s), and git commit allows you to save your changes to the local repository, it only saves the new commit object in the local Git repository.
 
-When you save in Git, a unique ID is created which allows you to keep record of what changes were made when and by who, this unique ID is "SHA".
+`
+A commit is a change to file(s), and git commit allows you to save your changes to the local repository, it only saves the new commit object in the local Git repository. When you save in Git, a unique ID is created which allows you to keep record of what changes were made when and by who, this unique ID is "SHA".
 `
 5. What does `git log` show you?
+
 `
 Git log is a running record of commits, it allows you to view information about previous commits that have occurred in a project. It lets you list the project history, filter it, and search for specific changes. 
 `
 6. What does `git status` tell you and how would the contents of `.gitignore` change its output?
-`
-git status is used to know the status of the working tree. It shows the current state of the working directory, it displays changes that have and have not been staged, it shows differences in the current tree and the HEAD pointer.
 
-The .gitignore file contains files that are intentionally supposed to be ignored. Since git status also displays paths in the working tree that are not tracked by Git, but are not ignored by gitignore, the contents of .gitignore would change the output of git status.
+`
+git status is used to know the status of the working tree. It shows the current state of the working directory, it displays changes that have and have not been staged, it shows differences in the current tree and the HEAD pointer. The .gitignore file contains files that are intentionally supposed to be ignored. Since git status also displays paths in the working tree that are not tracked by Git, but are not ignored by gitignore, the contents of .gitignore would change the output of git status.
 `
 7. What does `git push` do? Why is it not just sufficient to commit with `git commit -m 'fixed all bugs' `?
+
 `
 Git push pushes commits made on your local branch to a remote repository. We can't just do git commit -m ’fixed all bugs’ because we end up commiting files to the local, whereas pushing it specifies the remote and branch names. 
 `
 8. What does a non-fast-forward error `git push` reject mean? What is the most common way of dealing with this?
+
 ` 
 Git push reject is when git cannot push changes you made because someone else pushed to the same branch. The most common way of dealing with this is to fetch and merge changes made on the remote branch with changes made locally.
 `
