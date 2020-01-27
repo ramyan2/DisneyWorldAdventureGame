@@ -119,12 +119,12 @@ Sizing up C types and their limits, `int` and `char` arrays, and incrementing po
 
 ### Not all bytes are 8 bits?
 1. How many bits are there in a byte?
-```CAt least 8 bits in a byte```
+`At least 8 bits in a byte`
 2. How many bytes are there in a `char`?
-```C1 byte in a char```
+`1 byte in a char`
 3. How many bytes the following are on your machine?
    - `int`, `double`, `float`, `long`, and `long long`
-```Cint=4; double=8; float=4; long=4; long long=8```
+`int=4; double=8; float=4; long=4; long long=8`
 ### Follow the int pointer
 4. On a machine with 8 byte integers:
 ```C
@@ -134,11 +134,11 @@ int main(){
 ```
 If the address of data is `0x7fbd9d40`, then what is the address of `data+2`?
 
-```C0x7fbd9d50```
+`0x7fbd9d50`
 
 5. What is `data[3]` equivalent to in C?
    - Hint: what does C convert `data[3]` to before dereferencing the address?
-```C*(data+3)```
+`*(data+3)`
 
 ### `sizeof` character arrays, incrementing pointers
   
@@ -152,20 +152,26 @@ char *ptr = "hello";
 `"hello" is a string so it is immutable and constant`
 
 7. What does `sizeof("Hello\0World")` return?
-```C12```
-8. What does `strlen("Hello\0World")` return?`5`
-9. Give an example of X such that `sizeof(X)` is 3. `sizeof("ab")`
-10. Give an example of Y such that `sizeof(Y)` might be 4 or 8 depending on the machine. `sizeof(3)`
+`12`
+8. What does `strlen("Hello\0World")` return?
+`5`
+9. Give an example of X such that `sizeof(X)` is 3. 
+`sizeof("ab")`
+10. Give an example of Y such that `sizeof(Y)` might be 4 or 8 depending on the machine. 
+`sizeof(3)`
 
 ## Chapter 3
 
 Program arguments, environment variables, and working with character arrays (strings)
 
 ### Program arguments, `argc`, `argv`
-1. What are two ways to find the length of `argv`?
+1. What are two ways to find the length of `argv`? 
+`Argc is the first parameter of main(), and this indicated the length of argv. looping until argv[index] points to NULL`
 2. What does `argv[0]` represent?
+`It is the name of the program, so ./program`
 ### Environment Variables
 3. Where are the pointers to environment variables stored (on the stack, the heap, somewhere else)?
+`Somewhere else: top of process memory layout, so above the stack, in processors' own memory`
 ### String searching (strings are just char arrays)
 4. On a machine where pointers are 8 bytes, and with the following code:
 ```C
@@ -173,10 +179,13 @@ char *ptr = "Hello";
 char array[] = "Hello";
 ```
 What are the values of `sizeof(ptr)` and `sizeof(array)`? Why?
+`sizeof(ptr) = 8 -> pointer is 8 bytes in this machine
+sizeof(array) = 6 -> 5 bytes for "Hello" + 1 byte for null char at the end`
 
 ### Lifetime of automatic variables
 
 5. What data structure manages the lifetime of automatic variables?
+`The stack`
 
 ## Chapter 4
 
