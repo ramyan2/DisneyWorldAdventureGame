@@ -25,13 +25,71 @@ int main() {
    **
    ***
    ```
+```C 
+#include <unistd.h>
+#define STDERR_FILENO 2
+
+void write_triangle(int n) {
+	if (n < 1) {
+		exit(1);
+	}
+
+	int len;
+	int currlen;
+
+  	for(len = 1; len <= n; len++){
+		for (currlen = 0; currlen < len; currlen++) {
+    			write(2, "*", 1);
+		}
+		write(2, "\n", 1);
+  	}  	
+}
+
+int main() {
+	write_triangle(3);
+  	return 0;
+}
+```
+
 ### Writing to files
 3. Take your program from "Hello, World!" modify it write to a file called `hello_world.txt`.
    - Make sure to to use correct flags and a correct mode for `open()` (`man 2 open` is your friend).
+```C   
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+int main() {
+	mode_t mode = S_IRUSR | S_IWUSR;
+	int fildes = open("hello_world.txt", O_CREAT | O_TRUNC | O_RDWR, mode);
+	write(fildes, "Hi! My name is Ramya.", 21);
+	close(fildes);
+	return 0;
+}
+```
 ### Not everything is a system call
 4. Take your program from "Writing to files" and replace `write()` with `printf()`.
    - Make sure to print to the file instead of standard out!
+```C   
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+int main() {
+	mode_t mode = S_IRUSR | S_IWUSR;
+	close(1);
+	int fildes = open("hello_world.txt", O_CREAT | O_TRUNC | O_RDWR, mode);
+	printf("%s","Hi! My name is Ramya.");
+	close(fildes);
+	return 0;
+}
+```
+
 5. What are some differences between `write()` and `printf()`?
+
+write() is a system call which is basic and costly. On the other hand, printf() is a library provided by the C language that calls write(), and basically provides us to write data into a formatted sequence or output of bytes, and printf() also incorporates buffering such that data is written only when necessary. 
 
 ## Chapter 2
 
