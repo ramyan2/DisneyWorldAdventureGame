@@ -208,7 +208,7 @@ char array[] = "Hello";
 What are the values of `sizeof(ptr)` and `sizeof(array)`? Why?
 ```C 
 sizeof(ptr) = 8 -> pointer is 8 bytes in this machine
-sizeof(array) = 6 -> 5 bytes for "Hello" + 1 byte for null char at the end
+sizeof(array) = 6 -> 5 bytes for "Hello" + 1 byte for null char,'\0', at the end
 ```
 
 ### Lifetime of automatic variables
