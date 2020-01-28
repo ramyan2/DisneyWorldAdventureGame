@@ -342,9 +342,9 @@ Text input and output and parsing using `getchar`, `gets`, and `getline`.
 gets(), puts(), getchar(), putchar()
 ```
 2. Name one issue with `gets()`.
-```C 
+` 
 gets() does not do array bound testing so it does not recognize if the input is too long, and it can end up in buffer overflow
-```
+`
 ### Introducing `sscanf` and friends
 3. Write code that parses the string "Hello 5 World" and initializes 3 variables to "Hello", 5, and "World".
 ```C 
