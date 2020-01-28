@@ -375,7 +375,7 @@ buffer variable and size of buffer variable
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+int main()
 {
 	FILE *f = fopen("file", "r");
 	if (f == NULL) {
@@ -387,8 +387,7 @@ int main(void)
 	ssize_t read_line = getline(&line, &length, f);
 	
 	while (read_line != -1) {
-		printf("Retrieved line of length %zu:\n", read_line);
-		printf("%s", line);
+		printf("%s\n", line);
 		read_line = getline(&line, &length, f);
 	}
 	
